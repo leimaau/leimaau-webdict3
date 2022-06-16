@@ -7,10 +7,26 @@ body {
 }
 
 a {
-  color: inherit;
+  color: #007bff;
   text-decoration: none;
 }
 
 * {
   box-sizing: border-box;
+}
+
+.custom-scrolltop {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 4px;
+  background-color: var(--primary-color) !important;
+}
+
+.custom-scrolltop:hover {
+  background-color: var(--teal-400) !important;
+}
+
+.custom-scrolltop .p-scrolltop-icon {
+  font-size: 1rem;
+  color: var(--primary-color-text);
 }

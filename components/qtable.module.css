@@ -1,0 +1,27 @@
+.grid {
+    display: grid;
+    align-items: center;
+    justify-content: normal;
+    flex-wrap: wrap;
+    min-width: 1440px;
+    max-width: 1440px;
+}
+
+/*表格中的expl和note列*/
+.table p {
+    display: block;  /*覆蓋瀏覽器樣式*/
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+	margin-bottom: 0;
+	width: 150px;
+	overflow: hidden; /*過長隱藏*/
+	white-space: nowrap; /*無換行*/
+	text-overflow: ellipsis;  /*過長顯示省略號*/
+}
+
+.table td, .table th {
+    display: table-cell;
+	white-space: nowrap;
+}

@@ -1,0 +1,21 @@
+.container {
+  max-width: 66rem;
+  padding: 1rem 1rem;
+  margin: 0rem auto 3rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main {
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flow-root;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
