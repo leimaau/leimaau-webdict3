@@ -3,8 +3,7 @@
     align-items: center;
     justify-content: normal;
     flex-wrap: wrap;
-    min-width: 1440px;
-    max-width: 1440px;
+    overflow: auto;
 }
 
 /*表格中的expl和note列*/

@@ -71,7 +71,7 @@ export default function Post({ isShort, isConnected, tabDataList, tabColList, re
       <Messages ref={msgs_islong}></Messages>
     )}
 
-    <TabView className={(reqType=='B'||reqType=='C'||reqType=='D'||reqType=='F1'||reqType=='F2') ? 'hidden': ''}>
+    <TabView className={(reqType=='B'||reqType=='C'||reqType=='D'||reqType=='F1'||reqType=='F2') ? 'picTabView hidden overflow-auto': 'picTabView overflow-auto'}>
         <TabPanel header="餅圖">
             <PieChart pieData={dealData(tabDataList[5], tabDataList[6], reqType, reqWord)} reqWord={reqWord}/>
         </TabPanel>

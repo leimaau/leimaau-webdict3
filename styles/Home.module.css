@@ -21,13 +21,6 @@
   align-items: center;
 }
 
-.footer a {
-  display: initial;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
-
 .title a {
   color: #0070f3;
   text-decoration: none;

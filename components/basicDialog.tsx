@@ -18,6 +18,13 @@ export default function BasicDialog({rowDataFlag, clearFunc}) {
 
     const [displayBasic, setDisplayBasic] = useState(false)
     const [position, setPosition] = useState('center')
+    const [checkedAll, setCheckedAll] = useState(true)
+    const [shows, setShows] = useState<any>([])
+    const [items, setItems] = useState<any>([])
+    const [fanqieValue, setFanqieValue] = useState('')
+    const [explValue, setExplValue] = useState('')
+
+    const router = useRouter()
 
     const dialogFuncMap = {
         'displayBasic': setDisplayBasic
@@ -34,8 +41,6 @@ export default function BasicDialog({rowDataFlag, clearFunc}) {
     const onHide = (name) => {
         dialogFuncMap[`${name}`](false);
     }
-
-    const [checkedAll, setCheckedAll] = useState(true)
 
     const handleCheckAll = () => {
         if (checkedAll) {
@@ -57,8 +62,6 @@ export default function BasicDialog({rowDataFlag, clearFunc}) {
         }
     }
     
-    const router = useRouter()
-
     const querySubmit = () => {
         let searchStr = items.join('_')
         if(searchStr!=='') router.push('/search/' + searchStr + '?queryType=' + (rowDataFlag=='1' ? 'F1' : 'F2') + (shows.indexOf('反切')!==-1 ? ('&reqFanqie=' + fanqieValue) : '') + (shows.indexOf('釋文')!==-1 ? ('&reqExpl=' + explValue) : ''))
@@ -66,22 +69,13 @@ export default function BasicDialog({rowDataFlag, clearFunc}) {
 
     const renderFooter = (name) => {
         return (
-            <div>
+            <div className="card flex justify-content-end">
                 <Button label="關閉" icon="pi pi-times" onClick={() => onHide(name)} className="p-button-secondary p-button-sm" />
                 <ToggleButton checked={checkedAll} onChange={(e) => {setCheckedAll(e.value);handleCheckAll()}} onLabel="全選" offLabel="取消全選" onIcon="pi pi-filter" offIcon="pi pi-filter-slash" className="p-button-sm mr-2" aria-label="Confirmation" />
                 <Button label="查詢" icon="pi pi-check" onClick={()=>{querySubmit();clearFunc()}} autoFocus className="p-button-info p-button-sm" />
             </div>
         )
     }
-
-    const headerGroup = <ColumnGroup>
-                            <Row>
-                                <Column header="說明" rowSpan={2} align="center" />
-                                <Column header="選項" rowSpan={1} colSpan={2} align="center" />
-                            </Row>
-                        </ColumnGroup>
-
-    const [shows, setShows] = useState<any>([])
 
     const onShowChange = (e: { value: any, checked: boolean }) => {
         let selectedShows = [...shows]
@@ -121,8 +115,6 @@ export default function BasicDialog({rowDataFlag, clearFunc}) {
         }
     }
 
-    const [items, setItems] = useState<any>([])
-
     const onItemChange = (e: { value: any, checked: boolean }) => {
         let selectedItems = [...items]
         if (e.checked) {
@@ -142,9 +134,6 @@ export default function BasicDialog({rowDataFlag, clearFunc}) {
         }
 
     }
-
-    const [fanqieValue, setFanqieValue] = useState('')
-    const [explValue, setExplValue] = useState('')
 
     const itemBodyTemplate = (rowData) => {
         let itemRow = rowData.item.split('|')
@@ -173,11 +162,18 @@ export default function BasicDialog({rowDataFlag, clearFunc}) {
         )
     }
 
+    const headerGroup = <ColumnGroup>
+                            <Row>
+                                <Column header="說明" rowSpan={2} align="center" />
+                                <Column header="選項" rowSpan={1} colSpan={2} align="center" />
+                            </Row>
+                        </ColumnGroup>
+
   return (
     <div>
         <Button className={"p-button-outlined p-button-sm "+((router.pathname=='/') ? 'hidden' : '')} style={{ height: '2.25rem', color: '#30aa9f' }} label={customHeader} onClick={() => onClick('displayBasic', position)} />
-        <Dialog header={customHeader} visible={displayBasic} style={{ width: '50vw' }} footer={renderFooter('displayBasic')} onHide={() => onHide('displayBasic')}>
-            <div className="card">
+        <Dialog header={customHeader} visible={displayBasic} style={{ width: 'auto', overflow: 'auto' }} footer={renderFooter('displayBasic')} onHide={() => onHide('displayBasic')}>
+            <div className="card" style={{width: 'max-content'}}>
                 <DataTable value={rowDataSele} size="small" headerColumnGroup={headerGroup} stripedRows showGridlines responsiveLayout="scroll">
                     <Column key="guyinShow" field="show" header="說明" body={showBodyTemplate}></Column>
                     <Column key="guyinItem" field="item" header="選項" body={itemBodyTemplate}></Column>

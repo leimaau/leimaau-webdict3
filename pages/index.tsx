@@ -27,7 +27,7 @@ export default function Home({ isConnected }) {
 
       <p className={styles.description}>
         狸貓的在線辭典{' '}
-        <code className={styles.code}> v3.0.0 </code>
+        <code className={styles.code}> v3.0.1 </code>
       </p>
 
       <QButton search="" isConnected={isConnected} radioName="A" clearFunc={clearFunc}/>

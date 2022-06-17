@@ -11,7 +11,7 @@ export default function FastLink({textChar, reqType}) {
             </Divider>
             <Panel header="快速鏈接">
                 <div className="card">
-                    <div className="flex">
+                    <div className="flex flex-column md:flex-row align-items-left">
                         <p>
                         漢典網：<a className='hover:underline' href={"http://www.zdic.net/hans/"+textChar} target="_blank">{textChar}</a> | <a className='hover:underline' href={"https://www.zdic.net/zd/yy/ys/"+textChar} target="_blank">韻書</a> | <a className='hover:underline' href={"http://www.zdic.net/zd/yy/yy/"+textChar} target="_blank">粵語</a> | <a className='hover:underline' href={"http://www.zdic.net/zd/yy/ph/"+textChar} target="_blank">平話</a><br/>
                         韻典網：<a className='hover:underline' href={"https://ytenx.org/zim?dzih="+textChar+"&dzyen=1&jtkb=1&jtkd=1&jtdt=1&jtgt=1"} target="_blank">{textChar}</a><br/>

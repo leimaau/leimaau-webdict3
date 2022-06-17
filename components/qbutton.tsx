@@ -38,7 +38,7 @@ export default function QButton({search, isConnected, radioName, clearFunc}) {
 
   return (
     <div>
-        {(isConnected && !loading)? (
+        {(isConnected && !loading) ? (
           <div>
             <div className="p-inputgroup">
               <InputText value={valueFind} onChange={(e) => setValueFind(e.target.value)} onKeyDown={(e) => {if(e.key === 'Enter') querySubmit()}} placeholder="Keyword"/>

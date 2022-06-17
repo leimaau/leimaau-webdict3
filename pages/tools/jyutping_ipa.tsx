@@ -67,6 +67,22 @@ export default function transform() {
     if (copied) toast.current.show({severity:'success', summary: 'Success Message', detail:'複製成功！', life: 3000})
   }
 
+  const selectedItemsTemplate = (option, props) => {
+    if (option) {
+        return (
+            <div>
+                <div className="w-15rem md:w-max white-space-nowrap overflow-hidden text-overflow-ellipsis">{option.name}</div>
+            </div>
+        )
+    }
+
+    return (
+        <span>
+            {props.placeholder}
+        </span>
+    )
+  }
+
   return (
     <Layout home>
       <div>
@@ -81,31 +97,38 @@ export default function transform() {
               <label htmlFor="item2">IPA 轉粵拼</label>
             </div>
           </div>
-          <InputTextarea value={value1} onChange={(e) => setValue1(e.target.value)} rows={12} cols={110} />
+          <InputTextarea value={value1} onChange={(e) => setValue1(e.target.value)} rows={12} style={{width: '-webkit-fill-available'}} />
         </div>
-        <div className="card mt-2">
-          <div className="formgroup-inline">
-            <div className="field-checkbox">
-              { item=='1' ? '輸入 IPA 版本：' : '輸出 IPA 版本：'}
-              <Dropdown value={selectedItem1} options={items} onChange={(e) => setSelectedItem1(e.value)} optionLabel="name" placeholder="Select a Item" />
-              <Dropdown className={ item=='1' ? 'hidden' : 'ml-2'} value={selectedItem2} options={items2} onChange={(e) => setSelectedItem2(e.value)} optionLabel="name" placeholder="Select a Item" />
+        <div className="card">
+          <div className="formgroup-inline flex flex-column md:flex-row align-items-left">
+            <span className="mt-3">{ item=='1' ? '輸入 IPA 版本：' : '輸出 IPA 版本：'}</span>
+            <div className="field-checkbox m-1">
+              <Dropdown value={selectedItem1} options={items} valueTemplate={selectedItemsTemplate} onChange={(e) => setSelectedItem1(e.value)} optionLabel="name" placeholder="Select a Item" />
+            </div>
+            <div className="field-checkbox m-1">
+              <Dropdown className={ item=='1' ? 'hidden' : ''} value={selectedItem2} options={items2} onChange={(e) => setSelectedItem2(e.value)} optionLabel="name" placeholder="Select a Item" />
               <Checkbox className={ item=='1' ? 'hidden' : 'ml-2'} inputId="isSymbols" checked={checked} onChange={e => setChecked(e.checked)} />
               <label className={ item=='1' ? 'hidden' : ''} htmlFor="isSymbols">帶附加符</label>
             </div>
           </div>
-          <InputTextarea value={value2} onChange={(e) => {setValue2(e.target.value);setCopied(false)}} rows={12} cols={110} />
+          <InputTextarea className="mt-2" value={value2} onChange={(e) => {setValue2(e.target.value);setCopied(false)}} rows={12} style={{width: '-webkit-fill-available'}} />
         </div>
-        <div className="card" style={{width: 820}}>
+        <div className="card noteDiv">
           <span>※ 白(林 || 楊 || 梁)： tʃ/tʃʰ/ʃ、ʊŋ/ʊk/eŋ/ek || ts/tsʰ/s、oŋ/ok/eŋ/ek || tɕ/tɕʰ/ɕ、uŋ/uk/iŋ/ik</span><br />
           <span>※ 平(楊 || 李 || 余)： tʃ/tʃʰ/ʃ、ȵwɐœɛ(無韻尾用e)、(i)ɐŋ/(i)ɐk、j-、wu(int)、jy(nt)、kʷ/kʷʰ(紙面爲kʰw)、下陽入24 || ts/tsʰ/s、ɲβəøe、əŋ/ək/iɐŋ/iɐk、∅i-、∅u(int)、∅y(nt)、ku/kʰu、上陽入23 || 楊版基礎上：無韻尾用ɛ，ȵ{'->'}ɲ，oŋ/ok{'->'}uŋ/uk，o{'->'}ɔ，iɐŋ/iɐk{'->'}ɛŋ/ɛk</span><br />
           <span>※ 統一用kʷ/kʷʰ，其他 kw/kwh、kʷ/kʰʷ、kʷ/kwʰ、kw/khw、kw/kʰw、ku/kʰu、kᵘ/kʰᵘ 等可根據需要手工替換</span>
         </div>
-        <div className="card mt-2 flex justify-content-end">
-          <Button label="清空" className="p-button-raised p-button-info p-button-text p-button-sm mr-2" onClick={() => {setValue1('');setValue2('')}} />
+        <style jsx>{`
+          div .noteDiv {
+            max-width: 820px
+          }
+        `}</style>
+        <div className="card flex justify-content-end">
+          <Button label="清空" className="p-button-raised p-button-info p-button-text p-button-sm m-2" onClick={() => {setValue1('');setValue2('')}} />
           <CopyToClipboard text={value2} onCopy={() => setCopied(true)}>
-            <Button label="複製" className="p-button-info p-button-sm mr-2" onClick={() => {setCopied(true);handleCopy()}} />
+            <Button label="複製" className="p-button-info p-button-sm m-2" onClick={() => {setCopied(true);handleCopy()}} />
           </CopyToClipboard>
-          <Button label="轉換" className="p-button-sm" onClick={Func_JP_IPA}/>
+          <Button label="轉換" className="p-button-sm m-2" onClick={Func_JP_IPA}/>
         </div>
       </div>
       <Toast ref={toast} />

@@ -30,3 +30,11 @@ a {
   font-size: 1rem;
   color: var(--primary-color-text);
 }
+
+.picTabView .p-tabview-panel {
+  min-width: 1000px;
+}
+
+.picTabView .p-tabview-panels {
+  overflow: auto;
+}

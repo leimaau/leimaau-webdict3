@@ -241,65 +241,94 @@ export default function signarticle() {
     if (selectedItem5.code == "ipa_jyutping" || selectedItem5.code == "jyutping_ipa") setSelectedItem5({ name: '粵拼', code: 'jyutping' })
   }, [selectedItem4])
 
+  const selectedItemsTemplate = (option, props) => {
+    if (option) {
+        return (
+            <div>
+                <div className="w-15rem md:w-max white-space-nowrap overflow-hidden text-overflow-ellipsis">{option.name}</div>
+            </div>
+        )
+    }
+
+    return (
+        <span>
+            {props.placeholder}
+        </span>
+    )
+  }
+
   return (
     <Layout home>
       <div>
         <div className="card">
           <h2>在線標註</h2>
-          <div className="formgroup-inline">
+          <div className="formgroup-inline flex flex-column md:flex-row align-items-left">
             <div className="field-radiobutton">
               輸入文本：
               <RadioButton inputId="item1" name="item" value="0" onChange={(e) => {setItem(e.value);setInputTextarea('0')}} checked={item === '0'} />
               <label htmlFor="item1">繁體</label>
               <RadioButton inputId="item2" name="item" value="1" onChange={(e) => {setItem(e.value);setInputTextarea('1')}} checked={item === '1'} />
               <label htmlFor="item2">簡體</label>
-              <Checkbox className="ml-6" inputId="output_useWordSeg" checked={checked2} onChange={e => setChecked2(e.checked)} />
+            </div>
+            <div className="field-checkbox">
+              <Checkbox inputId="output_useWordSeg" checked={checked2} onChange={e => setChecked2(e.checked)} />
               <label htmlFor="output_useWordSeg">啓用分詞系統和審詞表</label>
-              <Checkbox className="ml-2" inputId="output_useFilter" checked={checked3} onChange={e => setChecked3(e.checked)} />
+              <Checkbox inputId="output_useFilter" checked={checked3} onChange={e => setChecked3(e.checked)} />
               <label htmlFor="output_useFilter">過濾罕用音和口語音</label>
             </div>
           </div>
-          <InputTextarea value={value1} onChange={(e) => setValue1(e.target.value)} rows={12} cols={110} />
+          <InputTextarea value={value1} onChange={(e) => setValue1(e.target.value)} rows={12} style={{width: '-webkit-fill-available'}} />
         </div>
         <div className="card mt-2">
-        <div className="formgroup-inline">
+          <div className="formgroup-inline flex flex-column md:flex-row align-items-left">
             <div className="field-checkbox">
-              輸出結果：
+              <span>輸出結果：</span>
               <Dropdown value={selectedItem3} options={items3} onChange={(e) => setSelectedItem3(e.value)} optionLabel="name" placeholder="Select a Item" />
-              <span className="ml-2">標註格式：</span>
+            </div>
+            <div className="field-checkbox">
+              <span>標註格式：</span>
               <Dropdown value={selectedItem4} options={items4} onChange={(e) => setSelectedItem4(e.value)} optionLabel="name" placeholder="Select a Item" />
-              <span className="ml-2">標註方式：</span>
+            </div>
+            <div className="field-checkbox">
+              <span>標註方式：</span>
               <Dropdown value={selectedItem5} options={items5} onChange={(e) => setSelectedItem5(e.value)} optionLabel="name" placeholder="Select a Item" />
             </div>
           </div>
-          <div className={ selectedItem5.code=='jyutping' ? 'hidden' : 'formgroup-inline'}>
-            <div className="field-checkbox">
-              輸出 IPA 版本：
-              <Dropdown value={selectedItem1} options={items} onChange={(e) => setSelectedItem1(e.value)} optionLabel="name" placeholder="Select a Item" />
-              <Dropdown className="ml-2" value={selectedItem2} options={items2} onChange={(e) => setSelectedItem2(e.value)} optionLabel="name" placeholder="Select a Item" />
+          <div className={ selectedItem5.code=='jyutping' ? 'hidden' : 'formgroup-inline flex flex-column md:flex-row align-items-left'}>
+            <span className="mt-3">輸出 IPA 版本：</span>
+            <div className="field-checkbox m-1">
+              <Dropdown value={selectedItem1} options={items} valueTemplate={selectedItemsTemplate} onChange={(e) => setSelectedItem1(e.value)} optionLabel="name" placeholder="Select a Item" />
+            </div>
+            <div className="field-checkbox m-1">
+              <Dropdown value={selectedItem2} options={items2} onChange={(e) => setSelectedItem2(e.value)} optionLabel="name" placeholder="Select a Item" />
               <Checkbox className="ml-2" inputId="isSymbols" checked={checked} onChange={e => setChecked(e.checked)} />
               <label htmlFor="isSymbols">帶附加符</label>
             </div>
           </div>
-          <TabView activeIndex={activeIndex} onTabChange={(e) => setActiveIndex(e.index)}>
+          <TabView className="overflow-auto" activeIndex={activeIndex} onTabChange={(e) => setActiveIndex(e.index)}>
               <TabPanel header="顯示格式">
                   <div dangerouslySetInnerHTML={{ __html: value2 }} />
               </TabPanel>
               <TabPanel header="HTML格式">
-                  <InputTextarea value={value2} onChange={(e) => {setValue2(e.target.value);setCopied(false)}} rows={12} cols={105} />
+                  <InputTextarea value={value2} onChange={(e) => {setValue2(e.target.value);setCopied(false)}} rows={12} style={{width: '-webkit-fill-available'}} />
               </TabPanel>
           </TabView>
         </div>
-        <div className="card" style={{width: 820}}>
+        <div className="card noteDiv">
           <span>※ 標註結果最好經過人工校對</span><br/>
           <span>※ 分詞系統尚未完善，開發中</span>
         </div>
-        <div className="card mt-2 flex justify-content-end">
-          <Button label="清空" className="p-button-raised p-button-info p-button-text p-button-sm mr-2" onClick={() => {setValue1('');setValue2('')}} />
+        <style jsx>{`
+          div .noteDiv {
+            max-width: 820px
+          }
+        `}</style>
+        <div className="card flex justify-content-end">
+          <Button label="清空" className="p-button-raised p-button-info p-button-text p-button-sm m-2" onClick={() => {setValue1('');setValue2('')}} />
           <CopyToClipboard text={(activeIndex==0) ? value2.replaceAll('<br>','\n').replaceAll('<ruby>','').replaceAll('</ruby>','').replaceAll('<rp>','').replaceAll('</rp>','').replaceAll('<rt>','').replaceAll('</rt>','') : value2} onCopy={() => setCopied(true)}>
-            <Button label="複製" className="p-button-info p-button-sm mr-2" onClick={() => {setCopied(true);handleCopy()}} />
+            <Button label="複製" className="p-button-info p-button-sm m-2" onClick={() => {setCopied(true);handleCopy()}} />
           </CopyToClipboard>
-          <Button label="標註" className="p-button-sm" onClick={signArticle}/>
+          <Button label="標註" className="p-button-sm m-2" onClick={signArticle}/>
         </div>
       </div>
       <Toast ref={toast} />
