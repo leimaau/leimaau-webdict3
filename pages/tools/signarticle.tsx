@@ -266,9 +266,9 @@ export default function signarticle() {
             <div className="field-radiobutton">
               輸入文本：
               <RadioButton inputId="item1" name="item" value="0" onChange={(e) => {setItem(e.value);setInputTextarea('0')}} checked={item === '0'} />
-              <label htmlFor="item1">繁體</label>
+              <label className="mr-0 ml-1 mr-2" htmlFor="item1">繁體</label>
               <RadioButton inputId="item2" name="item" value="1" onChange={(e) => {setItem(e.value);setInputTextarea('1')}} checked={item === '1'} />
-              <label htmlFor="item2">簡體</label>
+              <label className="mr-0 ml-1 mr-2" htmlFor="item2">簡體</label>
             </div>
             <div className="field-checkbox">
               <Checkbox inputId="output_useWordSeg" checked={checked2} onChange={e => setChecked2(e.checked)} />

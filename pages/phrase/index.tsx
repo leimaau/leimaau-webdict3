@@ -5,7 +5,7 @@ import QButton from '../../components/qbutton'
 import { Messages } from 'primereact/messages'
 import styles from '../../styles/Home.module.css'
 
-export default function SearchIndex({ isConnected }) {
+export default function PhraseIndex({ isConnected }) {
   
   const msgs_db = useRef(null)
   
@@ -21,10 +21,10 @@ export default function SearchIndex({ isConnected }) {
     <Layout home>
 
       <h1 className={styles.title}>
-        單字查詢
+        詞彙查詢
       </h1>
       
-      <QButton search="" isConnected={isConnected} radioName="A" clearFunc={clearFunc} type="單字"/>
+      <QButton search="" isConnected={isConnected} radioName="A" clearFunc={clearFunc} type="詞彙"/>
 
       {isConnected ? (
         <span></span>

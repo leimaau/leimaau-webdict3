@@ -11,7 +11,7 @@ import { Checkbox } from 'primereact/checkbox'
 import { InputText } from 'primereact/inputtext'
 import { rowData_select, rowData_selecty } from '../lib/tabConfig'
 
-export default function BasicDialog({rowDataFlag, clearFunc}) {
+export default function BasicDialog({rowDataFlag, clearFunc, type}) {
     const rowDataSele = rowDataFlag=='1' ? rowData_select : rowData_selecty
     const customHeader = rowDataFlag=='1' ? "中古音查詢" : "早期粵音查詢"
     const noteDiv = rowDataFlag=='1' ? <span>※ 除了反切和釋文其他項必填<br/>※ 重紐項只對《廣韻》查詢較精確</span> : <span>※ 除了反切和釋文其他項必填</span>
@@ -171,7 +171,7 @@ export default function BasicDialog({rowDataFlag, clearFunc}) {
 
   return (
     <div>
-        <Button className={"p-button-outlined p-button-sm "+((router.pathname=='/') ? 'hidden' : '')} style={{ height: '2.25rem', color: '#30aa9f' }} label={customHeader} onClick={() => onClick('displayBasic', position)} />
+        <Button className={"p-button-outlined p-button-sm "+((router.pathname!='/' && type=='單字') ? '' : 'hidden')} style={{ height: '2.25rem', color: '#30aa9f' }} label={customHeader} onClick={() => onClick('displayBasic', position)} />
         <Dialog header={customHeader} visible={displayBasic} style={{ width: 'auto', overflow: 'auto' }} footer={renderFooter('displayBasic')} onHide={() => onHide('displayBasic')}>
             <div className="card" style={{width: 'max-content'}}>
                 <DataTable value={rowDataSele} size="small" headerColumnGroup={headerGroup} stripedRows showGridlines responsiveLayout="scroll">

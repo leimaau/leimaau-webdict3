@@ -5,6 +5,8 @@ import Tab_1856 from '../models/Tab_1856'
 import Tab_1941 from '../models/Tab_1941'
 import Tabs_n from '../models/Tabs_n'
 import Tabs_t from '../models/Tabs_t'
+import Tab_2021_phrase from '../models/Tab_2021_phrase'
+import Tab_2021_bw_phrase from '../models/Tab_2021_bw_phrase'
 import { jy_shengniu, jy_yunmu } from '../lib/tabConfig'
 
 const toObj = (result: any[], year: string) => {
@@ -145,4 +147,28 @@ const judgeFunc = (searchValue: string, searchType: string) => {
   } else {
     return searchType
   }
+}
+
+
+export async function getTabPhrase(searchValue: string, searchType: string) {
+  let query = {$and: []}
+  const judgeValue = judgeFunc(searchValue, searchType)
+  
+  if (judgeValue=='A1') { //詞彙
+    query['$and'] = [{$or: [{trad: {$regex: searchValue}},{simp: {$regex: searchValue}}]}]
+  } else if (judgeValue=='A2'||judgeValue=='A3') { //帶調拼音或無調拼音
+    query['$and'] = [{jyutping: {$regex: searchValue}}]
+  } else if (judgeValue=='B') { //釋義
+    query['$and'] = [{expl: {$regex: searchValue}}]
+  } else if (judgeValue=='C') { //附註
+    query['$and'] = [{note: {$regex: searchValue}}]
+  }
+
+  const result1 = await Tab_2021_phrase.find(query)
+  const result2 = await Tab_2021_bw_phrase.find(query)
+  
+  const tabData1 = toObj(result1, '')
+  const tabData2 = toObj(result2, '')
+
+  return [tabData1,tabData2]
 }

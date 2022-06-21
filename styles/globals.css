@@ -38,3 +38,12 @@ a {
 .picTabView .p-tabview-panels {
   overflow: auto;
 }
+
+.wordTabView .p-tabview-panel {
+  min-width: 500px;
+  max-width: 800px;
+}
+
+.wordTabView .p-tabview-panels {
+  overflow: auto;
+}

@@ -18,7 +18,7 @@ import PieChart from '../../components/pieChart'
 import MixBarChart from '../../components/mixBarChart'
 import FastLink from '../../components/fastLink'
 
-export default function Post({ isShort, isConnected, tabDataList, tabColList, reqWord, reqType }) {
+export default function Search({ isShort, isConnected, tabDataList, tabColList, reqWord, reqType }) {
 
   const msgs_db = useRef(null)
   const msgs_islong = useRef(null)
@@ -37,21 +37,21 @@ export default function Post({ isShort, isConnected, tabDataList, tabColList, re
   let tradRes = tradData.filter(item => item['simp'] == reqWord), tradLink = []
   if (tradRes.length != 0) {
     for (let i in tradRes[0].trad) {
-      tradLink.push(<span key={'charlink'+i}><Link key={'charlink'+i} href={'/search/'+tradRes[0].trad[i]+'?queryType=A'}><a>{tradRes[0].trad[i]}</a></Link><span>{(i!=(tradRes[0].trad.length-1).toString())?'」,「':''}</span></span>)
+      tradLink.push(<span key={'charlink'+i}><Link key={'charlink'+i} href={'/search/'+tradRes[0].trad[i]+'?queryType=A'}><a>{tradRes[0].trad[i]}</a></Link>{(i!=(tradRes[0].trad.length-1).toString())?'」,「':''}</span>)
     }
   }
 
   useEffect(() => {
     if(!isConnected) msgs_db.current.show({ severity: 'error', summary: '', detail: '數據庫連接失敗，請刷新或聯繫站長', sticky: true })
     if(!isShort) msgs_islong.current.show({ severity: 'error', summary: '', detail: '數據量超過1000條，請縮小查詢範圍', sticky: true })
-    if(tradRes.length != 0) msgs_trad.current.show({ severity: 'success', summary: '', content: (<React.Fragment>可能與之相關的繁體字：「{tradLink} 」</React.Fragment>), sticky: true })
+    if(tradRes.length != 0) msgs_trad.current.show({ severity: 'success', summary: '', content: (<React.Fragment><span className="flex flex-wrap">可能與之相關的繁體字：「{tradLink} 」</span></React.Fragment>), sticky: true })
   }, [isConnected, isShort, tradRes])
 
 
   return (
     <Layout home>
       
-    <QButton search={reqWord} isConnected={isConnected} radioName={reqType} clearFunc={clearFunc}/>
+    <QButton search={reqWord} isConnected={isConnected} radioName={reqType} clearFunc={clearFunc} type="單字"/>
     
     {(tradRes.length == 0) ? (
       <span></span>

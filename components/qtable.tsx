@@ -315,8 +315,8 @@ export default function QTable({tabDataList, tabColList, reqType}) {
     return (
         <div className={`${styles.grid} ${styles.table}`}>
             <span className={(reqType=='D'||reqType=='F1'||reqType=='F2') ? 'hidden': ''}>
-                <Divider align="right">
-                    <span className="p-tag">文獻音及參攷音</span>
+                <Divider align="right" type="dashed">
+                    <span className="p-tag"><i className="pi pi-bookmark"></i>文獻音及參攷音</span>
                 </Divider>
 
                 <h2>南寧白話<small>市區</small></h2>
@@ -334,8 +334,8 @@ export default function QTable({tabDataList, tabColList, reqType}) {
                 </div>
             </span>
 
-            <Divider align="right">
-                <span className="p-tag">理論音及歷史音</span>
+            <Divider align="right" type="dashed">
+                <span className="p-tag"><i className="pi pi-bookmark"></i>理論音及歷史音</span>
             </Divider>
 
             <span className={(reqType=='F2') ? 'hidden': ''}>

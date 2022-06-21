@@ -30,7 +30,7 @@ export default function Home({ isConnected }) {
         <code className={styles.code}> v3.0.1 </code>
       </p>
 
-      <QButton search="" isConnected={isConnected} radioName="A" clearFunc={clearFunc}/>
+      <QButton search="" isConnected={isConnected} radioName="A" clearFunc={clearFunc} type="單字"/>
 
       {isConnected ? (
         <span></span>

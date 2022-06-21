@@ -33,6 +33,11 @@ export default function Navbar() {
                   label: '參攷資料',
                   icon: 'pi pi-fw pi-align-justify',
                   command:()=>{ router.push('/posts/REFERENCES') }
+              },
+              {
+                  label: '本站所用參攷資料',
+                  icon: 'pi pi-fw pi-tag',
+                  command:()=>{ router.push('/posts/allbook') }
               }
           ]
       },
@@ -70,15 +75,17 @@ export default function Navbar() {
               {
                   label: '單字查詢',
                   icon: 'pi pi-fw pi-table',
-                  command:()=>{ router.push('/') }
+                  command:()=>{ router.push('/search') }
               },
               {
-                  label: '詞彙查詢(開發中)',
+                  label: '詞彙查詢',
                   icon: 'pi pi-fw pi-book',
+                  command:()=>{ router.push('/phrase') }
               },
               {
-                  label: '語法查詢(開發中)',
+                  label: '語法查詢',
                   icon: 'pi pi-fw pi-briefcase',
+                  command:()=>{ router.push('/grammar') }
               },
               {
                   label: '演化規律查詢(開發中)',
@@ -95,6 +102,11 @@ export default function Navbar() {
                   label: '快速查詢手冊',
                   icon: 'pi pi-fw pi-file-pdf',
                   command:()=>{ window.open('https://github.com/leimaau/Nanning-Dialect-Manual') }
+              },
+              {
+                  label: '快速查詢文章',
+                  icon: 'pi pi-fw pi-list',
+                  command:()=>{ router.push('/posts') }
               }
           ]
       },

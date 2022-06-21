@@ -6,8 +6,8 @@ export default function FastLink({textChar, reqType}) {
 
     return (
         <div className={`${styles.grid} ${((reqType=='A' && /^[A-Za-z0-9]*$/.test(textChar))||reqType=='A2'||reqType=='A3'||reqType=='B'||reqType=='C'||reqType=='D'||reqType=='F1'||reqType=='F2') ? 'hidden': ''}`}>
-            <Divider align="right">
-                <span className="p-tag">快速鏈接參攷</span>
+            <Divider align="right" type="dashed">
+                <span className="p-tag"><i className="pi pi-bookmark"></i>快速鏈接參攷</span>
             </Divider>
             <Panel header="快速鏈接">
                 <div className="card">

@@ -92,9 +92,9 @@ export default function transform() {
             <div className="field-radiobutton">
               轉換方式：
               <RadioButton inputId="item1" name="item" value="0" onChange={(e) => {setItem(e.value);setInputTextarea('0')}} checked={item === '0'} />
-              <label htmlFor="item1">粵拼轉 IPA</label>
+              <label className="mr-0 ml-1 mr-2" htmlFor="item1">粵拼轉 IPA</label>
               <RadioButton inputId="item2" name="item" value="1" onChange={(e) => {setItem(e.value);setInputTextarea('1')}} checked={item === '1'} />
-              <label htmlFor="item2">IPA 轉粵拼</label>
+              <label className="mr-0 ml-1 mr-2" htmlFor="item2">IPA 轉粵拼</label>
             </div>
           </div>
           <InputTextarea value={value1} onChange={(e) => setValue1(e.target.value)} rows={12} style={{width: '-webkit-fill-available'}} />
