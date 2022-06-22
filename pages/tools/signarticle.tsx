@@ -39,11 +39,13 @@ export default function signarticle() {
   const items = (selectedItem3.code == 'nnDict') ? [
     { name: '南寧白話-林亦、覃鳳餘《廣西南寧白話研究》版', code: 'nIPA' },
     { name: '南寧白話-楊煥典主編《廣西通誌·漢語方言誌》版', code: 'nIPA2' },
-    { name: '南寧白話-梁振仕《〈切韻〉系統與南寧音系》版', code: 'nIPA3' }
+    { name: '南寧白話-梁振仕《〈切韻〉系統與南寧音系》版', code: 'nIPA3' },
+    { name: '南寧白話-唐七元《廣西漢語方言概要》版', code: 'nIPA4' }
   ] : [
     { name: '南寧平話-楊煥典主編《廣西通誌·漢語方言誌》版', code: 'tIPA' },
     { name: '南寧平話-李榮主編《南寧平話詞典》版', code: 'tIPA2' },
-    { name: '南寧平話-余瑾《廣西平話研究》版', code: 'tIPA3' }
+    { name: '南寧平話-余瑾《廣西平話研究》版', code: 'tIPA3' },
+    { name: '南寧平話-唐七元《廣西漢語方言概要》版', code: 'tIPA4' }
   ]
 
   const items2 = [

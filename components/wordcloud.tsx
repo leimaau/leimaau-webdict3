@@ -14,12 +14,13 @@ export default function WordCloud ({dataList}) {
     const customRenderer = (tag, size, color) => {
       return (
         <span key={tag.value}>
-          <span key={tag.value} style={{ color }} className={`tag-cloud-tag-${tag.value.replaceAll('(','').replaceAll(')','')}`} data-pr-tooltip={`${tag.value} (${tag.count})`}>
+          <span key={tag.value} style={{ color }} className={`tag-cloud-tag-${tag.value.replaceAll('(','').replaceAll(')','')} hover:text-teal-800`} data-pr-tooltip={`${tag.value} (${tag.count})`}>
             {tag.value}{' '}
           </span>
           <style jsx>{`
             span .tag-cloud-tag-${tag.value.replaceAll('(','').replaceAll(')','')} {
               font-size: ${size}px;
+              font-weight: bold;
               cursor: pointer;
             }
           `}</style>

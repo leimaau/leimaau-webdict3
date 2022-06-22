@@ -30,9 +30,11 @@ export default function transform() {
     { name: '南寧白話-林亦、覃鳳餘《廣西南寧白話研究》版', code: 'nIPA' },
     { name: '南寧白話-楊煥典主編《廣西通誌·漢語方言誌》版', code: 'nIPA2' },
     { name: '南寧白話-梁振仕《〈切韻〉系統與南寧音系》版', code: 'nIPA3' },
+    { name: '南寧白話-唐七元《廣西漢語方言概要》版', code: 'nIPA4' },
     { name: '南寧平話-楊煥典主編《廣西通誌·漢語方言誌》版', code: 'tIPA' },
     { name: '南寧平話-李榮主編《南寧平話詞典》版', code: 'tIPA2' },
-    { name: '南寧平話-余瑾《廣西平話研究》版', code: 'tIPA3' }
+    { name: '南寧平話-余瑾《廣西平話研究》版', code: 'tIPA3' },
+    { name: '南寧平話-唐七元《廣西漢語方言概要》版', code: 'tIPA4' }
   ]
 
   const items2 = [
@@ -114,8 +116,8 @@ export default function transform() {
           <InputTextarea className="mt-2" value={value2} onChange={(e) => {setValue2(e.target.value);setCopied(false)}} rows={12} style={{width: '-webkit-fill-available'}} />
         </div>
         <div className="card noteDiv">
-          <span>※ 白(林 || 楊 || 梁)： tʃ/tʃʰ/ʃ、ʊŋ/ʊk/eŋ/ek || ts/tsʰ/s、oŋ/ok/eŋ/ek || tɕ/tɕʰ/ɕ、uŋ/uk/iŋ/ik</span><br />
-          <span>※ 平(楊 || 李 || 余)： tʃ/tʃʰ/ʃ、ȵwɐœɛ(無韻尾用e)、(i)ɐŋ/(i)ɐk、j-、wu(int)、jy(nt)、kʷ/kʷʰ(紙面爲kʰw)、下陽入24 || ts/tsʰ/s、ɲβəøe、əŋ/ək/iɐŋ/iɐk、∅i-、∅u(int)、∅y(nt)、ku/kʰu、上陽入23 || 楊版基礎上：無韻尾用ɛ，ȵ{'->'}ɲ，oŋ/ok{'->'}uŋ/uk，o{'->'}ɔ，iɐŋ/iɐk{'->'}ɛŋ/ɛk</span><br />
+          <span>※ 白(林 || 楊 || 梁 || 唐)： tʃ/tʃʰ/ʃ、ʊŋ/ʊk/eŋ/ek || ts/tsʰ/s、oŋ/ok/eŋ/ek || tɕ/tɕʰ/ɕ、uŋ/uk/iŋ/ik || tʃ/tʃʰ/ʃ、oŋ/ok/eŋ/ek、kʷ/kʷʰ{'->'}ku/kʰu</span><br />
+          <span>※ 平(楊 || 李 || 余 || 唐)： tʃ/tʃʰ/ʃ、ȵwɐœɛ(無韻尾用e)、(i)ɐŋ/(i)ɐk、j-、wu(int)、jy(nt)、kʷ/kʷʰ(紙面爲kʰw)、下陽入24 || ts/tsʰ/s、ɲβəøe、əŋ/ək/iɐŋ/iɐk、∅i-、∅u(int)、∅y(nt)、ku/kʰu、上陽入23 || 楊版基礎上：無韻尾用ɛ，ȵ{'->'}ɲ，oŋ/ok{'->'}uŋ/uk，o{'->'}ɔ，iɐŋ/iɐk{'->'}ɛŋ/ɛk || 楊版基礎上：kʷ/kʷʰ{'->'}ku/kʰu</span><br />
           <span>※ 統一用kʷ/kʷʰ，其他 kw/kwh、kʷ/kʰʷ、kʷ/kwʰ、kw/khw、kw/kʰw、ku/kʰu、kᵘ/kʰᵘ 等可根據需要手工替換</span>
         </div>
         <style jsx>{`
@@ -175,7 +177,7 @@ export function jyutping_to_ipa(inputstr: string, IPA_version: string, output_IP
     outputstr = outputstr.replace(/aa/g,"Aː");
     outputstr = outputstr.replace(/a/g,"ɐ");
 
-	if (IPA_version == 'tIPA2') {
+	if (IPA_version == 'tIPA2' || IPA_version == 'nIPA4' || IPA_version == 'tIPA4') {
 		outputstr = outputstr.replace(/gw/g,"Ku");
 		outputstr = outputstr.replace(/kw/g,"Kʰu");
 	} else {
@@ -193,7 +195,7 @@ export function jyutping_to_ipa(inputstr: string, IPA_version: string, output_IP
     outputstr = outputstr.replace(/sy(\d)/g,"Sɿ$1");
     outputstr = outputstr.replace(/ng/g,"ŋ");
 	
-    if (IPA_version == 'nIPA' || IPA_version == 'tIPA' || IPA_version == 'tIPA3'){
+  if (IPA_version == 'nIPA' || IPA_version == 'tIPA' || IPA_version == 'tIPA3' || IPA_version == 'nIPA4' || IPA_version == 'tIPA4'){
         outputstr = outputstr.replace(/s/g,"ʃ");
         outputstr = outputstr.replace(/z/g,"t͡ʃ");
         outputstr = outputstr.replace(/c/g,"t͡ʃʰ");
@@ -207,7 +209,7 @@ export function jyutping_to_ipa(inputstr: string, IPA_version: string, output_IP
         outputstr = outputstr.replace(/c/g,"t͡ɕʰ");
 	}
 	
-    if (IPA_version == 'tIPA'){
+  if (IPA_version == 'tIPA' || IPA_version == 'tIPA4'){
         outputstr = outputstr.replace(/ɔː|ɔ/g,"o");
         outputstr = outputstr.replace(/ʊ(k|ŋ)/g,"o$1");
         outputstr = outputstr.replace(/(ɛ|ɛː)(\d|i)/g,"e$2");
@@ -232,20 +234,20 @@ export function jyutping_to_ipa(inputstr: string, IPA_version: string, output_IP
         outputstr = outputstr.replace(/ɪ/g,"e");
         outputstr = outputstr.replace(/iɐ([ŋk])/g,"ɛː$1");
 	} else if(IPA_version == 'nIPA') {
-		outputstr = outputstr.replace(/ɪ/g,"e");
-	} else if(IPA_version == 'nIPA2') {
+		    outputstr = outputstr.replace(/ɪ/g,"e");
+	} else if(IPA_version == 'nIPA2' || IPA_version == 'nIPA4') {
         outputstr = outputstr.replace(/ʊ(k|ŋ)/g,"o$1");
-		outputstr = outputstr.replace(/ɪ/g,"e");
+		    outputstr = outputstr.replace(/ɪ/g,"e");
 	} else if(IPA_version == 'nIPA3')  {
-		outputstr = outputstr.replace(/ʊ(k|ŋ)/g,"u$1");
-		outputstr = outputstr.replace(/ɪ(k|ŋ)/g,"i$1");
+		    outputstr = outputstr.replace(/ʊ(k|ŋ)/g,"u$1");
+		    outputstr = outputstr.replace(/ɪ(k|ŋ)/g,"i$1");
 	}
 
-    if (IPA_version == 'nIPA' || IPA_version == 'nIPA2' || IPA_version == 'nIPA3' || IPA_version == 'gIPA'){
+  if (IPA_version == 'nIPA' || IPA_version == 'nIPA2' || IPA_version == 'nIPA3' || IPA_version == 'nIPA4' || IPA_version == 'gIPA'){
         outputstr = outputstr.replace(/([ptk])6/g,"$1̚˨");
         outputstr = outputstr.replace(/([ptk])3/g,"$1̚˧");
         outputstr = outputstr.replace(/([ptk])1/g,"$1̚˥");	
-	} else if(IPA_version == 'tIPA' || IPA_version == 'tIPA3') {
+	} else if(IPA_version == 'tIPA' || IPA_version == 'tIPA3' || IPA_version == 'tIPA4') {
         outputstr = outputstr.replace(/([ptk])3/g,"$1̚˥");
         outputstr = outputstr.replace(/([ptk])2/g,"$1̚˧");
         outputstr = outputstr.replace(/([ptk])5/g,"$1̚˨˦");
@@ -257,7 +259,7 @@ export function jyutping_to_ipa(inputstr: string, IPA_version: string, output_IP
         outputstr = outputstr.replace(/([ptk])6/g,"$1̚˨");
 	}
 	
-    if (IPA_version == 'nIPA' || IPA_version == 'nIPA2' || IPA_version == 'nIPA3'){
+    if (IPA_version == 'nIPA' || IPA_version == 'nIPA2' || IPA_version == 'nIPA3' || IPA_version == 'nIPA4'){
         outputstr = outputstr.replace(/1/g,"˥˥");
         outputstr = outputstr.replace(/2/g,"˧˥");
         outputstr = outputstr.replace(/3/g,"˧˧");
@@ -306,7 +308,7 @@ function ipa_to_jyutping(inputstr: string, IPA_version: string){
 	
 	outputstr = outputstr.replace(/ː/g,"").replace(/͡/g,"").replace(/̚/g,"");
 	
-    if (IPA_version == 'nIPA' || IPA_version == 'nIPA2' || IPA_version == 'nIPA3' || IPA_version == 'gIPA'){
+    if (IPA_version == 'nIPA' || IPA_version == 'nIPA2' || IPA_version == 'nIPA3' || IPA_version == 'nIPA4' || IPA_version == 'gIPA'){
         outputstr = outputstr.replace(/˨˩|21|²¹|˩˩|11|¹¹/g,"_4");
         outputstr = outputstr.replace(/˥˥|55|⁵⁵/g,"_1");
         outputstr = outputstr.replace(/˨˦|24|²⁴|˩˧|13|¹³/g,"_5");
@@ -379,7 +381,7 @@ function ipa_to_jyutping(inputstr: string, IPA_version: string){
     outputstr = outputstr.replace(/y/g,"yu");
     outputstr = outputstr.replace(/ɿ/g,"y");
 	
-	if (IPA_version == 'tIPA2') {
+	if (IPA_version == 'tIPA2' || IPA_version == 'tIPA4') {
 		outputstr = outputstr.replace(/∅u/g,"wu");
 		outputstr = outputstr.replace(/^([∅]|)([u])([int]|)(\d|)/g,"w$2$3$4");
 		outputstr = outputstr.replace(/∅y/g,"jy");

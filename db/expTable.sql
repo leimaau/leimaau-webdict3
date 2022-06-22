@@ -122,10 +122,10 @@ select '1937kk'||'	'||tab_id||'	'||trad||'	'||simp||'	'||sour||'	'||expl||'	'||n
 );
 
 spool E:\LocalRepository\github\leimaau-webdict3\db\tab_2021_grammar.csv
-select to_nchar('year	tab_id	trad	simp	ipa_s	ipa_t	jyutping	sour	expl	note') w from dual
+select to_nchar('year	tab_id	trad	jyutping	sour	expl	note') w from dual
 union all
 select * from (
-select '2021'||'	'||tab_id||'	'||trad||'	'||simp||'	'||ipa_s||'	'||ipa_t||'	'||jyutping||'	'||sour||'	'||expl||'	'||note from tab_nbdict_2021_grammar order by tab_id
+select '2021'||'	'||tab_id||'	'||trad||'	'||jyutping||'	'||sour||'	'||expl||'	'||note from tab_nbdict_2021_grammar order by tab_id
 );
 
 spool off

@@ -1,13 +1,12 @@
 import React, { useEffect, useRef } from 'react'
-import { getTabPhrase } from '../../lib/dao'
+import { getTabGrammar } from '../../lib/dao'
 import 'default-passive-events'
 import { TabView, TabPanel } from 'primereact/tabview'
-import { Divider } from 'primereact/divider'
-import { Card } from 'primereact/card'
 import { Messages } from 'primereact/messages'
 import Layout from '../../components/layout'
 import QButton from '../../components/qbutton'
 import FastLink from '../../components/fastLink'
+import WordCard from '../../components/wordcard'
 
 export default function Grammar({ isShort, isConnected, tabDataList, reqWord, reqType }) {
 
@@ -28,7 +27,7 @@ export default function Grammar({ isShort, isConnected, tabDataList, reqWord, re
   return (
     <Layout home>
       
-    <QButton search={reqWord} isConnected={isConnected} radioName={reqType} clearFunc={clearFunc} type="詞彙"/>
+    <QButton search={reqWord} isConnected={isConnected} radioName={reqType} clearFunc={clearFunc} type="句子"/>
 
     {isConnected ? (
       <span></span>
@@ -42,51 +41,18 @@ export default function Grammar({ isShort, isConnected, tabDataList, reqWord, re
       <Messages ref={msgs_islong}></Messages>
     )}
 
-    <TabView className={(reqType=='B'||reqType=='C'||reqType=='D'||reqType=='F1'||reqType=='F2') ? 'picTabView hidden overflow-auto': 'picTabView overflow-auto'}>
-        <TabPanel header="詞雲圖">
-            545
+    <TabView className={(reqType=='D'||reqType=='F1'||reqType=='F2') ? 'wordTabView hidden overflow-auto': 'wordTabView overflow-auto'}>
+        <TabPanel header="南寧白話(市區)">
+          <WordCard tabDataListArr={tabDataList[0]} dividerName="2021年Leimaau《語法零散資料匯總》(本站提供)"/>
+        </TabPanel>
+        <TabPanel header="南寧平話(亭子)">
+          <WordCard tabDataListArr={tabDataList[1]} dividerName="2021年Leimaau《語法零散資料匯總》(本站提供)"/>
+        </TabPanel>
+        <TabPanel header="語料或童謠">
+          <WordCard tabDataListArr={tabDataList[2]} dividerName="1937年邕寧縣修誌委員會《邕寧縣誌(第4冊)》"/>
+          <WordCard tabDataListArr={tabDataList[3]} dividerName="1937年廣西省政府總務處統計室《南寧社會概況》"/>
         </TabPanel>
     </TabView>
-
-    <h2 className={tabDataList[0].length==0 ? 'hidden': ''}>南寧白話<small>市區</small></h2>
-    <div className={tabDataList[0].length==0 ? 'hidden': ''}>
-        <Divider align="left" type="dashed">
-            <span className="p-tag p-tag-info"><i className="pi pi-book"></i>2021年Leimaau《詞彙零散資料匯總》(本站提供)</span>
-        </Divider>
-        {tabDataList[0].map(({ _id,trad,simp,ipa_s,ipa_t,jyutping,sour,expl,note }) => (
-          <div key={_id}>
-            <Divider align="left" type="dashed"/>
-            <Card title={trad+'('+simp+')'} subTitle={jyutping+' ['+ipa_t+']'} >
-                <p className="m-0" style={{lineHeight: '1.5'}}><strong>粵拼：</strong>{jyutping}</p>
-                <p className="m-0" style={{lineHeight: '1.5'}}><strong>統一IPA：</strong>[{ipa_t}]</p>
-                <p className="m-0" style={{lineHeight: '1.5'}}><strong>原文IPA：</strong>[{ipa_s}]</p>
-                <p className="m-0" style={{lineHeight: '1.5'}}><strong>來源：</strong>{sour}</p>
-                <p className="m-0" style={{lineHeight: '1.5'}}><strong>釋義：</strong>{expl}</p>
-                <p className={note==null ? 'hidden' : "m-0"} style={{lineHeight: '1.5'}}><strong>附註：</strong>{note}</p>
-            </Card>
-          </div>
-        ))}
-    </div>
-
-    <h2 className={tabDataList[1].length==0 ? 'hidden': ''}>南寧平話<small>亭子</small></h2>
-    <div className={tabDataList[1].length==0 ? 'hidden': ''}>
-        <Divider align="left" type="dashed">
-            <span className="p-tag p-tag-info"><i className="pi pi-book"></i>2021年Leimaau《詞彙零散資料匯總》(本站提供)</span>
-        </Divider>
-        {tabDataList[1].map(({ _id,trad,simp,ipa_s,ipa_t,jyutping,sour,expl,note }) => (
-          <div key={_id}>
-            <Divider align="left" type="dashed"/>
-            <Card title={trad+'('+simp+')'} subTitle={jyutping+' ['+ipa_t+']'} >
-                <p className="m-0" style={{lineHeight: '1.5'}}><strong>粵拼：</strong>{jyutping}</p>
-                <p className="m-0" style={{lineHeight: '1.5'}}><strong>統一IPA：</strong>[{ipa_t}]</p>
-                <p className="m-0" style={{lineHeight: '1.5'}}><strong>原文IPA：</strong>[{ipa_s}]</p>
-                <p className="m-0" style={{lineHeight: '1.5'}}><strong>來源：</strong>{sour}</p>
-                <p className="m-0" style={{lineHeight: '1.5'}}><strong>釋義：</strong>{expl}</p>
-                <p className={note==null ? 'hidden' : "m-0"} style={{lineHeight: '1.5'}}><strong>附註：</strong>{note}</p>
-            </Card>
-          </div>
-        ))}
-    </div>
 
     <FastLink textChar={reqWord} reqType={reqType}/>
 
@@ -100,7 +66,7 @@ export async function getServerSideProps(context) {
   const reqType = context.query.queryType
 
   try {
-    const tabDataList = await getTabPhrase(reqWord, reqType)
+    const tabDataList = await getTabGrammar(reqWord, reqType)
 
     let dataLenght = 0
     for (let i in tabDataList) {
@@ -123,5 +89,6 @@ export async function getServerSideProps(context) {
     }
   }
 }
+
 
 

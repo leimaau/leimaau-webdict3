@@ -7,6 +7,9 @@ import Tabs_n from '../models/Tabs_n'
 import Tabs_t from '../models/Tabs_t'
 import Tab_2021_phrase from '../models/Tab_2021_phrase'
 import Tab_2021_bw_phrase from '../models/Tab_2021_bw_phrase'
+import Tab_2021_grammar from '../models/Tab_2021_grammar'
+import Tab_1937jz_proverb from '../models/Tab_1937jz_proverb'
+import Tab_1937kk_proverb from '../models/Tab_1937kk_proverb'
 import { jy_shengniu, jy_yunmu } from '../lib/tabConfig'
 
 const toObj = (result: any[], year: string) => {
@@ -15,6 +18,10 @@ const toObj = (result: any[], year: string) => {
     tabDoc._id = tabDoc._id.toString()
     if (year!='') {
       tabDoc.year = year
+    } else if (tabDoc.year == '1937jz') {
+      tabDoc.simp = null
+    } else if (tabDoc.year == '1937kk') {
+      tabDoc.simp = null
     } else if (tabDoc.year == '1994') {
       tabDoc.sour = '1994年謝建猷《南寧白話同音字彙》' + tabDoc.sour
     } else if (tabDoc.year == '1997') {
@@ -171,4 +178,31 @@ export async function getTabPhrase(searchValue: string, searchType: string) {
   const tabData2 = toObj(result2, '')
 
   return [tabData1,tabData2]
+}
+
+export async function getTabGrammar(searchValue: string, searchType: string) {
+  let query = {$and: []}
+  const judgeValue = judgeFunc(searchValue, searchType)
+  
+  if (judgeValue=='A1') { //句子
+    query['$and'] = [{trad: {$regex: searchValue}}]
+  } else if (judgeValue=='A2'||judgeValue=='A3') { //帶調拼音或無調拼音
+    query['$and'] = [{jyutping: {$regex: searchValue}}]
+  } else if (judgeValue=='B') { //釋義
+    query['$and'] = [{expl: {$regex: searchValue}}]
+  } else if (judgeValue=='C') { //附註
+    query['$and'] = [{note: {$regex: searchValue}}]
+  }
+
+  const result1 = await Tab_2021_grammar.find(query)
+  const result2 = []
+  const result3 = await Tab_1937jz_proverb.find(query)
+  const result4 = await Tab_1937kk_proverb.find(query)
+
+  const tabData1 = toObj(result1, '')
+  const tabData2 = toObj(result2, '')
+  const tabData3 = toObj(result3, '')
+  const tabData4 = toObj(result4, '')
+
+  return [tabData1,tabData2,tabData3,tabData4]
 }

@@ -179,7 +179,7 @@ const sourBodyTemplate = (rowData) => {
 }
 
 // 䈎碼拼接函數
-const pageSplit = (sour, picType, linkaddr) => {
+export const pageSplit = (sour, picType, linkaddr) => {
     let index = sour.lastIndexOf('P')
     let value = sour.substring(index+1,sour.length)
 	let pageLink = []
