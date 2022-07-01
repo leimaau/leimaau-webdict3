@@ -1,6 +1,6 @@
 # 南寧話輸入方案
 
-本文選自本站作者狸貓的[《南寧白話小冊子》](https://leimaau.github.io/book/appendix1/appendix4.2.html)，更多詳細內容可前往參閱。
+本文選自本站作者狸貓的[《南寧白話小冊子》](https://leimaau.github.io/myBook/#/appendix1/appendix4.2)，更多詳細內容可前往參閱。
 
 ## RIME輸入法引擎
 

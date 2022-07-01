@@ -116,8 +116,8 @@ export default function transform() {
           <InputTextarea className="mt-2" value={value2} onChange={(e) => {setValue2(e.target.value);setCopied(false)}} rows={12} style={{width: '-webkit-fill-available'}} />
         </div>
         <div className="card noteDiv">
-          <span>※ 白(林 || 楊 || 梁 || 唐)： tʃ/tʃʰ/ʃ、ʊŋ/ʊk/eŋ/ek || ts/tsʰ/s、oŋ/ok/eŋ/ek || tɕ/tɕʰ/ɕ、uŋ/uk/iŋ/ik || tʃ/tʃʰ/ʃ、oŋ/ok/eŋ/ek、kʷ/kʷʰ{'->'}ku/kʰu</span><br />
-          <span>※ 平(楊 || 李 || 余 || 唐)： tʃ/tʃʰ/ʃ、ȵwɐœɛ(無韻尾用e)、(i)ɐŋ/(i)ɐk、j-、wu(int)、jy(nt)、kʷ/kʷʰ(紙面爲kʰw)、下陽入24 || ts/tsʰ/s、ɲβəøe、əŋ/ək/iɐŋ/iɐk、∅i-、∅u(int)、∅y(nt)、ku/kʰu、上陽入23 || 楊版基礎上：無韻尾用ɛ，ȵ{'->'}ɲ，oŋ/ok{'->'}uŋ/uk，o{'->'}ɔ，iɐŋ/iɐk{'->'}ɛŋ/ɛk || 楊版基礎上：kʷ/kʷʰ{'->'}ku/kʰu</span><br />
+          <span>※ 白(林 || 楊 || 梁 || 唐)： tʃ/tʃʰ/ʃ、ʊŋ/ʊk/eŋ/ek || ts/tsʰ/s、oŋ/ok/eŋ/ek || tɕ/tɕʰ/ɕ、uŋ/uk/iŋ/ik || tʃ/tʃʰ/ʃ、oŋ/ok/eŋ/ek、kʷ/kʷʰ{'->'}ku/kʰu</span><br/>
+          <span>※ 平(楊 || 李 || 余 || 唐)： tʃ/tʃʰ/ʃ、ȵwɐœɛ(無韻尾用e)、(i)ɐŋ/(i)ɐk、j-、wu(int)、jy(nt)、kʷ/kʷʰ(紙面爲kʰw)、下陽入24 || ts/tsʰ/s、ɲβəøe、əŋ/ək/iɐŋ/iɐk、∅i-、∅u(int)、∅y(nt)、ku/kʰu、上陽入23 || 楊版基礎上：無韻尾用ɛ，ȵ{'->'}ɲ，oŋ/ok{'->'}uŋ/uk，o{'->'}ɔ，iɐŋ/iɐk{'->'}ɛŋ/ɛk || 楊版基礎上：kʷ/kʷʰ{'->'}ku/kʰu</span><br/>
           <span>※ 統一用kʷ/kʷʰ，其他 kw/kwh、kʷ/kʰʷ、kʷ/kwʰ、kw/khw、kw/kʰw、ku/kʰu、kᵘ/kʰᵘ 等可根據需要手工替換</span>
         </div>
         <style jsx>{`

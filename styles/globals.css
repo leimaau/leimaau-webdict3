@@ -46,3 +46,27 @@ a {
 .wordTabView .p-tabview-panels {
   overflow: auto;
 }
+
+.treeselect-demo .p-treeselect {
+  width: 27rem;
+}
+
+.treeselect-demo .p-treeselect-label {
+  width: 15rem;
+}
+
+.treeselect-demo .p-treeselect-token {
+  width: 100px;
+}
+
+.treeselect-demo .p-treeselect-token-label {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 640px) {
+  .treeselect-demo .p-treeselect {
+      width: 100%;
+  }
+}

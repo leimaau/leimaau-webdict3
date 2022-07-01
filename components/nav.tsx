@@ -56,6 +56,11 @@ export default function Navbar() {
                   command:()=>{ router.push('/tools/signarticle') }
               },
               {
+                  label: '在線分詞',
+                  icon: 'pi pi-fw pi-th-large',
+                  command:()=>{ router.push('/tools/segarticle') }
+              },
+              {
                   label: '理論音推導',
                   icon: 'pi pi-fw pi-sitemap',
                   command:()=>{ router.push('/posts/infer') }
@@ -74,7 +79,7 @@ export default function Navbar() {
           items: [
               {
                   label: '單字查詢',
-                  icon: 'pi pi-fw pi-table',
+                  icon: 'pi pi-fw pi-chart-pie',
                   command:()=>{ router.push('/search') }
               },
               {
@@ -90,7 +95,7 @@ export default function Navbar() {
               {
                   label: '演化規律查詢(開發中)',
                   icon: 'pi pi-fw pi-chart-bar',
-
+                  //command:()=>{ router.push('/evolution') }
               }
           ]
       },

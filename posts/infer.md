@@ -236,7 +236,7 @@ function 韻母規則() {
     if (選項.文白讀 === '文讀') {
       return 'aan'; 
     } else {
-      return is('見溪疑曉匣母 或 山韻 幫母') ? 'en' : 'aan';
+      return is('見溪疑曉匣母 或 山韻 幫母 入聲') ? 'en' : 'aan';
     }
   }
   if (is('仙先韻 幫組')) return 'in';
@@ -544,7 +544,7 @@ when she='山' then
       case when niu in('見','溪','群','疑','曉','匣') then 'ut' when niu='影' then 'aat' else 'yut' end
     when yunbu in('鎋','黠') then
       case when niu='匣' and hu='開' then 'at' else 'aat' end
-      --case when deng='二' and niu in('見','溪','疑','曉','匣') then 'et' else 'aat' end
+      --case when (deng='二' and niu in('見','溪','疑','曉','匣')) or (yunbu='黠' and niu='幫') then 'et' else 'aat' end
     when yunbu in('屑','薛') and hu='開' then 'it'
     when yunbu in('屑','薛') and hu='合' and niu in('幫','滂','並','明') then 'it'
     when yunbu in('屑','薛') and hu='合' and niu not in('幫','滂','並','明') then 'yut' end
