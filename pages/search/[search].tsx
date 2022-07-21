@@ -62,21 +62,25 @@ export default function Search({ _isShort, isConnected, _tabDataList, tabColList
        }
     }).then(res => res.json())
 
-    let dataLenght = 0
-    for (let i in res.text) {
-      dataLenght += res.text[i].length
-    }
-
-    if (dataLenght < 1000) {
-      setIsShort(true)
-      setTabDataList(res.text)
-      setReqWord(valueFind)
-      setReqType(radioFind)
-    } else {
-      setIsShort(false)
-    }
+    useEffect(() => {
+      let dataLenght = 0
+      for (let i in res.text) {
+        dataLenght += res.text[i].length
+      }
+  
+      if (dataLenght < 1000) {
+        setIsShort(true)
+        setTabDataList(res.text)
+        setReqWord(valueFind)
+        setReqType(radioFind)
+      } else {
+        setIsShort(false)
+      }
+    }, [res])
 
   }
+
+
 
 
   return (
