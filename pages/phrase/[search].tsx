@@ -47,8 +47,13 @@ export default function Phrase({ _isShort, isConnected, _tabDataList, _reqWord, 
   const getTabContent = async (valueFind, radioFind, type) => {
     clearFunc()
 
-    const res = await fetch('/api/tabcontent/' + valueFind + '?reqType=' + radioFind + '&type=' + type)
-      .then(res => res.json())
+    const res = await fetch('/api/tabcontent/' + valueFind + '?reqType=' + radioFind + '&type=' + type, {
+      method: 'GET',
+      headers : { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+       }
+    }).then(res => res.json())
 
     let dataLenght = 0
     for (let i in res.text) {

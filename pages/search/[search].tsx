@@ -54,8 +54,13 @@ export default function Search({ _isShort, isConnected, _tabDataList, tabColList
   const getTabContent = async (valueFind, radioFind, type, fanqieValue = '', explValue = '') => {
     clearFunc()
 
-    const res = await fetch('/api/tabcontent/' + valueFind + '?reqType=' + radioFind + '&type=' + type + '&reqFanqie=' + fanqieValue + '&reqExpl=' + explValue)
-      .then(res => res.json())
+    const res = await fetch('/api/tabcontent/' + valueFind + '?reqType=' + radioFind + '&type=' + type + '&reqFanqie=' + fanqieValue + '&reqExpl=' + explValue, {
+      method: 'GET',
+      headers : { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+       }
+    }).then(res => res.json())
 
     let dataLenght = 0
     for (let i in res.text) {
