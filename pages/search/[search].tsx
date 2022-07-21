@@ -60,14 +60,14 @@ export default function Search({ _isShort, isConnected, _tabDataList, tabColList
         'Content-Type': 'application/json',
         'Accept': 'application/json'
        }
-    }).then(res => res.json())
-
-    useEffect(() => {
+    })
+    .then(res => res.json())
+    .then((res) => {
       let dataLenght = 0
       for (let i in res.text) {
         dataLenght += res.text[i].length
       }
-  
+
       if (dataLenght < 1000) {
         setIsShort(true)
         setTabDataList(res.text)
@@ -76,11 +76,9 @@ export default function Search({ _isShort, isConnected, _tabDataList, tabColList
       } else {
         setIsShort(false)
       }
-    }, [res])
+    })
 
   }
-
-
 
 
   return (

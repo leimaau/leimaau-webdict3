@@ -52,14 +52,14 @@ export default function Grammar({ _isShort, isConnected, _tabDataList, _reqWord,
         'Content-Type': 'application/json',
         'Accept': 'application/json'
        }
-    }).then(res => res.json())
-
-    useEffect(() => {
+    })
+    .then(res => res.json())
+    .then((res) => {
       let dataLenght = 0
       for (let i in res.text) {
         dataLenght += res.text[i].length
       }
-  
+
       if (dataLenght < 1000) {
         setIsShort(true)
         setTabDataList(res.text)
@@ -68,7 +68,7 @@ export default function Grammar({ _isShort, isConnected, _tabDataList, _reqWord,
       } else {
         setIsShort(false)
       }
-    }, [res])
+    })
 
   }
 
