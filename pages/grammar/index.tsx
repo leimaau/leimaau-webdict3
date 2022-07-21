@@ -17,6 +17,10 @@ export default function GrammarIndex({ isConnected }) {
     if(!isConnected) msgs_db.current.show({ severity: 'error', summary: '', detail: '數據庫連接失敗，請刷新或聯繫站長', sticky: true })
   }, [isConnected])
 
+  const getTabContent = async (valueFind, radioFind, type) => {
+    clearFunc()
+  }
+
   return (
     <Layout home>
 
@@ -24,7 +28,7 @@ export default function GrammarIndex({ isConnected }) {
         語法查詢
       </h1>
       
-      <QButton search="" isConnected={isConnected} radioName="A" clearFunc={clearFunc} type="句子"/>
+      <QButton search="" isConnected={isConnected} radioName="A" getContent={getTabContent} type="句子"/>
 
       {isConnected ? (
         <span></span>

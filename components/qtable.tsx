@@ -48,7 +48,7 @@ const wordBodyTemplate = (rowData) => {
             let hrefStr = '/search/' + charStr[i] + ((rowData.trad==undefined) ? '?queryType=A1' : '?queryType=E1')
             aLink.push(
             <Link key={'wordBodyTemplate'+hrefStr+i} href={hrefStr} scroll={false}>
-                <a className='hover:underline'>{charStr[i]}<span>{(i!=(charStr.length-1).toString())?'|':''}</span></a>
+                <a className='hover:underline' onClick={() => _getContent(charStr[i],(rowData.simp==undefined) ? 'A1' : 'E1', '單字')}>{charStr[i]}<span>{(i!=(charStr.length-1).toString())?'|':''}</span></a>
             </Link>)
         }
         return <>{aLink}</>
@@ -56,7 +56,7 @@ const wordBodyTemplate = (rowData) => {
         let hrefStr = '/search/' + word + ((rowData.trad==undefined) ? '?queryType=A1' : '?queryType=E1')
         return (
             <Link key={'wordBodyTemplate'+hrefStr} href={hrefStr} scroll={false}>
-              <a className='hover:underline'>{word}</a>
+              <a className='hover:underline' onClick={() => _getContent(word,(rowData.simp==undefined) ? 'A1' : 'E1', '單字')}>{word}</a>
             </Link>
         )
     }
@@ -67,7 +67,7 @@ const wordBodyTemplate2 = (rowData) => {
     let hrefStr = '/search/' + word + ((rowData.simp==undefined) ? '?queryType=A1' : '?queryType=E2')
     return (
         <Link key={'wordBodyTemplate2'+hrefStr} href={hrefStr} scroll={false}>
-          <a className='hover:underline'>{word}</a>
+          <a className='hover:underline' onClick={() => _getContent(word,(rowData.simp==undefined) ? 'A1' : 'E2', '單字')}>{word}</a>
         </Link>
     )
 }
@@ -77,7 +77,7 @@ const jpBodyTemplate = (rowData) => {
     let hrefStr = '/search/' + jyutping + '?queryType=A2'
     return (
         <Link key={'jpBodyTemplate'+hrefStr} href={hrefStr} scroll={false}>
-          <a className='hover:underline'>{jyutping}</a>
+          <a className='hover:underline' onClick={() => _getContent(jyutping,'A2', '單字')}>{jyutping}</a>
         </Link>
     )
 }
@@ -87,7 +87,7 @@ const jpBodyTemplate2 = (rowData) => {
     let hrefStr = '/search/' + jyutping + '?queryType=A2'
     return (
         <Link key={'jpBodyTemplate2'+hrefStr} href={hrefStr} scroll={false}>
-          <a className='hover:underline'>{jyutping}</a>
+          <a className='hover:underline' onClick={() => _getContent(jyutping,'A2', '單字')}>{jyutping}</a>
         </Link>
     )
 }
@@ -97,7 +97,7 @@ const fanqieBodyTemplate = (rowData) => {
     let hrefStr = '/search/' + fanqie + '?queryType=D'
     return (
         <Link key={'fanqieBodyTemplate'+hrefStr} href={hrefStr} scroll={false}>
-          <a className='hover:underline'>{fanqie}</a>
+          <a className='hover:underline' onClick={() => _getContent(fanqie,'D', '單字')}>{fanqie}</a>
         </Link>
     )
 }
@@ -190,8 +190,10 @@ export const pageSplit = (sour, picType, linkaddr) => {
     return <>{pageLink}</>
 }
 
+let _getContent = (valueFind, radioFind, type) => {}
 
-export default function QTable({tabDataList, tabColList, reqType}) {
+export default function QTable({tabDataList, tabColList, reqType, getContent}) {
+    _getContent = getContent
     const showtabData = tabDataList[0]
     const showtabData2 = tabDataList[1]
     const showtabData3 = tabDataList[2]

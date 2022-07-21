@@ -17,6 +17,10 @@ export default function PhraseIndex({ isConnected }) {
     if(!isConnected) msgs_db.current.show({ severity: 'error', summary: '', detail: '數據庫連接失敗，請刷新或聯繫站長', sticky: true })
   }, [isConnected])
 
+  const getTabContent = async (valueFind, radioFind, type) => {
+    clearFunc()
+  }
+
   return (
     <Layout home>
 
@@ -24,7 +28,7 @@ export default function PhraseIndex({ isConnected }) {
         詞彙查詢
       </h1>
       
-      <QButton search="" isConnected={isConnected} radioName="A" clearFunc={clearFunc} type="詞彙"/>
+      <QButton search="" isConnected={isConnected} radioName="A" getContent={getTabContent} type="詞彙"/>
 
       {isConnected ? (
         <span></span>

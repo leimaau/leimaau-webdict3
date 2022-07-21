@@ -11,7 +11,7 @@ import { Checkbox } from 'primereact/checkbox'
 import { InputText } from 'primereact/inputtext'
 import { rowData_select, rowData_selecty } from '../lib/tabConfig'
 
-export default function BasicDialog({rowDataFlag, clearFunc, type}) {
+export default function BasicDialog({rowDataFlag, getContent, type}) {
     const rowDataSele = rowDataFlag=='1' ? rowData_select : rowData_selecty
     const customHeader = rowDataFlag=='1' ? "中古音查詢" : "早期粵音查詢"
     const noteDiv = rowDataFlag=='1' ? <span>※ 除了反切和釋文其他項必填<br/>※ 重紐項只對《廣韻》查詢較精確</span> : <span>※ 除了反切和釋文其他項必填</span>
@@ -64,15 +64,16 @@ export default function BasicDialog({rowDataFlag, clearFunc, type}) {
     
     const querySubmit = () => {
         let searchStr = items.join('_')
-        if(searchStr!=='') router.push('/search/' + searchStr + '?queryType=' + (rowDataFlag=='1' ? 'F1' : 'F2') + (shows.indexOf('反切')!==-1 ? ('&reqFanqie=' + fanqieValue) : '') + (shows.indexOf('釋文')!==-1 ? ('&reqExpl=' + explValue) : ''))
-      }
+        //if(searchStr!=='') router.push('/search/' + searchStr + '?queryType=' + (rowDataFlag=='1' ? 'F1' : 'F2') + (shows.indexOf('反切')!==-1 ? ('&reqFanqie=' + fanqieValue) : '') + (shows.indexOf('釋文')!==-1 ? ('&reqExpl=' + explValue) : ''))
+        if(searchStr!=='') getContent(searchStr, rowDataFlag=='1' ? 'F1' : 'F2', shows.indexOf('反切')!==-1 ? fanqieValue : '', shows.indexOf('釋文')!==-1 ? explValue : '')
+    }
 
     const renderFooter = (name) => {
         return (
             <div className="card flex justify-content-end">
                 <Button label="關閉" icon="pi pi-times" onClick={() => onHide(name)} className="p-button-secondary p-button-sm" />
                 <ToggleButton checked={checkedAll} onChange={(e) => {setCheckedAll(e.value);handleCheckAll()}} onLabel="全選" offLabel="取消全選" onIcon="pi pi-filter" offIcon="pi pi-filter-slash" className="p-button-sm mr-2" aria-label="Confirmation" />
-                <Button label="查詢" icon="pi pi-check" onClick={()=>{querySubmit();clearFunc()}} autoFocus className="p-button-info p-button-sm" />
+                <Button label="查詢" icon="pi pi-check" onClick={()=>querySubmit()} autoFocus className="p-button-info p-button-sm" />
             </div>
         )
     }
@@ -171,7 +172,7 @@ export default function BasicDialog({rowDataFlag, clearFunc, type}) {
 
   return (
     <div>
-        <Button className={"p-button-outlined p-button-sm "+((router.pathname!='/' && type=='單字') ? '' : 'hidden')} style={{ height: '2.25rem', color: '#30aa9f' }} label={customHeader} onClick={() => onClick('displayBasic', position)} />
+        <Button className={"p-button-outlined p-button-sm "+((router.pathname!='/' && router.pathname!='/search' && type=='單字') ? '' : 'hidden')} style={{ height: '2.25rem', color: '#30aa9f' }} label={customHeader} onClick={() => onClick('displayBasic', position)} />
         <Dialog header={customHeader} visible={displayBasic} style={{ width: 'auto', overflow: 'auto' }} footer={renderFooter('displayBasic')} onHide={() => onHide('displayBasic')}>
             <div className="card" style={{width: 'max-content'}}>
                 <DataTable value={rowDataSele} size="small" headerColumnGroup={headerGroup} stripedRows showGridlines responsiveLayout="scroll">

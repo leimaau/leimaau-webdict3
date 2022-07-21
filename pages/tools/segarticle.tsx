@@ -95,7 +95,7 @@ export default function signarticle() {
         </div>
         <div className="card noteDiv">
           <span>※ 本功能使用開源的<a target="_blank" href="https://github.com/leizongmin/node-segment">中文分詞模塊</a>，本站添加適合繁體的新分詞詞典</span><br/>
-          <span>※ 詞性具體參攷源碼<a target="_blank" href="https://github.com/leizongmin/node-segment/blob/master/lib/POSTAG.js">此處</a>給的定義</span><br/>
+          <span>※ 詞性具體參攷<a target="_blank" href="https://github.com/leizongmin/node-segment/blob/master/lib/POSTAG.js">此處源碼</a>給的定義</span><br/>
           <span>※ 請勿對較長且無任何標點符號的文本分詞</span>
         </div>
         <style jsx>{`

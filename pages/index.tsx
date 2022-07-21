@@ -18,6 +18,10 @@ export default function Home({ isConnected }) {
     if(!isConnected) msgs_db.current.show({ severity: 'error', summary: 'Error', detail: '數據庫連接失敗，請刷新或聯繫站長', sticky: true })
   }, [isConnected])
 
+  const getTabContent = async (valueFind, radioFind, type) => {
+    clearFunc()
+  }
+
   return (
     <Layout home>
       
@@ -27,10 +31,10 @@ export default function Home({ isConnected }) {
 
       <p className={styles.description}>
         狸貓的在線辭典{' '}
-        <code className={styles.code}> v3.0.3 </code>
+        <code className={styles.code}> v3.1.0 </code>
       </p>
 
-      <QButton search="" isConnected={isConnected} radioName="A" clearFunc={clearFunc} type="單字"/>
+      <QButton search="" isConnected={isConnected} radioName="A" getContent={getTabContent} type="單字"/>
 
       {isConnected ? (
         <span></span>

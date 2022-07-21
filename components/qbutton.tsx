@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import BasicDialog from '../components/basicDialog'
 
-export default function QButton({search, isConnected, radioName, clearFunc, type}) {
+export default function QButton({search, isConnected, radioName, getContent, type}) {
 
   const router = useRouter()
   const [valueFind, setValueFind] = useState(search)
@@ -13,7 +13,7 @@ export default function QButton({search, isConnected, radioName, clearFunc, type
   const [loading, setLoading] = useState(false)
 
   const categories = [{name: type+'/拼音', key: 'A'}, {name: '釋義', key: 'B'}, {name: '附註', key: 'C'}]
-  const selValue = (radioFind=='A') ? 0 : ((radioFind=='B') ? 1 : (radioFind=='C') ? 2 : 1)
+  const selValue = (radioFind=='A') ? 0 : ((radioFind=='B') ? 1 : (radioFind=='C') ? 2 : 0)
   const [selectedCategory, setSelectedCategory] = useState(categories[selValue])
 
   useEffect(() => {
@@ -28,12 +28,13 @@ export default function QButton({search, isConnected, radioName, clearFunc, type
   }, [router.events])
 
   const querySubmit = () => {
-    clearFunc()
     if (!valueFind || valueFind=='*') {
       return false
-    } else {
+    } else if (router.pathname=='/' || router.pathname=='/search' || router.pathname=='/phrase' || router.pathname=='/grammar') {
       let pathstr = (type=='單字' ? '/search/' : (type=='詞彙' ? '/phrase/' : '/grammar/'))
       router.push(pathstr + valueFind.replace(/[\s|\~|`|\!|\@|\#|\$|\%|\^|\&|\*|\(|\)|\-|\_|\+|\=|\||\|\[|\]|\{|\}|\;|\:|\"|\'|\,|\<|\.|\>|\/|\?]/g,'') + '?queryType=' + radioFind)
+    } else {
+      getContent(valueFind, radioFind, type)
     }
   }
 
@@ -56,7 +57,7 @@ export default function QButton({search, isConnected, radioName, clearFunc, type
                 )
             })
             }</div>
-            <BasicDialog rowDataFlag="1" clearFunc={clearFunc} type={type}/><span className='ml-2'></span><BasicDialog rowDataFlag="2" clearFunc={clearFunc} type={type}/>
+            <BasicDialog rowDataFlag="1" getContent={getContent} type={type}/><span className='ml-2'></span><BasicDialog rowDataFlag="2" getContent={getContent} type={type}/>
             </div>
           </div>
         ) : (
@@ -76,7 +77,7 @@ export default function QButton({search, isConnected, radioName, clearFunc, type
                 )
             })
             }</div>
-            <BasicDialog rowDataFlag="1" clearFunc={clearFunc} type={type}/><span className='ml-2'></span><BasicDialog rowDataFlag="2" clearFunc={clearFunc} type={type}/>
+            <BasicDialog rowDataFlag="1" getContent={getContent} type={type}/><span className='ml-2'></span><BasicDialog rowDataFlag="2" getContent={getContent} type={type}/>
             </div>
           </div>
         )}

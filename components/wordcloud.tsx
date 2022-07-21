@@ -12,6 +12,7 @@ export default function WordCloud ({dataList}) {
     })
 
     const customRenderer = (tag, size, color) => {
+      if (size<20) size = 24
       return (
         <span key={tag.value}>
           <span key={tag.value} style={{ color }} className={`tag-cloud-tag-${tag.value.replaceAll('(','').replaceAll(')','')} hover:text-teal-800`} data-pr-tooltip={`${tag.value} (${tag.count})`}>

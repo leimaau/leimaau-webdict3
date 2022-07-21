@@ -20,7 +20,7 @@ export function calcYear (data) {
 }
 
 // 轉換對象
-const transObj = (inputData: any[], queryType: string, search: string) =>{
+const transObj = (inputData: any[], queryType: string, search: string) => {
 	if (inputData==undefined || queryType=='B' || queryType=='C' || queryType=='D' || queryType=='F1' || queryType=='F2') return {}
 	const searchPara = ((queryType=='A' || queryType=='A2') && /[a-z]/.test(search)) ? 'trad' : 'jyutping'
 	const obj_data = {}  // 對象：{粵拼 -> [多份數據年份]}
