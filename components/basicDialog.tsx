@@ -63,9 +63,10 @@ export default function BasicDialog({rowDataFlag, getContent, type}) {
     }
     
     const querySubmit = () => {
+        getContent('','','')  // clearFunc()
         let searchStr = items.join('_')
-        //if(searchStr!=='') router.push('/search/' + searchStr + '?queryType=' + (rowDataFlag=='1' ? 'F1' : 'F2') + (shows.indexOf('反切')!==-1 ? ('&reqFanqie=' + fanqieValue) : '') + (shows.indexOf('釋文')!==-1 ? ('&reqExpl=' + explValue) : ''))
-        if(searchStr!=='') getContent(searchStr, rowDataFlag=='1' ? 'F1' : 'F2', shows.indexOf('反切')!==-1 ? fanqieValue : '', shows.indexOf('釋文')!==-1 ? explValue : '')
+        if(searchStr!=='') router.push('/search/' + searchStr + '?queryType=' + (rowDataFlag=='1' ? 'F1' : 'F2') + (shows.indexOf('反切')!==-1 ? ('&reqFanqie=' + fanqieValue) : '') + (shows.indexOf('釋文')!==-1 ? ('&reqExpl=' + explValue) : ''))
+        //if(searchStr!=='') getContent(searchStr, rowDataFlag=='1' ? 'F1' : 'F2', shows.indexOf('反切')!==-1 ? fanqieValue : '', shows.indexOf('釋文')!==-1 ? explValue : '')
     }
 
     const renderFooter = (name) => {
@@ -172,7 +173,7 @@ export default function BasicDialog({rowDataFlag, getContent, type}) {
 
   return (
     <div>
-        <Button className={"p-button-outlined p-button-sm "+((router.pathname!='/' && router.pathname!='/search' && type=='單字') ? '' : 'hidden')} style={{ height: '2.25rem', color: '#30aa9f' }} label={customHeader} onClick={() => onClick('displayBasic', position)} />
+        <Button className={"p-button-outlined p-button-sm "+((router.pathname!='/' && type=='單字') ? '' : 'hidden')} style={{ height: '2.25rem', color: '#30aa9f' }} label={customHeader} onClick={() => onClick('displayBasic', position)} />
         <Dialog header={customHeader} visible={displayBasic} style={{ width: 'auto', overflow: 'auto' }} footer={renderFooter('displayBasic')} onHide={() => onHide('displayBasic')}>
             <div className="card" style={{width: 'max-content'}}>
                 <DataTable value={rowDataSele} size="small" headerColumnGroup={headerGroup} stripedRows showGridlines responsiveLayout="scroll">

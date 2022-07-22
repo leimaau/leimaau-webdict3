@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { getTabGrammar } from '../../lib/dao'
 import { tradData } from '../../lib/markdata/gzDict'
@@ -15,10 +15,15 @@ export default function Grammar({ _isShort, isConnected, _tabDataList, _reqWord,
   const msgs_db = useRef(null)
   const msgs_islong = useRef(null)
   const msgs_trad = useRef(null)
+  /*
   const [isShort, setIsShort] = useState(_isShort)
   const [tabDataList, setTabDataList] = useState(_tabDataList)
   const [reqWord, setReqWord] = useState(_reqWord)
-  const [reqType, setReqType] = useState(_reqType)
+  const [reqType, setReqType] = useState(_reqType)*/
+  const isShort = _isShort
+  const tabDataList = _tabDataList
+  const reqWord = _reqWord
+  const reqType = _reqType
   
   const clearFunc = () => {
     if (msgs_db.current!==null) msgs_db.current.clear()
@@ -33,7 +38,8 @@ export default function Grammar({ _isShort, isConnected, _tabDataList, _reqWord,
   let tradRes = tradData.filter(item => item['simp'] == reqWord), tradLink = []
   if (tradRes.length != 0) {
     for (let i in tradRes[0].trad) {
-      tradLink.push(<span key={'charlink' + i}><Link key={'charlink' + i} href={'/grammar/' + tradRes[0].trad[i] + '?queryType=' + reqType}><a onClick={() => getTabContent(tradRes[0].trad[i], reqType, '句子')}>{tradRes[0].trad[i]}</a></Link>{(i != (tradRes[0].trad.length - 1).toString()) ? '」,「' : ''}</span>)
+      //tradLink.push(<span key={'charlink' + i}><Link key={'charlink' + i} href={'/grammar/' + tradRes[0].trad[i] + '?queryType=' + reqType}><a onClick={() => getTabContent(tradRes[0].trad[i], reqType, '句子')}>{tradRes[0].trad[i]}</a></Link>{(i != (tradRes[0].trad.length - 1).toString()) ? '」,「' : ''}</span>)
+      tradLink.push(<span key={'charlink' + i}><Link key={'charlink' + i} href={'/grammar/' + tradRes[0].trad[i] + '?queryType=' + reqType}><a>{tradRes[0].trad[i]}</a></Link>{(i != (tradRes[0].trad.length - 1).toString()) ? '」,「' : ''}</span>)
     }
   }
 
@@ -45,6 +51,10 @@ export default function Grammar({ _isShort, isConnected, _tabDataList, _reqWord,
 
   const getTabContent = async (valueFind, radioFind, type) => {
     clearFunc()
+    /*
+    const dev = process.env.NODE_ENV !== 'production'
+
+    const server = dev ? 'http://localhost:3000' : 'https://leimaau-webdict3.vercel.app'
 
     const res = await fetch('/api/tabcontent/' + valueFind + '?reqType=' + radioFind + '&type=' + type, {
       method: 'GET',
@@ -52,23 +62,21 @@ export default function Grammar({ _isShort, isConnected, _tabDataList, _reqWord,
         'Content-Type': 'application/json',
         'Accept': 'application/json'
        }
-    })
-    .then(res => res.json())
-    .then((res) => {
-      let dataLenght = 0
-      for (let i in res.text) {
-        dataLenght += res.text[i].length
-      }
+    }).then(res => res.json())
 
-      if (dataLenght < 1000) {
-        setIsShort(true)
-        setTabDataList(res.text)
-        setReqWord(valueFind)
-        setReqType(radioFind)
-      } else {
-        setIsShort(false)
-      }
-    })
+    let dataLenght = 0
+    for (let i in res.text) {
+      dataLenght += res.text[i].length
+    }
+
+    if (dataLenght < 1000) {
+      setIsShort(true)
+      setTabDataList(await res.text)
+      setReqWord(valueFind)
+      setReqType(radioFind)
+    } else {
+      setIsShort(false)
+    }*/
 
   }
 
