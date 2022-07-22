@@ -25,13 +25,13 @@ export default function Navbar() {
                 label: '與廣州話的區別',
                 icon: 'pi pi-fw pi-align-center',
                 command:()=>{ router.push('/posts/section2.2') }
-            },
+              },
               {
                   separator: true
               },
               {
                   label: '參攷資料',
-                  icon: 'pi pi-fw pi-align-justify',
+                  icon: 'pi pi-fw pi-tags',
                   command:()=>{ router.push('/posts/REFERENCES') }
               },
               {
@@ -52,22 +52,25 @@ export default function Navbar() {
               },
               {
                   label: '在線標註',
-                  icon: 'pi pi-fw pi-user-edit',
+                  icon: 'pi pi-fw pi-th-large',
                   command:()=>{ router.push('/tools/signarticle') }
               },
               {
                   label: '在線分詞',
-                  icon: 'pi pi-fw pi-th-large',
+                  icon: 'pi pi-fw pi-sitemap',
                   command:()=>{ router.push('/tools/segarticle') }
               },
               {
+                  separator: true
+              },
+              {
                   label: '理論音推導',
-                  icon: 'pi pi-fw pi-sitemap',
+                  icon: 'pi pi-fw pi-compass',
                   command:()=>{ router.push('/posts/infer') }
               },
               {
                   label: '南寧話輸入方案',
-                  icon: 'pi pi-fw pi-desktop',
+                  icon: 'pi pi-fw pi-user-edit',
                   command:()=>{ router.push('/posts/appendix4.2') }
               },
 
@@ -105,12 +108,52 @@ export default function Navbar() {
           items: [
               {
                   label: '快速查詢手冊',
-                  icon: 'pi pi-fw pi-file-pdf',
-                  command:()=>{ window.open('https://github.com/leimaau/Nanning-Dialect-Manual') }
+                  icon: 'pi pi-fw pi-list',
+                  items:[
+                    {
+                       label:'Github庫',
+                       icon:'pi pi-fw pi-github',
+                       command:()=>{ window.open('https://github.com/leimaau/Nanning-Dialect-Manual') }
+                    },
+                    {
+                       label:'在線預覽PDF',
+                       icon:'pi pi-fw pi-download',
+                       items:[
+                        {
+                            label:'南寧白話單字音表',
+                            icon:'pi pi-fw pi-file-pdf',
+                            command:()=>{ window.open('/pdf/?counter=1') }
+                        },
+                        {
+                            label:'南寧白話同音字表',
+                            icon:'pi pi-fw pi-file-pdf',
+                            command:()=>{ window.open('/pdf/?counter=2') }
+                        },
+                        {
+                            label:'南寧平話單字音表',
+                            icon:'pi pi-fw pi-file-pdf',
+                            command:()=>{ window.open('/pdf/?counter=3') }
+                        },
+                        {
+                            label:'南寧平話同音字表',
+                            icon:'pi pi-fw pi-file-pdf',
+                            command:()=>{ window.open('/pdf/?counter=4') }
+                        },
+                        {
+                            separator: true
+                        },
+                        {
+                            label:'南寧話單字音文獻資料集（整理中）',
+                            icon:'pi pi-fw pi-file-pdf',
+                            //command:()=>{ window.open('/pdf/?counter=5') }
+                        },
+                       ]
+                    }
+                 ]
               },
               {
                   label: '快速查詢文章',
-                  icon: 'pi pi-fw pi-list',
+                  icon: 'pi pi-fw pi-calendar',
                   command:()=>{ router.push('/posts') }
               }
           ]
