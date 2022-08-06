@@ -9,9 +9,10 @@ import { ColumnGroup } from 'primereact/columngroup'
 import { Row } from 'primereact/row'
 import { Checkbox } from 'primereact/checkbox'
 import { InputText } from 'primereact/inputtext'
+import { BlockUI } from 'primereact/blockui'
 import { rowData_select, rowData_selecty } from '../lib/tabConfig'
 
-export default function BasicDialog({rowDataFlag, getContent, type}) {
+export default function BasicDialog({rowDataFlag, getContent, type, setLodFun}) {
     const rowDataSele = rowDataFlag=='1' ? rowData_select : rowData_selecty
     const customHeader = rowDataFlag=='1' ? "中古音查詢" : "早期粵音查詢"
     const noteDiv = rowDataFlag=='1' ? <span>※ 除了反切和釋文其他項必填<br/>※ 重紐項只對《廣韻》查詢較精確</span> : <span>※ 除了反切和釋文其他項必填</span>
@@ -23,6 +24,7 @@ export default function BasicDialog({rowDataFlag, getContent, type}) {
     const [items, setItems] = useState<any>([])
     const [fanqieValue, setFanqieValue] = useState('')
     const [explValue, setExplValue] = useState('')
+    const [blockedDocument, setBlockedDocument] = useState<boolean>(false)
 
     const router = useRouter()
 
@@ -62,11 +64,16 @@ export default function BasicDialog({rowDataFlag, getContent, type}) {
         }
     }
     
-    const querySubmit = () => {
-        getContent('','','')  // clearFunc()
+    const querySubmit = async (name) => {
+        setBlockedDocument(true)
+        setLodFun(true)
+        //getContent('','','')  // clearFunc()
         let searchStr = items.join('_')
-        if(searchStr!=='') router.push('/search/' + searchStr + '?queryType=' + (rowDataFlag=='1' ? 'F1' : 'F2') + (shows.indexOf('反切')!==-1 ? ('&reqFanqie=' + fanqieValue) : '') + (shows.indexOf('釋文')!==-1 ? ('&reqExpl=' + explValue) : ''))
-        //if(searchStr!=='') getContent(searchStr, rowDataFlag=='1' ? 'F1' : 'F2', shows.indexOf('反切')!==-1 ? fanqieValue : '', shows.indexOf('釋文')!==-1 ? explValue : '')
+        //if(searchStr!=='') router.push('/search/' + searchStr + '?queryType=' + (rowDataFlag=='1' ? 'F1' : 'F2') + (shows.indexOf('反切')!==-1 ? ('&reqFanqie=' + fanqieValue) : '') + (shows.indexOf('釋文')!==-1 ? ('&reqExpl=' + explValue) : ''))
+        if(searchStr!=='') await getContent(searchStr, rowDataFlag=='1' ? 'F1' : 'F2', '單字', shows.indexOf('反切')!==-1 ? fanqieValue : '', shows.indexOf('釋文')!==-1 ? explValue : '')
+        setLodFun(false)
+        onHide(name)
+        setBlockedDocument(false)
     }
 
     const renderFooter = (name) => {
@@ -74,7 +81,7 @@ export default function BasicDialog({rowDataFlag, getContent, type}) {
             <div className="card flex justify-content-end">
                 <Button label="關閉" icon="pi pi-times" onClick={() => onHide(name)} className="p-button-secondary p-button-sm" />
                 <ToggleButton checked={checkedAll} onChange={(e) => {setCheckedAll(e.value);handleCheckAll()}} onLabel="全選" offLabel="取消全選" onIcon="pi pi-filter" offIcon="pi pi-filter-slash" className="p-button-sm mr-2" aria-label="Confirmation" />
-                <Button label="查詢" icon="pi pi-check" onClick={()=>querySubmit()} autoFocus className="p-button-info p-button-sm" />
+                <Button label="查詢" icon="pi pi-check" onClick={()=>querySubmit(name)} autoFocus className="p-button-info p-button-sm" />
             </div>
         )
     }
@@ -173,7 +180,8 @@ export default function BasicDialog({rowDataFlag, getContent, type}) {
 
   return (
     <div>
-        <Button className={"p-button-outlined p-button-sm "+((router.pathname!='/' && type=='單字') ? '' : 'hidden')} style={{ height: '2.25rem', color: '#30aa9f' }} label={customHeader} onClick={() => onClick('displayBasic', position)} />
+        <BlockUI blocked={blockedDocument} fullScreen />
+        <Button className={"p-button-outlined p-button-sm "+((router.pathname!='/' && router.pathname!='/search' && type=='單字') ? '' : 'hidden')} style={{ height: '2.25rem', color: '#30aa9f' }} label={customHeader} onClick={() => onClick('displayBasic', position)} />
         <Dialog header={customHeader} visible={displayBasic} style={{ width: 'auto', overflow: 'auto' }} footer={renderFooter('displayBasic')} onHide={() => onHide('displayBasic')}>
             <div className="card" style={{width: 'max-content'}}>
                 <DataTable value={rowDataSele} size="small" headerColumnGroup={headerGroup} stripedRows showGridlines responsiveLayout="scroll">

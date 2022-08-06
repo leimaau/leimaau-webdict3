@@ -19,7 +19,7 @@ export default function WordCard ({tabDataListArr,dividerName}) {
                 <span className="p-tag p-tag-info"><i className="pi pi-book"></i>{dividerName}</span>
             </Divider>
             {tabDataListArr.map(({ year,_id,trad,simp,ipa_s,ipa_t,jyutping,sour,expl,note }) => (
-            <div key={_id}>
+            <div key={year+_id+trad+simp+jyutping+sour+expl+Math.random()}>
                 <Divider align="left" type="dashed"/>
                 <Card footer={<React.Fragment><p className={ipa_s==null ? "hidden" : "text-xs text-600"}>原文IPA：[{ipa_s}]</p><p className="text-xs text-600">來源：{(year!='1937jz'&&year!='1937kk') ? sour : sourStr(year,sour)}</p><p className={note==null ? "hidden" : "text-xs text-600"}>附註：{note}</p></React.Fragment>} title={trad+ (simp!=null? '('+simp+')' : '')} subTitle={(jyutping!=null? jyutping : '')+(ipa_t!=null? ' ['+ipa_t+']' : '')} >
                     <p className="m-0 text-cyan-500 hover:text-cyan-700" style={{lineHeight: '1.5'}}>{expl!=null ? expl : ''}</p>

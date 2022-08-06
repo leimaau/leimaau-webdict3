@@ -17,28 +17,32 @@ export default function QButton({search, isConnected, radioName, getContent, typ
   const [selectedCategory, setSelectedCategory] = useState(categories[selValue])
 
   useEffect(() => {
-    router.events.on('routeChangeStart', () => setLoading(true))
-    router.events.on('routeChangeComplete', () => setLoading(false))
-    router.events.on('routeChangeError', () => setLoading(false))
+    router.events.on('routeChangeStart', () => {setLoading(true)})
+    router.events.on('routeChangeComplete', () => {setLoading(false)})
+    router.events.on('routeChangeError', () => {setLoading(false)})
     return () => {
-      router.events.off('routeChangeStart', () => setLoading(true))
-      router.events.off('routeChangeComplete', () => setLoading(false))
-      router.events.off('routeChangeError', () => setLoading(false))
+      router.events.off('routeChangeStart', () => {setLoading(true)})
+      router.events.off('routeChangeComplete', () => {setLoading(false)})
+      router.events.off('routeChangeError', () => {setLoading(false)})
     }
   }, [router.events])
 
-  const querySubmit = () => {
+  const querySubmit = async () => {
     if (!valueFind || valueFind=='*') {
       return false
     } else if (router.pathname=='/' || router.pathname=='/search' || router.pathname=='/phrase' || router.pathname=='/grammar') {
       let pathstr = (type=='單字' ? '/search/' : (type=='詞彙' ? '/phrase/' : '/grammar/'))
       router.push(pathstr + valueFind.replace(/[\s|\~|`|\!|\@|\#|\$|\%|\^|\&|\*|\(|\)|\-|\_|\+|\=|\||\|\[|\]|\{|\}|\;|\:|\"|\'|\,|\<|\.|\>|\/|\?]/g,'') + '?queryType=' + radioFind)
     } else {
-      getContent(valueFind, radioFind, type)  // clearFunc()
-      let pathstr = (type=='單字' ? '/search/' : (type=='詞彙' ? '/phrase/' : '/grammar/'))
-      router.push(pathstr + valueFind.replace(/[\s|\~|`|\!|\@|\#|\$|\%|\^|\&|\*|\(|\)|\-|\_|\+|\=|\||\|\[|\]|\{|\}|\;|\:|\"|\'|\,|\<|\.|\>|\/|\?]/g,'') + '?queryType=' + radioFind)
+      setLoading(true)
+      await getContent(valueFind, radioFind, type)
+      setLoading(false)
+      //let pathstr = (type=='單字' ? '/search/' : (type=='詞彙' ? '/phrase/' : '/grammar/'))
+      //router.push(pathstr + valueFind.replace(/[\s|\~|`|\!|\@|\#|\$|\%|\^|\&|\*|\(|\)|\-|\_|\+|\=|\||\|\[|\]|\{|\}|\;|\:|\"|\'|\,|\<|\.|\>|\/|\?]/g,'') + '?queryType=' + radioFind)
     }
   }
+
+  const setLodFun = (v: boolean) => {setLoading(v)}
 
   return (
     <div>
@@ -46,7 +50,7 @@ export default function QButton({search, isConnected, radioName, getContent, typ
           <div>
             <div className="p-inputgroup">
               <InputText value={valueFind} onChange={(e) => setValueFind(e.target.value)} onKeyDown={(e) => {if(e.key === 'Enter') querySubmit()}} placeholder="Keyword"/>
-              <Button label="查詢" icon="pi pi-search" className="p-button" onClick={()=>{querySubmit()}}/>
+              <Button label="查詢" icon="pi pi-search" className="p-button" onClick={()=>querySubmit()}/>
             </div>
             <div className="formgroup-inline pt-2">
             <div className="field-radiobutton pt-2">
@@ -59,14 +63,14 @@ export default function QButton({search, isConnected, radioName, getContent, typ
                 )
             })
             }</div>
-            <BasicDialog rowDataFlag="1" getContent={getContent} type={type}/><span className='ml-2'></span><BasicDialog rowDataFlag="2" getContent={getContent} type={type}/>
+            <BasicDialog rowDataFlag="1" getContent={getContent} type={type} setLodFun={setLodFun}/><span className='ml-2'></span><BasicDialog rowDataFlag="2" getContent={getContent} type={type} setLodFun={setLodFun}/>
             </div>
           </div>
         ) : (
           <div>
             <div className="p-inputgroup">
               <InputText value={valueFind} onChange={(e) => setValueFind(e.target.value)} onKeyDown={(e) => {if(e.key === 'Enter') querySubmit()}} placeholder="Keyword"/>
-              <Button label="查詢" icon="pi pi-search" className="p-button" onClick={()=>{querySubmit()}} loading />
+              <Button label="查詢" icon="pi pi-search" className="p-button" onClick={()=>querySubmit()} loading />
             </div>
             <div className="formgroup-inline pt-2">
             <div className="field-radiobutton pt-2">
@@ -79,7 +83,7 @@ export default function QButton({search, isConnected, radioName, getContent, typ
                 )
             })
             }</div>
-            <BasicDialog rowDataFlag="1" getContent={getContent} type={type}/><span className='ml-2'></span><BasicDialog rowDataFlag="2" getContent={getContent} type={type}/>
+            <BasicDialog rowDataFlag="1" getContent={getContent} type={type} setLodFun={setLodFun}/><span className='ml-2'></span><BasicDialog rowDataFlag="2" getContent={getContent} type={type} setLodFun={setLodFun}/>
             </div>
           </div>
         )}

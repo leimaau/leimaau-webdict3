@@ -1,10 +1,12 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { getTabPhrase } from '../../lib/dao'
+import { getTabPhrase2 } from '../../lib/dealDataFunc'
 import { tradData } from '../../lib/markdata/gzDict'
 import 'default-passive-events'
 import { TabView, TabPanel } from 'primereact/tabview'
 import { Messages } from 'primereact/messages'
+import { BlockUI } from 'primereact/blockui'
 import Layout from '../../components/layout'
 import QButton from '../../components/qbutton'
 import FastLink from '../../components/fastLink'
@@ -16,15 +18,18 @@ export default function Phrase({ _isShort, isConnected, _tabDataList, _reqWord, 
   const msgs_db = useRef(null)
   const msgs_islong = useRef(null)
   const msgs_trad = useRef(null)
-  /*
+  const [blockedDocument, setBlockedDocument] = useState<boolean>(false)
+  
   const [isShort, setIsShort] = useState(_isShort)
   const [tabDataList, setTabDataList] = useState(_tabDataList)
   const [reqWord, setReqWord] = useState(_reqWord)
-  const [reqType, setReqType] = useState(_reqType)*/
+  const [reqType, setReqType] = useState(_reqType)
+  /*
   const isShort = _isShort
   const tabDataList = _tabDataList
   const reqWord = _reqWord
   const reqType = _reqType
+  */
 
   const clearFunc = () => {
     if (msgs_db.current !== null) msgs_db.current.clear()
@@ -39,8 +44,8 @@ export default function Phrase({ _isShort, isConnected, _tabDataList, _reqWord, 
   let tradRes = tradData.filter(item => item['simp'] == reqWord), tradLink = []
   if (tradRes.length != 0) {
     for (let i in tradRes[0].trad) {
-      //tradLink.push(<span key={'charlink' + i}><Link key={'charlink' + i} href={'/phrase/' + tradRes[0].trad[i] + '?queryType=' + reqType}><a onClick={() => getTabContent(tradRes[0].trad[i], reqType, '詞彙')}>{tradRes[0].trad[i]}</a></Link>{(i != (tradRes[0].trad.length - 1).toString()) ? '」,「' : ''}</span>)
-      tradLink.push(<span key={'charlink' + i}><Link key={'charlink' + i} href={'/phrase/' + tradRes[0].trad[i] + '?queryType=' + reqType}><a>{tradRes[0].trad[i]}</a></Link>{(i != (tradRes[0].trad.length - 1).toString()) ? '」,「' : ''}</span>)
+      tradLink.push(<span key={'charlink' + i}><Link key={'charlink' + i} href='###'><a onClick={() => getTabContent(tradRes[0].trad[i], reqType, '詞彙')}>{tradRes[0].trad[i]}</a></Link>{(i != (tradRes[0].trad.length - 1).toString()) ? '」,「' : ''}</span>)
+      //tradLink.push(<span key={'charlink' + i}><Link key={'charlink' + i} href={'/phrase/' + tradRes[0].trad[i] + '?queryType=' + reqType}><a>{tradRes[0].trad[i]}</a></Link>{(i != (tradRes[0].trad.length - 1).toString()) ? '」,「' : ''}</span>)
     }
   }
 
@@ -51,7 +56,27 @@ export default function Phrase({ _isShort, isConnected, _tabDataList, _reqWord, 
   }, [isConnected, isShort, tradRes])
 
   const getTabContent = async (valueFind, radioFind, type) => {
+    
+    setBlockedDocument(true)
+    const newList = await getTabPhrase2(valueFind, radioFind)
+    setBlockedDocument(false)
+    
     clearFunc()
+    
+    let dataLenght = 0
+    for (let i in newList) {
+      dataLenght += newList[i].length
+    }
+
+    if (dataLenght < 1000) {
+      setIsShort(true)
+      setTabDataList(newList)
+      setReqWord(valueFind)
+      setReqType(radioFind)
+    } else {
+      setIsShort(false)
+    }
+
     /*
     const dev = process.env.NODE_ENV !== 'production'
 
@@ -84,6 +109,8 @@ export default function Phrase({ _isShort, isConnected, _tabDataList, _reqWord, 
 
   return (
     <Layout home>
+
+      <BlockUI blocked={blockedDocument} fullScreen />
 
       <QButton search={reqWord} isConnected={isConnected} radioName={reqType} getContent={getTabContent} type="詞彙" />
 
