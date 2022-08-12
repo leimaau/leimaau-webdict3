@@ -560,6 +560,8 @@
 偉韙煒瑋緯 |	偉韙煒瑋緯wai2/wɐi˧˥/[於貴切] |	偉韙煒瑋緯wai5/wɐi˩˧/
 卉 |	卉wai2/wɐi˧˥/ |	卉wai2/wɐi˧˥/、卉wai5/wɐi˩˧/
 葦 |	葦wai4/wɐi˨˩/[於非切] |	葦wai5/wɐi˩˧/
+韋 |	韋wai4/wɐi˨˩/ |	韋wai4/wɐi˨˩/、韋wai5/wɐi˩˧/
+儲 |	儲cyu4/t͡ʃʰyː˨˩/ |	儲cyu5/t͡sʰyː˩˧/
 挺 |	挺ting2/tʰeŋ˧˥/[他頂切] |	挺ting5/tʰeŋ˩˧/
 斂 |	斂lim2/liːm˧˥/[力驗切] | 斂lim5/liːm˩˧/
 殮 |	殮lim6/liːm˨/、殮lim2/liːm˧˥/[力驗切] |	殮lim6/liːm˨/
@@ -583,7 +585,6 @@
 詠泳潁 |	詠泳潁wing5/weŋ˨˦/ |	詠泳潁wing6/weŋ˨/
 狒拂弗 |	狒拂弗fat1/fɐt̚˥/、狒拂弗fat6/fɐt̚˨/ |	狒拂弗fat1/fɐt̚˥/
 猝 |	猝cyut1/t͡ʃʰyːt̚˥/ |	猝cyut3/t͡sʰyːt̚˧/
-儲 |	儲cyu4/t͡ʃʰyː˨˩/ |	儲cyu5/t͡sʰyː˩˧/
 沼 |	沼ziu1/t͡ʃiːu˥/ |	沼ziu2/t͡siːu˧˥/
 詔 |	詔ziu1/t͡ʃiːu˥/ |	詔ziu3/t͡siːu˧/
 忘 |	忘mong6/mɔːŋ˨/、忘mong4/mɔːŋ˨˩/ |	忘mong4/mɔːŋ˨˩/

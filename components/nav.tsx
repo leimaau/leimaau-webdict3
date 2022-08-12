@@ -143,7 +143,7 @@ export default function Navbar() {
                             separator: true
                         },
                         {
-                            label:'南寧話單字音文獻資料集（整理中）',
+                            label:'南寧話單字音文獻資料彙編（整理中）',
                             icon:'pi pi-fw pi-file-pdf',
                             //command:()=>{ window.open('/pdf/?counter=5') }
                         },

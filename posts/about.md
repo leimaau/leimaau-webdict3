@@ -6,7 +6,7 @@ Leimaau（狸貓），91年南寧老城區人，愛好音樂、看劇、遊戲�
 
 ## 本站
 
-本站叫「狸貓的在線辭典 3.0 版」(Leimaau's Webdict 3.0)，於2022年05月22日至2022年06月12日開發，2022年06月13日正式上線，是一個私人在線辭典，旨在記錄本人的學習筆記。其是 2.0 版 [Leimaau's Webdict 2](https://leimaau.github.io/leimaau-webdict2/) 和 1.0 版 [Leimaau's Webdict](https://leimaau.github.io/leimaau-webdict/) 的延續。舊版的一些功能和內容過於繁雜，新版增刪了部分功能和查詢內容，使其更加簡單易用。程序的開發和製作由 Leimaau 負責，因爲架構簡單，不打算用複雜工程的方式製作，所用服務器很小，流量有限制，所以使用時偶爾會有 504 的錯誤很正常，刷新或稍後刷新即可。
+本站叫「狸貓的在線辭典 3.0 版」(Leimaau's Webdict 3.0)，於2022年05月22日至2022年06月12日開發，2022年06月13日正式上線，是一個私人在線辭典，旨在記錄本人的學習筆記。其是 2.0 版 [Leimaau's Webdict 2](https://leimaau.github.io/leimaau-webdict2/) 和 1.0 版 [Leimaau's Webdict](https://leimaau.github.io/leimaau-webdict/) 的延續。舊版的一些功能和內容過於繁雜，新版增刪了部分功能和查詢內容，使其更加簡單易用。程序的開發和製作由 Leimaau 負責，因爲架構簡單，不打算用複雜工程的方式製作，所用服務器很小，流量有限制，所以使用時偶爾會有 504 的錯誤很正常，重新回到主葉即可。
 
 ### 數值設定
 

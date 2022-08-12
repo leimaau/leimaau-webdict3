@@ -35,7 +35,7 @@ export default function QButton({search, isConnected, radioName, getContent, typ
       router.push(pathstr + valueFind.replace(/[\s|\~|`|\!|\@|\#|\$|\%|\^|\&|\*|\(|\)|\-|\_|\+|\=|\||\|\[|\]|\{|\}|\;|\:|\"|\'|\,|\<|\.|\>|\/|\?]/g,'') + '?queryType=' + radioFind)
     } else {
       setLoading(true)
-      await getContent(valueFind, radioFind, type)
+      await getContent(valueFind.replace(/[\s|\~|`|\!|\@|\#|\$|\%|\^|\&|\*|\(|\)|\-|\_|\+|\=|\||\|\[|\]|\{|\}|\;|\:|\"|\'|\,|\<|\.|\>|\/|\?]/g,''), radioFind, type)
       setLoading(false)
       //let pathstr = (type=='單字' ? '/search/' : (type=='詞彙' ? '/phrase/' : '/grammar/'))
       //router.push(pathstr + valueFind.replace(/[\s|\~|`|\!|\@|\#|\$|\%|\^|\&|\*|\(|\)|\-|\_|\+|\=|\||\|\[|\]|\{|\}|\;|\:|\"|\'|\,|\<|\.|\>|\/|\?]/g,'') + '?queryType=' + radioFind)

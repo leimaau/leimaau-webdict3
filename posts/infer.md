@@ -384,11 +384,11 @@ return 聲母 + 韻母 + 聲調;
 create or replace view v_nbdict_202109_gy as
 select tab_id,word trad,
 case when niu='幫' then
-  case when (yunbu='東' and deng='三') or yunbu in('鍾','微','廢','虞','文','元','陽','尤','凡','燭','物','月','藥','乏') then 'f' else 'b' end
+  case when (she='通' and hu='合' and deng='三' and tone ='入') or (yunbu='東' and deng='三') or yunbu in('鍾','微','廢','虞','文','元','陽','尤','凡','燭','物','月','藥','乏') then 'f' else 'b' end
 when niu='滂' then
-  case when (yunbu='東' and deng='三') or yunbu in('鍾','微','廢','虞','文','元','陽','尤','凡','燭','物','月','藥','乏') then 'f' else 'p' end
+  case when (she='通' and hu='合' and deng='三' and tone ='入') or (yunbu='東' and deng='三') or yunbu in('鍾','微','廢','虞','文','元','陽','尤','凡','燭','物','月','藥','乏') then 'f' else 'p' end
 when niu='並' then
-  case when (yunbu='東' and deng='三') or yunbu in('鍾','微','廢','虞','文','元','陽','尤','凡','燭','物','月','藥','乏') then 'f'
+  case when (she='通' and hu='合' and deng='三' and tone ='入') or (yunbu='東' and deng='三') or yunbu in('鍾','微','廢','虞','文','元','陽','尤','凡','燭','物','月','藥','乏') then 'f'
   else case when tone='平' then 'p' else 'b' end end
 when niu='明' then 'm'
 when niu='端' then 'd'
@@ -996,11 +996,11 @@ return 聲母 + 韻母 + 聲調;
 create or replace view v_nbdict_202109_gy_bw as
 select tab_id,word trad,
 case when niu='幫' then
-  case when (yunbu='東' and deng='三') or yunbu in('鍾','微','廢','虞','文','元','陽','尤','凡','燭','物','月','藥','乏') then 'f' else 'b' end
+  case when (she='通' and hu='合' and deng='三' and tone ='入') or (yunbu='東' and deng='三') or yunbu in('鍾','微','廢','虞','文','元','陽','尤','凡','燭','物','月','藥','乏') then 'f' else 'b' end
 when niu='滂' then
-  case when (yunbu='東' and deng='三') or yunbu in('鍾','微','廢','虞','文','元','陽','尤','凡','燭','物','月','藥','乏') then 'f' else 'p' end
+  case when (she='通' and hu='合' and deng='三' and tone ='入') or (yunbu='東' and deng='三') or yunbu in('鍾','微','廢','虞','文','元','陽','尤','凡','燭','物','月','藥','乏') then 'f' else 'p' end
 when niu='並' then
-  case when (yunbu='東' and deng='三') or yunbu in('鍾','微','廢','虞','文','元','陽','尤','凡','燭','物','月','藥','乏') then 'f' else 'b' end
+  case when (she='通' and hu='合' and deng='三' and tone ='入') or (yunbu='東' and deng='三') or yunbu in('鍾','微','廢','虞','文','元','陽','尤','凡','燭','物','月','藥','乏') then 'f' else 'b' end
 when niu='明' then
   case when yunbu in('虞','文') then 'f' else 'm' end
 when niu='端' then 'd'
