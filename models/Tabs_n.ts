@@ -34,4 +34,4 @@ const Tabs_n_Schema = new mongoose.Schema({
   },
 })
 
-export default mongoose.models.Tabs_n || mongoose.model('Tabs_n', Tabs_n_Schema, 'tabs_n')
+export default mongoose.model('Tabs_n', Tabs_n_Schema, 'tabs_n')

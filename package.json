@@ -12,7 +12,7 @@
     "echarts": "^5.3.2",
     "echarts-for-react": "^3.0.2",
     "gray-matter": "^4.0.3",
-    "mongoose": "^6.4.6",
+    "mongoose": "^6.5.2",
     "next": "^12.1.4",
     "nextjs-progressbar": "^0.0.14",
     "pdfjs-dist": "^2.14.305",

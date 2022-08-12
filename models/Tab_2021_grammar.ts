@@ -25,4 +25,4 @@ const Tab_2021_grammar_Schema = new mongoose.Schema({
   },
 })
 
-export default mongoose.models.Tab_2021_grammar || mongoose.model('Tab_2021_grammar', Tab_2021_grammar_Schema, 'tab_2021_grammar')
+export default mongoose.model('Tab_2021_grammar', Tab_2021_grammar_Schema, 'tab_2021_grammar')

@@ -34,4 +34,4 @@ const Tab_1937jz_proverb_Schema = new mongoose.Schema({
   },
 })
 
-export default mongoose.models.Tab_1937jz_proverb || mongoose.model('Tab_1937jz_proverb', Tab_1937jz_proverb_Schema, 'tab_1937jz_proverb')
+export default mongoose.model('Tab_1937jz_proverb', Tab_1937jz_proverb_Schema, 'tab_1937jz_proverb')

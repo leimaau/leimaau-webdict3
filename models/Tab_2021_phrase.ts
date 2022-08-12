@@ -34,4 +34,4 @@ const Tab_2021_phrase_Schema = new mongoose.Schema({
   },
 })
 
-export default mongoose.models.Tab_2021_phrase || mongoose.model('Tab_2021_phrase', Tab_2021_phrase_Schema, 'tab_2021_phrase')
+export default mongoose.model('Tab_2021_phrase', Tab_2021_phrase_Schema, 'tab_2021_phrase')
