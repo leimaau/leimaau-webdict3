@@ -357,7 +357,7 @@ if (聲母 === 'h' && (韻母 === 'ui' || 韻母 === 'un')) 聲母 = 'f'; // 保
 if (聲母 === 'hw' && 韻母.startsWith('a')) 聲母 = 'f';
 
 
-// 南寧的 詠泳咏 濁去作上
+// 南寧的 詠泳咏 讀陽上
 if (is('云匣母 庚韻 合口 去聲')) 聲調 = '5';
 
 
@@ -885,7 +885,7 @@ function 韻母規則() {
   if (is('麻韻 三等')) return 'e';
 
   // 宕攝
-  if (is('陽韻 幫組')) return 'aang';
+  if (is('陽韻 幫組')) return 'ung';
   if (is('陽韻 開口 莊組')) return 'aang';
   if (is('陽韻 開口')) return 'iang';
   if (is('陽韻 合口')) return 'ung';
@@ -894,10 +894,10 @@ function 韻母規則() {
   if (is('唐韻 合口')) return 'ung';
 
   // 梗攝
-  if (is('庚韻 二等')) return is('影見曉幫滂並母') ? 'ang' : 'iang';
+  if (is('庚韻 二等')) return is('影見曉幫滂並母') ? 'ang' : (選項.新老派 === '老派') ? 'iang' : 'aang';
   if (is('庚韻 三等 莊組')) return 'iang';
   if (is('庚韻 三等')) return 'ing';
-  if (is('耕韻')) return is('影見曉幫滂並母') ? 'ang' : 'iang';
+  if (is('耕韻')) return is('影見曉幫滂並母') ? 'ang' : (選項.新老派 === '老派') ? 'iang' : 'ang';
   if (is('清青韻')) return 'ing';
 
   // 曾攝
@@ -971,7 +971,7 @@ if (聲母 === 'nj' && (韻母 === 'ing' || 韻母 === 'iang')) 聲母 = 'ng';
 if (聲母 === 'nj' && 韻母.startsWith('i') && is('入聲')) 聲母 = 'n';
 
 
-// 南寧的 詠泳咏 濁去作上
+// 南寧的 詠泳咏 讀陽上
 if (is('云匣母 庚韻 合口 去聲')) 聲調 = '5';
 
 
@@ -1030,7 +1030,7 @@ when niu='溪' then
     else 'h' end
   when hu='合' and yunbu<>'模' then
     case when she='臻' and deng='三' and yunbu='文' then 'kw'
-    when she in('果','遇','止','假','梗','宕') or yunbu in('皆','佳','祭','齊','屑','薛','魂','月','真') or (deng='三' and yunbu='歌') then 'k'
+    when she in('果','遇','止','假','梗','宕') or yunbu in('皆','佳','祭','齊','屑','薛','魂','月','真') then 'k'
     when she='曾' and deng='一' and yunbu='登' then 'w'
     else 'h' end
   end
@@ -1160,16 +1160,18 @@ when she='宕' then
   case when yunbu in ('陽','唐') then
     case when hu='開' and deng='三' and niu not in('幫','滂','並','明','莊','初','崇','生') then 'iang' else
       case when hu='開' and (deng<>'三' or niu in('幫','滂','並','明','莊','初','崇','生')) then 'aang'
-      when hu='合' and niu in('幫','滂','並','明') then 'aang'
-      when hu='合' and deng='三' and niu='來' and she='宕' then 'iang' else 'ung' end
+      when hu='合' and niu in('幫','滂','並','明') and deng='一' then 'aang'
+      when hu='合' and niu in('幫','滂','並','明') and deng='三' then 'ung'
+      when hu='合' and deng='三' and niu='來' then 'iang' else 'ung' end
     end
   else
     case when hu='開' and deng='三' and niu not in('幫','滂','並','明') then 'iak' else
       case when yunbu='鐸' and tone='去' then 'aau' -- 應歸入肴韻
       when hu='開' and deng='一' and niu='明' then 'oek'
       when hu='開' and deng<>'三' and niu not in('幫','滂','並','明') then 'aak'
-      when hu='合' and niu in('幫','滂','並','明') then 'aak'
-      when hu='合' and deng='三' and niu='來' and she='宕' then 'iak' else 'uk' end
+      when hu='合' and niu in('幫','滂','並','明') and deng='一' then 'aak'
+      when hu='合' and niu in('幫','滂','並','明') and deng='三' then 'uk'
+      when hu='合' and deng='三' and niu='來' then 'iak' else 'uk' end
     end
   end
 when she='梗' then
@@ -1216,36 +1218,6 @@ else
   when tone='入' then '2' end
 end shengdiao,niu,yunbu,she,hu,deng,tone,expl,note
 from tab_gy_jy_dong
-WITH READ ONLY
-;
-
-
-create or replace view v_nbdict_infer_bw as
-select tab_id,trad,simp,ipa_t ipa_s,ipa_t,u1.jyutping,sour,expl,note from (
-  select tab_id,trad,simp,replace(replace(replace(replace(
-  replace(replace(replace(replace(replace(replace(replace(
-  replace(replace(replace(replace(replace(replace(shengmu||yunmu||shengdiao,
-  'wyu','jyu'),'ngi','nji'),'ngyu','njyu'),'ngoe','njoe'),'nguk','njuk'),'ngung','njung'),
-  'ngut','wut'),'ngun','wun'),'hwa','wa'),'ngw','w'),'wui','wai'),
-  'njing','nging'),'njik','nik'),'njip','nip'),'njit','nit'),'njiang','ngiang'),'njiak','ngiak') jyutping,sour,expl,note
-  --njing>nging  njik>nik  njip>nip  njit>nit  njiang>ngiang  njiak>ngiak
-  from (
-    select tab_id,trad,trad simp,
-    case when shengmu ='g' and hu='合' and yunmu not like 'u%' and yunmu not like 'o%' and yunmu not like 'yu%' and yunmu not like 'im%' then 'gw'
-    when shengmu ='k' and hu='合' and yunmu not like 'u%' and yunmu not like 'o%' and yunmu not like 'yu%' and yunmu not like 'ing%' and yunmu not like 'im%' then 'kw'
-    when shengmu ='h' and hu='合' and yunmu not like 'u%' and yunmu not like 'o%' and yunmu not like 'yu%' and yunmu not like 'i%' then 'hw'
-    when shengmu ='w' and (yunmu='ung' or yunmu='uk') then ''
-    else shengmu end shengmu,
-    case when shengmu in('b','p','m','f') and yunmu like '%m' then substr(yunmu,1,length(yunmu)-1)||'n'
-    when shengmu in('b','p','m','f') and yunmu like '%p' then substr(yunmu,1,length(yunmu)-1)||'t'
-    else yunmu end yunmu,
-    --南寧 詠泳咏 濁去作上
-    case when niu in('云','匣') and hu='合' and yunbu='庚' and tone='去' then '5' else shengdiao end shengdiao
-    ,'' sour,expl,note
-    from  v_nbdict_202109_gy_bw
-    order by tab_id)
-)u1,tab_jyutping_ipa_bw u2
-where u1.jyutping=u2.jyutping(+)
 WITH READ ONLY
 ;
 ```

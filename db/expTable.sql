@@ -69,9 +69,11 @@ select '2007'||'	'||tab_id||'	'||trad||'	'||simp||'	'||ipa_s||'	'||ipa_t||'	'||j
 union all
 select '2008'||'	'||tab_id||'	'||trad||'	'||simp||'	'||ipa_s||'	'||ipa_t||'	'||jyutping||'	'||replace(sour,'2008年林亦、覃鳳餘《廣西南寧白話研究》','')||'	'||expl||'	'||note from v_nbdict_2008
 union all
-select '201806'||'	'||tab_id||'	'||trad||'	'||simp||'	'||ipa_s||'	'||ipa_t||'	'||jyutping||'	'||sour||'	'||expl||'	'||note from tab_nbdict_201806
+select '2009'||'	'||tab_id||'	'||trad||'	'||simp||'	'||ipa_s||'	'||ipa_t||'	'||jyutping||'	'||replace(sour,'2009年陳海倫、林亦《粵語平話土話方音字彙》','')||'	'||expl||'	'||note from v_nbdict_2009
 union all
 select '2018'||'	'||tab_id||'	'||trad||'	'||simp||'	'||ipa_s||'	'||ipa_t||'	'||jyutping||'	'||sour||'	'||expl||'	'||note from v_nb_zingjam_all
+union all
+select '201806'||'	'||tab_id||'	'||trad||'	'||simp||'	'||ipa_s||'	'||ipa_t||'	'||jyutping||'	'||sour||'	'||expl||'	'||note from tab_nbdict_201806
 union all
 select '2021'||'	'||tab_id||'	'||trad||'	'||simp||'	'||ipa_s||'	'||ipa_t||'	'||jyutping||'	'||sour||'	'||expl||'	'||note from tab_nbdict_2021
 );
@@ -87,6 +89,8 @@ union all
 select '201703'||'	'||tab_id||'	'||trad||'	'||simp||'	'||ipa_s||'	'||ipa_t||'	'||jyutping||'	'||sour||'	'||expl||'	'||note from v_nbdict_201703_bw
 union all
 select '201705'||'	'||tab_id||'	'||trad||'	'||simp||'	'||ipa_s||'	'||ipa_t||'	'||jyutping||'	'||replace(sour,'2017年詹伯慧、張振興《漢語方言學大詞典》','')||'	'||expl||'	'||note from v_nbdict_201705_bw
+union all
+select '2009'||'	'||tab_id||'	'||trad||'	'||simp||'	'||ipa_s||'	'||ipa_t||'	'||jyutping||'	'||replace(sour,'2009年陳海倫、林亦《粵語平話土話方音字彙》','')||'	'||expl||'	'||note from v_nbdict_2009_bw
 union all
 select '2018'||'	'||tab_id||'	'||trad||'	'||simp||'	'||ipa_s||'	'||ipa_t||'	'||jyutping||'	'||sour||'	'||expl||'	'||note from v_nb_zingjam_bw_all
 union all

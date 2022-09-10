@@ -143,6 +143,11 @@ export default function Navbar() {
                             separator: true
                         },
                         {
+                            label:'南寧白話、南寧亭子平話與廣州話三語對照字表',
+                            icon:'pi pi-fw pi-file-pdf',
+                            command:()=>{ window.open('/pdf/?counter=5') }
+                        },
+                        {
                             label:'南寧話單字音文獻資料彙編（整理中）',
                             icon:'pi pi-fw pi-file-pdf',
                             //command:()=>{ window.open('/pdf/?counter=5') }

@@ -238,7 +238,7 @@ export async function getTabAll2(searchValue: string, searchType: string, reqFan
     //let regObj = (reqFanqie=='' && reqExpl!=='') ? {expl: {$regex: reqExpl}} : (reqFanqie!=='' && reqExpl=='') ? {fanqie: {$regex: reqFanqie}} : (reqFanqie!=='' && reqExpl!=='') ? {$and:[{fanqie: {$regex: reqFanqie}},{expl: {$regex: reqExpl}}]} : {}
     //query['$and'] = [{niu: {$in: niu.join('_').split('_')}},{yunbu: {$in: yunbu.join('_').split('_')}},{hu: {$in: hu}},{deng: {$in: deng}},{tone: {$in: tone}},{chong: {$in: chong}},{fanqie: {$regex: reqFanqie}},{expl: {$regex: reqExpl}},regObj]
     
-    query = item => inStruct(item.niu, niu.join('_').split('_')) && inStruct(item.yunbu, yunbu.join('_').split('_')) && inStruct(item.hu, hu) && inStruct(item.deng, deng) && inStruct(item.tone, tone) && inStruct(item.chong, chong) && (new RegExp(reqFanqie,'gi')).test(item.fanqie) && (new RegExp(reqExpl,'gi')).test(item.expl)
+    query = item => inStruct(item.niu, niu.join('_').split('_')) && inStruct(item.yunbu, yunbu.join('_').split('_')) && inStruct(item.hu, hu) && inStruct(item.deng, deng) && inStruct(item.tone, tone) && (item.chong===undefined ? true : inStruct(item.chong, chong)) && (new RegExp(reqFanqie,'gi')).test(item.fanqie) && (new RegExp(reqExpl,'gi')).test(item.expl)
     query2 = item => false
     query3 = item => false
   } else if (judgeValue=='F2') { //早期粵音查詢

@@ -8,6 +8,8 @@ Leimaau（狸貓），91年南寧老城區人，愛好音樂、看劇、遊戲�
 
 本站叫「狸貓的在線辭典 3.0 版」(Leimaau's Webdict 3.0)，於2022年05月22日至2022年06月12日開發，2022年06月13日正式上線，是一個私人在線辭典，旨在記錄本人的學習筆記。其是 2.0 版 [Leimaau's Webdict 2](https://leimaau.github.io/leimaau-webdict2/) 和 1.0 版 [Leimaau's Webdict](https://leimaau.github.io/leimaau-webdict/) 的延續。舊版的一些功能和內容過於繁雜，新版增刪了部分功能和查詢內容，使其更加簡單易用。程序的開發和製作由 Leimaau 負責，因爲架構簡單，不打算用複雜工程的方式製作，所用服務器很小，流量有限制，所以使用時偶爾會有 504 的錯誤很正常，重新回到主葉即可。
 
+本站原先開發和運行於 vercel 中，爲了避免網絡不穩定，故將程序備份於 netlify 中運行，因此本站有兩個地址，vercel 地址作[主䈎地址](https://leimaau-webdict3.vercel.app/)，netlify 地址作[備份地址](https://tranquil-tulumba-4026d9.netlify.app)。
+
 ### 數值設定
 
 本站字典的一些計算中涉及資料權重的幾何平均值，各資料權重的預設值爲：
@@ -44,7 +46,7 @@ github：[leimaau's github](https://github.com/leimaau)
 
 ### 版本更新
 
-2022-06-13 v3.0.0 正式上線
+2022-06-13 v3.0.0 Leimaau's Webdict 3 正式上線
 
 2022-06-17 v3.0.1 適配手機界面
 
@@ -55,6 +57,8 @@ github：[leimaau's github](https://github.com/leimaau)
 2022-07-22 v3.0.4 增加在線預覽PDF功能，優化詞雲圖顯示，優化導航欄圖標
 
 2022-08-06 v3.0.5 建立內部測試系統，完善查詢邏輯，儘量避免504錯誤，增加遮罩
+
+2022-09-10 v3.0.6 增加備用系統，增加新文獻，修訂審音表，修復一些bug
 
 ## 友情贊助
 
