@@ -47,13 +47,13 @@ const wordBodyTemplate = (rowData) => {
         for (let i in charStr) {
             let hrefStr = '/search/' + charStr[i] + ((rowData.trad==undefined) ? '?queryType=A1' : '?queryType=E1')
             aLink.push(
-            <Link key={'wordBodyTemplate'+hrefStr+i} href='###' scroll={false}>
-                <a className='hover:underline' onClick={() => _getContent(charStr[i],(rowData.simp==undefined) ? 'A1' : 'E1', '單字')}>{charStr[i]}<span>{(i!=(charStr.length-1).toString())?'|':''}</span></a>
-            </Link>)
-            /*aLink.push(
-            <Link key={'wordBodyTemplate'+hrefStr+i} href={hrefStr} scroll={false}>
-                <a className='hover:underline'>{charStr[i]}<span>{(i!=(charStr.length-1).toString())?'|':''}</span></a>
-            </Link>)*/
+                <Link key={'wordBodyTemplate'+hrefStr+i} href='###' scroll={false}>
+                    <a className='hover:underline' onClick={() => _getContent(charStr[i],(rowData.simp==undefined) ? 'A1' : 'E1', '單字')}>{charStr[i]}<span>{(i!=(charStr.length-1).toString())?'|':''}</span></a>
+                </Link>
+                /*<Link key={'wordBodyTemplate'+hrefStr+i} href={hrefStr} scroll={false}>
+                    <a className='hover:underline'>{charStr[i]}<span>{(i!=(charStr.length-1).toString())?'|':''}</span></a>
+                </Link>*/
+            )
         }
         return <>{aLink}</>
     } else {

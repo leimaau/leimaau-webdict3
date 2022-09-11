@@ -10,7 +10,7 @@ export function calcYear (data) {
 			dataValue += Math.log(7)
 		} else if (item == '1997' || item == '2003' || /2021/.test(item)){
 			dataValue += Math.log(5)
-		} else if (item == '1994' || item == '2000' || item == '2007' || item == '201703' || item == '201705'){
+		} else if (item == '1994' || item == '2000' || item == '2007' || item == '201703' || item == '201705' || item == '200906'){
 			dataValue += Math.log(3)
 		} else if (item == '201806' || item == '2022'){
 			dataValue += Math.log(1.5)
@@ -145,6 +145,10 @@ const toObj = (result: any[], year: string) => {
       tabDoc.sour = '2007年謝建猷《廣西漢語方言研究》'
     } else if (tabDoc.year == '2008') {
       tabDoc.sour = '2008年林亦、覃鳳餘《廣西南寧白話研究》' + tabDoc.sour
+    } else if (tabDoc.year == '2009') {
+      tabDoc.sour = '2009年陳海倫、林亦《粵語平話土話方音字彙》' + tabDoc.sour
+    } else if (tabDoc.year == '200906') {
+      tabDoc.sour = '2009年張菁雅《桂南平話語音比較研究》' + tabDoc.sour
     } else if (tabDoc.year == '201703') {
       tabDoc.sour = '2017年教育部《漢語方言用字規範》' + tabDoc.sour
     } else if (tabDoc.year == '201705') {

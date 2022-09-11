@@ -12,7 +12,6 @@ export default function Home({ isConnected }) {
   const msgs_db = useRef(null)
   const msgs_loding = useRef(null)
   const [loding, setLoding] = useState<boolean>(false)
-  
 
   const clearFunc = () => {
     if (msgs_db.current!==null) msgs_db.current.clear()

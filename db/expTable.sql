@@ -71,6 +71,8 @@ select '2008'||'	'||tab_id||'	'||trad||'	'||simp||'	'||ipa_s||'	'||ipa_t||'	'||j
 union all
 select '2009'||'	'||tab_id||'	'||trad||'	'||simp||'	'||ipa_s||'	'||ipa_t||'	'||jyutping||'	'||replace(sour,'2009年陳海倫、林亦《粵語平話土話方音字彙》','')||'	'||expl||'	'||note from v_nbdict_2009
 union all
+select '200906'||'	'||tab_id||'	'||trad||'	'||simp||'	'||ipa_s||'	'||ipa_t||'	'||jyutping||'	'||replace(sour,'2009年張菁雅《桂南平話語音比較研究》','')||'	'||expl||'	'||note from v_nbdict_200906
+union all
 select '2018'||'	'||tab_id||'	'||trad||'	'||simp||'	'||ipa_s||'	'||ipa_t||'	'||jyutping||'	'||sour||'	'||expl||'	'||note from v_nb_zingjam_all
 union all
 select '201806'||'	'||tab_id||'	'||trad||'	'||simp||'	'||ipa_s||'	'||ipa_t||'	'||jyutping||'	'||sour||'	'||expl||'	'||note from tab_nbdict_201806

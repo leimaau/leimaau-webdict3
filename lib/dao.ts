@@ -38,6 +38,8 @@ const toObj = (result: any[], year: string) => {
       tabDoc.sour = '2008年林亦、覃鳳餘《廣西南寧白話研究》' + tabDoc.sour
     } else if (tabDoc.year == '2009') {
       tabDoc.sour = '2009年陳海倫、林亦《粵語平話土話方音字彙》' + tabDoc.sour
+    } else if (tabDoc.year == '200906') {
+      tabDoc.sour = '2009年張菁雅《桂南平話語音比較研究》' + tabDoc.sour
     } else if (tabDoc.year == '201703') {
       tabDoc.sour = '2017年教育部《漢語方言用字規範》' + tabDoc.sour
     } else if (tabDoc.year == '201705') {
