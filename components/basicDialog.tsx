@@ -80,7 +80,7 @@ export default function BasicDialog({rowDataFlag, getContent, type, setLodFun}) 
         return (
             <div className="card flex justify-content-end">
                 <Button label="關閉" icon="pi pi-times" onClick={() => onHide(name)} className="p-button-secondary p-button-sm" />
-                <ToggleButton checked={checkedAll} onChange={(e) => {setCheckedAll(e.value);handleCheckAll()}} onLabel="全選" offLabel="取消全選" onIcon="pi pi-filter" offIcon="pi pi-filter-slash" className="p-button-sm mr-2" aria-label="Confirmation" />
+                <ToggleButton checked={checkedAll} onChange={(e) => {setCheckedAll(e.value);handleCheckAll()}} onLabel="全選" offLabel="取消" onIcon="pi pi-filter" offIcon="pi pi-filter-slash" className="p-button-sm mr-2" aria-label="Confirmation" />
                 <Button label="查詢" icon="pi pi-check" onClick={()=>querySubmit(name)} autoFocus className="p-button-info p-button-sm" />
             </div>
         )

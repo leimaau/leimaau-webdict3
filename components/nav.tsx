@@ -61,6 +61,11 @@ export default function Navbar() {
                   command:()=>{ router.push('/tools/segarticle') }
               },
               {
+                  label: '讀音聯想',
+                  icon: 'pi pi-fw pi-question-circle',
+                  command:()=>{ router.push('/tools/soundLenovo') }
+              },
+              {
                   separator: true
               },
               {

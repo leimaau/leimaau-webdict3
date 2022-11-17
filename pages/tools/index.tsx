@@ -29,6 +29,13 @@ export default function ToolsIndex() {
       </div>
 
       <div className={styles.grid}>
+          <a href={'/tools/soundLenovo'} className={styles.card}>
+          <h2>讀音聯想 &rarr;</h2>
+          <p>讀音聯想器用於在攷究有音無字的音節時，爲猜想其本字提供方便</p>
+          </a>
+      </div>
+
+      <div className={styles.grid}>
           <a href={'/posts/infer'} className={styles.card}>
           <h2>理論音推導 &rarr;</h2>
           <p>利用《廣韻》《集韻》推導理論音的數據庫源碼展示</p>

@@ -162,7 +162,7 @@ const pageBodyTemplate = (rowData) => {
 }
 
 const sourBodyTemplate = (rowData) => {
-    let linkaddr = 'https://fastly.jsdelivr.net/gh/leimaau/CDN@latest/data-store/' + rowData.year
+    let linkaddr = 'https://leimaau.github.io/CDN/index.html?value=' + rowData.year
 	if (rowData.year == '1994') linkaddr += 'zh/zh'
 	else if (rowData.year == '1997') linkaddr += 'yd/yd'
 	else if (rowData.year == '1998') linkaddr += 'dfz/dfz'
@@ -170,6 +170,7 @@ const sourBodyTemplate = (rowData) => {
 	else if (rowData.year == '2007') linkaddr = ''
 	else if (rowData.year == '2008') linkaddr += 'yj/yj'
 	else if (rowData.year == '2009') linkaddr += 'yy/yy'
+	else if (rowData.year == '200906') linkaddr = linkaddr.replace('200906','2009') + 'yj/yj'
 	else if (rowData.year == '201703') linkaddr = linkaddr.replace('201703','2017') + 'gj/gj'
 	else if (rowData.year == '201705') linkaddr =  linkaddr.replace('201705','2017') + 'hy/hy0'
 	else if (rowData.year == '2018') linkaddr = ''

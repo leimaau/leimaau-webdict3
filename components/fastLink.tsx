@@ -29,7 +29,7 @@ export default function FastLink({textChar, reqType}) {
                         粵拼歌詞網：<a className='hover:underline' href={"https://jyut6.com/search.php?keyword="+textChar} target="_blank">{textChar}</a><br/>
                         翡翠粵語歌詞：<a className='hover:underline' href={"https://www.feitsui.com/zh-hans/search/?query="+textChar} target="_blank">{textChar}</a><br/>
                         中國大百科全書數據庫：<a className='hover:underline' href={"https://h.bkzx.cn/search?query="+textChar+"&sublibId="} target="_blank">{textChar}</a><br/>
-                        國學寶典：<a className='hover:underline' href={"http://www.gxbd.com/"} target="_blank">前往</a><br/>
+                        中國哲學書電子化計劃：<a className='hover:underline' href={"https://ctext.org/dictionary.pl?if=gb&char="+textChar} target="_blank">{textChar}</a><br/>
                         大學數字圖書館合作計劃：<a className='hover:underline' href={"https://cadal.edu.cn/index/home"} target="_blank">前往</a><br/>
                         萬方方誌數據庫：<a className='hover:underline' href={"http://fz.wanfangdata.com.cn/index.do"} target="_blank">前往</a><br/>
                         </p>
@@ -40,7 +40,7 @@ export default function FastLink({textChar, reqType}) {
                         字海|葉典：<a className='hover:underline' href={"http://zisea.com/zscontent.asp?uni="+encodeUnicode(textChar).replace('\\u','')} target="_blank">{textChar}</a><br/>
                         字統网：<a className='hover:underline' href={"https://zi.tools/zi/"+textChar} target="_blank">{textChar}</a><br/>
                         漢字全息資源應用系統：<a className='hover:underline' href={"http://qxk.bnu.edu.cn/#/danziDetail/42c2d834-fa1d-47e9-9f90-972a687183f7/"+textChar+"/22d3af76-1ffe-46da-8c28-40e7dfe6b8d2/0"} target="_blank">{textChar}</a><br/>
-                        中國哲學書電子化計劃：<a className='hover:underline' href={"https://ctext.org/dictionary.pl?if=gb&char="+textChar} target="_blank">{textChar}</a><br/>
+                        教育部國語小字典：<a className='hover:underline' href={"https://dict.mini.moe.edu.tw/SearchIndex/searchResult?searchType=one&dictSearchField="+textChar} target="_blank">{textChar}</a><br/>
                         Forvo：<a className='hover:underline' href={"https://zh.forvo.com/search/"+textChar+"/"} target="_blank">{textChar}</a><br/>
                         Unihan：<a className='hover:underline' href={"https://www.unicode.org/cgi-bin/GetUnihanData.pl?codepoint="+textChar} target="_blank">{textChar}</a><br/>
                         萌典：<a className='hover:underline' href={"https://www.moedict.tw/"+textChar} target="_blank">{textChar}</a><br/>
@@ -73,7 +73,7 @@ export default function FastLink({textChar, reqType}) {
                         廣西地情資料庫：<a className='hover:underline' href={"http://www.gxdfz.org.cn/gdtz/"} target="_blank">前往</a><br/>
                         開放康熙字典：<a className='hover:underline' href={"http://kangxi.adcs.org.tw/kangxizidian/"} target="_blank">前往</a><br/>
                         漢語大字典檢索：<a className='hover:underline' href={"http://www.homeinmists.com/hd/search.html"} target="_blank">前往</a><br/>
-                        說文解字圖像查閱：<a className='hover:underline' href={"http://www.homeinmists.com/shuowen/find.html"} target="_blank">前往</a><br/>
+                        國學寶典：<a className='hover:underline' href={"http://www.gxbd.com/"} target="_blank">前往</a><br/>
                         說文解字在線查詢：<a className='hover:underline' href={"http://www.shuowen.org/"} target="_blank">前往</a><br/>
                         現代標準漢語與粵語對照資料庫：<a className='hover:underline' href={"http://apps.itsc.cuhk.edu.hk/hanyu/Page/Cover.aspx"} target="_blank">前往</a><br/>
                         ISO漢字查詢系統：<a className='hover:underline' href={"http://glyph.iso10646hk.net/chinese/icharacters.jsp"} target="_blank">前往</a><br/>

@@ -1,300 +1,6 @@
 [{
   "_id": {
-    "$oid": "62ade56087594d2297fb8f74"
-  },
-  "year": "2021",
-  "tab_id": 2,
-  "trad": "瞓",
-  "simp": "瞓",
-  "ipa_s": "wɐn55",
-  "ipa_t": "wɐn55",
-  "jyutping": "wan3",
-  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P656",
-  "expl": "累乏",
-  "note": "原文有音無字"
-},{
-  "_id": {
-    "$oid": "62ade56087594d2297fb8f75"
-  },
-  "year": "2021",
-  "tab_id": 3,
-  "trad": "睏",
-  "simp": "睏",
-  "ipa_s": "wɐn55",
-  "ipa_t": "wɐn55",
-  "jyutping": "wan3",
-  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P656",
-  "expl": "累乏",
-  "note": "原文有音無字"
-},{
-  "_id": {
-    "$oid": "62ade56087594d2297fb8f7a"
-  },
-  "year": "2021",
-  "tab_id": 8,
-  "trad": "眨",
-  "simp": "眨",
-  "ipa_s": "jɐp2",
-  "ipa_t": "jɐp2",
-  "jyutping": "jap6",
-  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P656",
-  "expl": "眨",
-  "note": "原文有音無字"
-},{
-  "_id": {
-    "$oid": "62ade56087594d2297fb8f82"
-  },
-  "year": "2021",
-  "tab_id": 16,
-  "trad": "䚕",
-  "simp": "䚕",
-  "ipa_s": "lɐi55",
-  "ipa_t": "lɐi55",
-  "jyutping": "lai3",
-  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P656",
-  "expl": "找",
-  "note": "原文有音無字"
-},{
-  "_id": {
-    "$oid": "62ade56087594d2297fb8f84"
-  },
-  "year": "2021",
-  "tab_id": 17,
-  "trad": "江夯邊",
-  "simp": "江夯边",
-  "ipa_s": "kaŋ53 haŋ53 pin53",
-  "ipa_t": "kaŋ53 haŋ53 pin53",
-  "jyutping": "gaang1 haang1 bin1",
-  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P656",
-  "expl": "岸邊",
-  "note": "原文作「江坎邊」"
-},{
-  "_id": {
-    "$oid": "62ade56087594d2297fb8f86"
-  },
-  "year": "2021",
-  "tab_id": 19,
-  "trad": "凐水",
-  "simp": "凐水",
-  "ipa_s": "jɐn53 ʃui33",
-  "ipa_t": "jɐn53 ʃui33",
-  "jyutping": "jan1 sui2",
-  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P656",
-  "expl": "涼水",
-  "note": "原文有音無字"
-},{
-  "_id": {
-    "$oid": "62ade56087594d2297fb8f8c"
-  },
-  "year": "2021",
-  "tab_id": 25,
-  "trad": "攝石",
-  "simp": "摄石",
-  "ipa_s": "ʃip3 ʃek2",
-  "ipa_t": "ʃip3 ʃek2",
-  "jyutping": "sip2 sik6",
-  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P657",
-  "expl": "磁石",
-  "note": "原文未標音"
-},{
-  "_id": {
-    "$oid": "62ade56087594d2297fb8f93"
-  },
-  "year": "2021",
-  "tab_id": 32,
-  "trad": "駛田",
-  "simp": "驶田",
-  "ipa_s": "ʃɐi33 tin21",
-  "ipa_t": "ʃɐi33 tin21",
-  "jyutping": "sai2 din4",
-  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P657",
-  "expl": "犁田",
-  "note": "原文未標音"
-},{
-  "_id": {
-    "$oid": "62ade56087594d2297fb8f96"
-  },
-  "year": "2021",
-  "tab_id": 35,
-  "trad": "草子",
-  "simp": "草子",
-  "ipa_s": "tʃʰau33 tʃi33",
-  "ipa_t": "tʃʰau33 tʃi33",
-  "jyutping": "caau2 zi2",
-  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P657",
-  "expl": "稗子",
-  "note": "原文未標音"
-},{
-  "_id": {
-    "$oid": "62ade56087594d2297fb8f98"
-  },
-  "year": "2021",
-  "tab_id": 37,
-  "trad": "刨穀",
-  "simp": "刨谷",
-  "ipa_s": "pau21 kœk3",
-  "ipa_t": "pau21 kœk3",
-  "jyutping": "baau4 goek2",
-  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P657",
-  "expl": "秕穀",
-  "note": "原文作「刨穀」"
-},{
-  "_id": {
-    "$oid": "62ade56087594d2297fb8f9b"
-  },
-  "year": "2021",
-  "tab_id": 40,
-  "trad": "齷齪",
-  "simp": "龌龊",
-  "ipa_s": "∅ok3 tʃʰok3",
-  "ipa_t": "∅ok3 tʃʰok3",
-  "jyutping": "uk2 cuk2",
-  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P657",
-  "expl": "骯髒",
-  "note": "原文未標音"
-},{
-  "_id": {
-    "$oid": "62ade56087594d2297fb8fa2"
-  },
-  "year": "2021",
-  "tab_id": 47,
-  "trad": "脷前",
-  "simp": "脷前",
-  "ipa_s": "li22 tʃin21",
-  "ipa_t": "li22 tʃin21",
-  "jyutping": "li6 zin4",
-  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P658",
-  "expl": "舌頭",
-  "note": "原文有音無字"
-},{
-  "_id": {
-    "$oid": "62ade56087594d2297fb8fa4"
-  },
-  "year": "2021",
-  "tab_id": 49,
-  "trad": "囗(bot6)囗(lot6)子(zi2)",
-  "simp": "囗(bot6)囗(lot6)子(zi2)",
-  "ipa_s": "pɔt2 lɔt2 tʃi33",
-  "ipa_t": "pot2 lot2 tʃi33",
-  "jyutping": "bot6 lot6 zi2",
-  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P658",
-  "expl": "蝌蚪",
-  "note": "原文有音無字"
-},{
-  "_id": {
-    "$oid": "62ade56087594d2297fb8f76"
-  },
-  "year": "2021",
-  "tab_id": 4,
-  "trad": "囗(njaang3)",
-  "simp": "囗(njaang3)",
-  "ipa_s": "ȵaŋ55",
-  "ipa_t": "ȵaŋ55",
-  "jyutping": "njaang3",
-  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P656",
-  "expl": "咬",
-  "note": "原文有音無字"
-},{
-  "_id": {
-    "$oid": "62ade56087594d2297fb8f77"
-  },
-  "year": "2021",
-  "tab_id": 5,
-  "trad": "剁",
-  "simp": "剁",
-  "ipa_s": "tɛk3",
-  "ipa_t": "tiɐk3",
-  "jyutping": "diak2",
-  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P656",
-  "expl": "剁肉",
-  "note": "原文有音無字，標音[tɛk3]"
-},{
-  "_id": {
-    "$oid": "62ade56087594d2297fb8f78"
-  },
-  "year": "2021",
-  "tab_id": 6,
-  "trad": "斲",
-  "simp": "斫",
-  "ipa_s": "tɛk3",
-  "ipa_t": "tiɐk3",
-  "jyutping": "diak2",
-  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P656",
-  "expl": "剁肉",
-  "note": "原文有音無字，標音[tɛk3]"
-},{
-  "_id": {
-    "$oid": "62ade56087594d2297fb8f87"
-  },
-  "year": "2021",
-  "tab_id": 20,
-  "trad": "嚜鉤",
-  "simp": "嚜钩",
-  "ipa_s": "mak5 kɐu53",
-  "ipa_t": "mak5 kɐu53",
-  "jyutping": "maak3 gau1",
-  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P656",
-  "expl": "鋤頭",
-  "note": "原文有音無字"
-},{
-  "_id": {
-    "$oid": "62ade56087594d2297fb8f8a"
-  },
-  "year": "2021",
-  "tab_id": 23,
-  "trad": "𤊶水",
-  "simp": "𤊶水",
-  "ipa_s": "lɐt5 ʃui33",
-  "ipa_t": "lɐt5 ʃui33",
-  "jyutping": "lat3 sui2",
-  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P657",
-  "expl": "熱水",
-  "note": "原文有音無字"
-},{
-  "_id": {
-    "$oid": "62ade56087594d2297fb8f9c"
-  },
-  "year": "2021",
-  "tab_id": 41,
-  "trad": "歸",
-  "simp": "归",
-  "ipa_s": "kʷɐi53",
-  "ipa_t": "kʷɐi53",
-  "jyutping": "gwai1",
-  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P657",
-  "expl": "回家",
-  "note": "原文未標音"
-},{
-  "_id": {
-    "$oid": "62ade56087594d2297fb8f9e"
-  },
-  "year": "2021",
-  "tab_id": 43,
-  "trad": "屋",
-  "simp": "屋",
-  "ipa_s": "∅œk3",
-  "ipa_t": "∅œk3",
-  "jyutping": "oek2",
-  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P657",
-  "expl": "房子、家",
-  "note": "原文未標音"
-},{
-  "_id": {
-    "$oid": "62ade56087594d2297fb8fa1"
-  },
-  "year": "2021",
-  "tab_id": 46,
-  "trad": "塘𧋦",
-  "simp": "塘𧋦",
-  "ipa_s": "taŋ21 mɛŋ53",
-  "ipa_t": "taŋ21 miɐŋ53",
-  "jyutping": "daang4 miang1",
-  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P658",
-  "expl": "蜻蜓",
-  "note": "原文有音無字"
-},{
-  "_id": {
-    "$oid": "62ade56087594d2297fb8f73"
+    "$oid": "63761bb0bb2a7e3bb4bdbb93"
   },
   "year": "2021",
   "tab_id": 1,
@@ -308,203 +14,77 @@
   "note": "原文有音無字，標音[luŋ53]"
 },{
   "_id": {
-    "$oid": "62ade56087594d2297fb8f7b"
+    "$oid": "63761bb0bb2a7e3bb4bdbb94"
   },
   "year": "2021",
-  "tab_id": 9,
-  "trad": "搣",
-  "simp": "搣",
-  "ipa_s": "mat3",
-  "ipa_t": "mat3",
-  "jyutping": "maat2",
+  "tab_id": 2,
+  "trad": "瞓",
+  "simp": "瞓",
+  "ipa_s": "wɐn55",
+  "ipa_t": "wɐn55",
+  "jyutping": "wan3",
   "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P656",
-  "expl": "掐",
+  "expl": "累乏",
   "note": "原文有音無字"
 },{
   "_id": {
-    "$oid": "62ade56087594d2297fb8f7d"
+    "$oid": "63761bb0bb2a7e3bb4bdbb95"
   },
   "year": "2021",
-  "tab_id": 11,
-  "trad": "哄",
-  "simp": "哄",
-  "ipa_s": "hœŋ33",
-  "ipa_t": "hœŋ33",
-  "jyutping": "hoeng2",
-  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P658",
-  "expl": "騙",
-  "note": "原文有音無字"
-},{
-  "_id": {
-    "$oid": "62ade56087594d2297fb8f7e"
-  },
-  "year": "2021",
-  "tab_id": 12,
-  "trad": "鐺",
-  "simp": "铛",
-  "ipa_s": "tʃʰɛŋ53",
-  "ipa_t": "tʃʰiɐŋ53",
-  "jyutping": "ciang1",
-  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P657",
-  "expl": "炒菜鍋",
-  "note": "原文作[tʃʰɛŋ53]"
-},{
-  "_id": {
-    "$oid": "62ade56087594d2297fb8f7f"
-  },
-  "year": "2021",
-  "tab_id": 13,
-  "trad": "钁",
-  "simp": "镢",
-  "ipa_s": "kʰwɐk5",
-  "ipa_t": "kʷʰɐk5",
-  "jyutping": "kwak3",
-  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P657",
-  "expl": "大鋤頭",
-  "note": "原文誤作「镬」字"
-},{
-  "_id": {
-    "$oid": "62ade56087594d2297fb8f83"
-  },
-  "year": "2021",
-  "tab_id": 17,
-  "trad": "矋",
-  "simp": "矋",
-  "ipa_s": "lɐi55",
-  "ipa_t": "lɐi55",
-  "jyutping": "lai3",
+  "tab_id": 3,
+  "trad": "睏",
+  "simp": "睏",
+  "ipa_s": "wɐn55",
+  "ipa_t": "wɐn55",
+  "jyutping": "wan3",
   "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P656",
-  "expl": "找",
+  "expl": "累乏",
   "note": "原文有音無字"
 },{
   "_id": {
-    "$oid": "62ade56087594d2297fb8f85"
+    "$oid": "63761bb0bb2a7e3bb4bdbb96"
   },
   "year": "2021",
-  "tab_id": 18,
-  "trad": "囗(dam3)水",
-  "simp": "囗(dam3)水",
-  "ipa_s": "tɐm55 ʃui33",
-  "ipa_t": "tɐm55 ʃui33",
-  "jyutping": "dam3 sui2",
+  "tab_id": 4,
+  "trad": "囗(njaang3)",
+  "simp": "囗(njaang3)",
+  "ipa_s": "ȵaŋ55",
+  "ipa_t": "ȵaŋ55",
+  "jyutping": "njaang3",
   "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P656",
-  "expl": "汲水",
+  "expl": "咬",
   "note": "原文有音無字"
 },{
   "_id": {
-    "$oid": "62ade56087594d2297fb8f89"
+    "$oid": "63761bb0bb2a7e3bb4bdbb97"
   },
   "year": "2021",
-  "tab_id": 22,
-  "trad": "粟禾",
-  "simp": "粟禾",
-  "ipa_s": "ɬœk3 hu21",
-  "ipa_t": "ɬœk3 hu21",
-  "jyutping": "sloek2 hu4",
+  "tab_id": 5,
+  "trad": "剁",
+  "simp": "剁",
+  "ipa_s": "tɛk3",
+  "ipa_t": "tiɐk3",
+  "jyutping": "diak2",
   "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P656",
-  "expl": "小米",
-  "note": "原文未標音"
+  "expl": "剁肉",
+  "note": "原文有音無字，標音[tɛk3]"
 },{
   "_id": {
-    "$oid": "62ade56087594d2297fb8f8d"
+    "$oid": "63761bb0bb2a7e3bb4bdbb98"
   },
   "year": "2021",
-  "tab_id": 26,
-  "trad": "大烘天",
-  "simp": "大烘天",
-  "ipa_s": "tai22 hœŋ53 tʰin53",
-  "ipa_t": "tai22 hœŋ53 tʰin53",
-  "jyutping": "daai6 hoeng1 tin1",
-  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P657",
-  "expl": "夏天",
-  "note": "原文未標音"
+  "tab_id": 6,
+  "trad": "斲",
+  "simp": "斫",
+  "ipa_s": "tɛk3",
+  "ipa_t": "tiɐk3",
+  "jyutping": "diak2",
+  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P656",
+  "expl": "剁肉",
+  "note": "原文有音無字，標音[tɛk3]"
 },{
   "_id": {
-    "$oid": "62ade56087594d2297fb8f8e"
-  },
-  "year": "2021",
-  "tab_id": 27,
-  "trad": "凐天",
-  "simp": "凐天",
-  "ipa_s": "jɐn53 tʰin53",
-  "ipa_t": "jɐn53 tʰin53",
-  "jyutping": "jan1 tin1",
-  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P657",
-  "expl": "冬天",
-  "note": "原文有音無字"
-},{
-  "_id": {
-    "$oid": "62ade56087594d2297fb8f90"
-  },
-  "year": "2021",
-  "tab_id": 29,
-  "trad": "謝日",
-  "simp": "谢日",
-  "ipa_s": "tʃi22 ȵɐt24",
-  "ipa_t": "tʃi22 ȵɐt24",
-  "jyutping": "zi6 njat5",
-  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P657",
-  "expl": "昨天",
-  "note": "原文有音無字"
-},{
-  "_id": {
-    "$oid": "62ade56087594d2297fb8f91"
-  },
-  "year": "2021",
-  "tab_id": 30,
-  "trad": "禾堂",
-  "simp": "禾堂",
-  "ipa_s": "hu21 taŋ21",
-  "ipa_t": "hu21 taŋ21",
-  "jyutping": "hu4 daang4",
-  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P657",
-  "expl": "穀場",
-  "note": "原文未標音"
-},{
-  "_id": {
-    "$oid": "62ade56087594d2297fb8f95"
-  },
-  "year": "2021",
-  "tab_id": 34,
-  "trad": "舂柱",
-  "simp": "舂柱",
-  "ipa_s": "tʃʰœŋ53 tʃʰy24",
-  "ipa_t": "tʃʰœŋ53 tʃʰy24",
-  "jyutping": "coeng1 cyu5",
-  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P657",
-  "expl": "碓杵",
-  "note": "原文未標音"
-},{
-  "_id": {
-    "$oid": "62ade56087594d2297fb8f97"
-  },
-  "year": "2021",
-  "tab_id": 36,
-  "trad": "穮穀",
-  "simp": "穮谷",
-  "ipa_s": "pau21 kœk3",
-  "ipa_t": "pau21 kœk3",
-  "jyutping": "baau4 goek2",
-  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P657",
-  "expl": "秕穀",
-  "note": "原文作「刨穀」"
-},{
-  "_id": {
-    "$oid": "62ade56087594d2297fb8f99"
-  },
-  "year": "2021",
-  "tab_id": 38,
-  "trad": "蓮餅",
-  "simp": "莲饼",
-  "ipa_s": "lin21 peŋ33",
-  "ipa_t": "lin21 peŋ33",
-  "jyutping": "lin4 bing2",
-  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P657",
-  "expl": "蓮蓬",
-  "note": "原文未標音"
-},{
-  "_id": {
-    "$oid": "62ade56087594d2297fb8f79"
+    "$oid": "63761bb0bb2a7e3bb4bdbb99"
   },
   "year": "2021",
   "tab_id": 7,
@@ -518,7 +98,35 @@
   "note": "原文有音無字"
 },{
   "_id": {
-    "$oid": "62ade56087594d2297fb8f7c"
+    "$oid": "63761bb0bb2a7e3bb4bdbb9a"
+  },
+  "year": "2021",
+  "tab_id": 8,
+  "trad": "眨",
+  "simp": "眨",
+  "ipa_s": "jɐp2",
+  "ipa_t": "jɐp2",
+  "jyutping": "jap6",
+  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P656",
+  "expl": "眨",
+  "note": "原文有音無字"
+},{
+  "_id": {
+    "$oid": "63761bb0bb2a7e3bb4bdbb9b"
+  },
+  "year": "2021",
+  "tab_id": 9,
+  "trad": "搣",
+  "simp": "搣",
+  "ipa_s": "mat3",
+  "ipa_t": "mat3",
+  "jyutping": "maat2",
+  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P656",
+  "expl": "掐",
+  "note": "原文有音無字"
+},{
+  "_id": {
+    "$oid": "63761bb0bb2a7e3bb4bdbb9c"
   },
   "year": "2021",
   "tab_id": 10,
@@ -532,7 +140,49 @@
   "note": "原文有音無字"
 },{
   "_id": {
-    "$oid": "62ade56087594d2297fb8f80"
+    "$oid": "63761bb0bb2a7e3bb4bdbb9d"
+  },
+  "year": "2021",
+  "tab_id": 11,
+  "trad": "哄",
+  "simp": "哄",
+  "ipa_s": "hœŋ33",
+  "ipa_t": "hœŋ33",
+  "jyutping": "hoeng2",
+  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P658",
+  "expl": "騙",
+  "note": "原文有音無字"
+},{
+  "_id": {
+    "$oid": "63761bb0bb2a7e3bb4bdbb9e"
+  },
+  "year": "2021",
+  "tab_id": 12,
+  "trad": "鐺",
+  "simp": "铛",
+  "ipa_s": "tʃʰɛŋ53",
+  "ipa_t": "tʃʰiɐŋ53",
+  "jyutping": "ciang1",
+  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P657",
+  "expl": "炒菜鍋",
+  "note": "原文作[tʃʰɛŋ53]"
+},{
+  "_id": {
+    "$oid": "63761bb0bb2a7e3bb4bdbb9f"
+  },
+  "year": "2021",
+  "tab_id": 13,
+  "trad": "钁",
+  "simp": "镢",
+  "ipa_s": "kʰwɐk5",
+  "ipa_t": "kʷʰɐk5",
+  "jyutping": "kwak3",
+  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P657",
+  "expl": "大鋤頭",
+  "note": "原文誤作「镬」字"
+},{
+  "_id": {
+    "$oid": "63761bb0bb2a7e3bb4bdbba0"
   },
   "year": "2021",
   "tab_id": 14,
@@ -546,7 +196,7 @@
   "note": "原文有音無字"
 },{
   "_id": {
-    "$oid": "62ade56087594d2297fb8f81"
+    "$oid": "63761bb0bb2a7e3bb4bdbba1"
   },
   "year": "2021",
   "tab_id": 15,
@@ -560,7 +210,91 @@
   "note": "原文有音無字"
 },{
   "_id": {
-    "$oid": "62ade56087594d2297fb8f88"
+    "$oid": "63761bb0bb2a7e3bb4bdbba2"
+  },
+  "year": "2021",
+  "tab_id": 16,
+  "trad": "䚕",
+  "simp": "䚕",
+  "ipa_s": "lɐi55",
+  "ipa_t": "lɐi55",
+  "jyutping": "lai3",
+  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P656",
+  "expl": "找",
+  "note": "原文有音無字"
+},{
+  "_id": {
+    "$oid": "63761bb0bb2a7e3bb4bdbba3"
+  },
+  "year": "2021",
+  "tab_id": 17,
+  "trad": "矋",
+  "simp": "矋",
+  "ipa_s": "lɐi55",
+  "ipa_t": "lɐi55",
+  "jyutping": "lai3",
+  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P656",
+  "expl": "找",
+  "note": "原文有音無字"
+},{
+  "_id": {
+    "$oid": "63761bb0bb2a7e3bb4bdbba4"
+  },
+  "year": "2021",
+  "tab_id": 17,
+  "trad": "江夯邊",
+  "simp": "江夯边",
+  "ipa_s": "kaŋ53 haŋ53 pin53",
+  "ipa_t": "kaŋ53 haŋ53 pin53",
+  "jyutping": "gaang1 haang1 bin1",
+  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P656",
+  "expl": "岸邊",
+  "note": "原文作「江坎邊」"
+},{
+  "_id": {
+    "$oid": "63761bb0bb2a7e3bb4bdbba5"
+  },
+  "year": "2021",
+  "tab_id": 18,
+  "trad": "囗(dam3)水",
+  "simp": "囗(dam3)水",
+  "ipa_s": "tɐm55 ʃui33",
+  "ipa_t": "tɐm55 ʃui33",
+  "jyutping": "dam3 sui2",
+  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P656",
+  "expl": "汲水",
+  "note": "原文有音無字"
+},{
+  "_id": {
+    "$oid": "63761bb0bb2a7e3bb4bdbba6"
+  },
+  "year": "2021",
+  "tab_id": 19,
+  "trad": "凐水",
+  "simp": "凐水",
+  "ipa_s": "jɐn53 ʃui33",
+  "ipa_t": "jɐn53 ʃui33",
+  "jyutping": "jan1 sui2",
+  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P656",
+  "expl": "涼水",
+  "note": "原文有音無字"
+},{
+  "_id": {
+    "$oid": "63761bb0bb2a7e3bb4bdbba7"
+  },
+  "year": "2021",
+  "tab_id": 20,
+  "trad": "嚜鉤",
+  "simp": "嚜钩",
+  "ipa_s": "mak5 kɐu53",
+  "ipa_t": "mak5 kɐu53",
+  "jyutping": "maak3 gau1",
+  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P656",
+  "expl": "鋤頭",
+  "note": "原文有音無字"
+},{
+  "_id": {
+    "$oid": "63761bb0bb2a7e3bb4bdbba8"
   },
   "year": "2021",
   "tab_id": 21,
@@ -574,7 +308,35 @@
   "note": "原文未標音"
 },{
   "_id": {
-    "$oid": "62ade56087594d2297fb8f8b"
+    "$oid": "63761bb0bb2a7e3bb4bdbba9"
+  },
+  "year": "2021",
+  "tab_id": 22,
+  "trad": "粟禾",
+  "simp": "粟禾",
+  "ipa_s": "ɬœk3 hu21",
+  "ipa_t": "ɬœk3 hu21",
+  "jyutping": "sloek2 hu4",
+  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P656",
+  "expl": "小米",
+  "note": "原文未標音"
+},{
+  "_id": {
+    "$oid": "63761bb0bb2a7e3bb4bdbbaa"
+  },
+  "year": "2021",
+  "tab_id": 23,
+  "trad": "𤊶水",
+  "simp": "𤊶水",
+  "ipa_s": "lɐt5 ʃui33",
+  "ipa_t": "lɐt5 ʃui33",
+  "jyutping": "lat3 sui2",
+  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P657",
+  "expl": "熱水",
+  "note": "原文有音無字"
+},{
+  "_id": {
+    "$oid": "63761bb0bb2a7e3bb4bdbbab"
   },
   "year": "2021",
   "tab_id": 24,
@@ -588,7 +350,49 @@
   "note": "原文有音無字"
 },{
   "_id": {
-    "$oid": "62ade56087594d2297fb8f8f"
+    "$oid": "63761bb0bb2a7e3bb4bdbbac"
+  },
+  "year": "2021",
+  "tab_id": 25,
+  "trad": "攝石",
+  "simp": "摄石",
+  "ipa_s": "ʃip3 ʃek2",
+  "ipa_t": "ʃip3 ʃek2",
+  "jyutping": "sip2 sik6",
+  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P657",
+  "expl": "磁石",
+  "note": "原文未標音"
+},{
+  "_id": {
+    "$oid": "63761bb0bb2a7e3bb4bdbbad"
+  },
+  "year": "2021",
+  "tab_id": 26,
+  "trad": "大烘天",
+  "simp": "大烘天",
+  "ipa_s": "tai22 hœŋ53 tʰin53",
+  "ipa_t": "tai22 hœŋ53 tʰin53",
+  "jyutping": "daai6 hoeng1 tin1",
+  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P657",
+  "expl": "夏天",
+  "note": "原文未標音"
+},{
+  "_id": {
+    "$oid": "63761bb0bb2a7e3bb4bdbbae"
+  },
+  "year": "2021",
+  "tab_id": 27,
+  "trad": "凐天",
+  "simp": "凐天",
+  "ipa_s": "jɐn53 tʰin53",
+  "ipa_t": "jɐn53 tʰin53",
+  "jyutping": "jan1 tin1",
+  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P657",
+  "expl": "冬天",
+  "note": "原文有音無字"
+},{
+  "_id": {
+    "$oid": "63761bb0bb2a7e3bb4bdbbaf"
   },
   "year": "2021",
   "tab_id": 28,
@@ -602,7 +406,35 @@
   "note": "原文有音無字，本字「謝日」"
 },{
   "_id": {
-    "$oid": "62ade56087594d2297fb8f92"
+    "$oid": "63761bb0bb2a7e3bb4bdbbb0"
+  },
+  "year": "2021",
+  "tab_id": 29,
+  "trad": "謝日",
+  "simp": "谢日",
+  "ipa_s": "tʃi22 ȵɐt24",
+  "ipa_t": "tʃi22 ȵɐt24",
+  "jyutping": "zi6 njat5",
+  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P657",
+  "expl": "昨天",
+  "note": "原文有音無字"
+},{
+  "_id": {
+    "$oid": "63761bb0bb2a7e3bb4bdbbb1"
+  },
+  "year": "2021",
+  "tab_id": 30,
+  "trad": "禾堂",
+  "simp": "禾堂",
+  "ipa_s": "hu21 taŋ21",
+  "ipa_t": "hu21 taŋ21",
+  "jyutping": "hu4 daang4",
+  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P657",
+  "expl": "穀場",
+  "note": "原文未標音"
+},{
+  "_id": {
+    "$oid": "63761bb0bb2a7e3bb4bdbbb2"
   },
   "year": "2021",
   "tab_id": 31,
@@ -616,7 +448,21 @@
   "note": "原文未標音"
 },{
   "_id": {
-    "$oid": "62ade56087594d2297fb8f94"
+    "$oid": "63761bb0bb2a7e3bb4bdbbb3"
+  },
+  "year": "2021",
+  "tab_id": 32,
+  "trad": "駛田",
+  "simp": "驶田",
+  "ipa_s": "ʃɐi33 tin21",
+  "ipa_t": "ʃɐi33 tin21",
+  "jyutping": "sai2 din4",
+  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P657",
+  "expl": "犁田",
+  "note": "原文未標音"
+},{
+  "_id": {
+    "$oid": "63761bb0bb2a7e3bb4bdbbb4"
   },
   "year": "2021",
   "tab_id": 33,
@@ -630,7 +476,77 @@
   "note": "原文作「舂柱」，未標音"
 },{
   "_id": {
-    "$oid": "62ade56087594d2297fb8f9a"
+    "$oid": "63761bb0bb2a7e3bb4bdbbb5"
+  },
+  "year": "2021",
+  "tab_id": 34,
+  "trad": "舂柱",
+  "simp": "舂柱",
+  "ipa_s": "tʃʰœŋ53 tʃʰy24",
+  "ipa_t": "tʃʰœŋ53 tʃʰy24",
+  "jyutping": "coeng1 cyu5",
+  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P657",
+  "expl": "碓杵",
+  "note": "原文未標音"
+},{
+  "_id": {
+    "$oid": "63761bb0bb2a7e3bb4bdbbb6"
+  },
+  "year": "2021",
+  "tab_id": 35,
+  "trad": "草子",
+  "simp": "草子",
+  "ipa_s": "tʃʰau33 tʃi33",
+  "ipa_t": "tʃʰau33 tʃi33",
+  "jyutping": "caau2 zi2",
+  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P657",
+  "expl": "稗子",
+  "note": "原文未標音"
+},{
+  "_id": {
+    "$oid": "63761bb0bb2a7e3bb4bdbbb7"
+  },
+  "year": "2021",
+  "tab_id": 36,
+  "trad": "穮穀",
+  "simp": "穮谷",
+  "ipa_s": "pau21 kœk3",
+  "ipa_t": "pau21 kœk3",
+  "jyutping": "baau4 goek2",
+  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P657",
+  "expl": "秕穀",
+  "note": "原文作「刨穀」"
+},{
+  "_id": {
+    "$oid": "63761bb0bb2a7e3bb4bdbbb8"
+  },
+  "year": "2021",
+  "tab_id": 37,
+  "trad": "刨穀",
+  "simp": "刨谷",
+  "ipa_s": "pau21 kœk3",
+  "ipa_t": "pau21 kœk3",
+  "jyutping": "baau4 goek2",
+  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P657",
+  "expl": "秕穀",
+  "note": "原文作「刨穀」"
+},{
+  "_id": {
+    "$oid": "63761bb0bb2a7e3bb4bdbbb9"
+  },
+  "year": "2021",
+  "tab_id": 38,
+  "trad": "蓮餅",
+  "simp": "莲饼",
+  "ipa_s": "lin21 peŋ33",
+  "ipa_t": "lin21 peŋ33",
+  "jyutping": "lin4 bing2",
+  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P657",
+  "expl": "蓮蓬",
+  "note": "原文未標音"
+},{
+  "_id": {
+    "$oid": "63761bb0bb2a7e3bb4bdbbba"
   },
   "year": "2021",
   "tab_id": 39,
@@ -644,7 +560,35 @@
   "note": "原文未標音"
 },{
   "_id": {
-    "$oid": "62ade56087594d2297fb8f9d"
+    "$oid": "63761bb0bb2a7e3bb4bdbbbb"
+  },
+  "year": "2021",
+  "tab_id": 40,
+  "trad": "齷齪",
+  "simp": "龌龊",
+  "ipa_s": "∅ok3 tʃʰok3",
+  "ipa_t": "∅ok3 tʃʰok3",
+  "jyutping": "uk2 cuk2",
+  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P657",
+  "expl": "骯髒",
+  "note": "原文未標音"
+},{
+  "_id": {
+    "$oid": "63761bb0bb2a7e3bb4bdbbbc"
+  },
+  "year": "2021",
+  "tab_id": 41,
+  "trad": "歸",
+  "simp": "归",
+  "ipa_s": "kʷɐi53",
+  "ipa_t": "kʷɐi53",
+  "jyutping": "gwai1",
+  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P657",
+  "expl": "回家",
+  "note": "原文未標音"
+},{
+  "_id": {
+    "$oid": "63761bb0bb2a7e3bb4bdbbbd"
   },
   "year": "2021",
   "tab_id": 42,
@@ -658,7 +602,21 @@
   "note": "原文未標音"
 },{
   "_id": {
-    "$oid": "62ade56087594d2297fb8f9f"
+    "$oid": "63761bb0bb2a7e3bb4bdbbbe"
+  },
+  "year": "2021",
+  "tab_id": 43,
+  "trad": "屋",
+  "simp": "屋",
+  "ipa_s": "∅œk3",
+  "ipa_t": "∅œk3",
+  "jyutping": "oek2",
+  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P657",
+  "expl": "房子、家",
+  "note": "原文未標音"
+},{
+  "_id": {
+    "$oid": "63761bb0bb2a7e3bb4bdbbbf"
   },
   "year": "2021",
   "tab_id": 44,
@@ -671,7 +629,7 @@
   "expl": "下霜"
 },{
   "_id": {
-    "$oid": "62ade56087594d2297fb8fa0"
+    "$oid": "63761bb0bb2a7e3bb4bdbbc0"
   },
   "year": "2021",
   "tab_id": 45,
@@ -684,7 +642,35 @@
   "expl": "溫水"
 },{
   "_id": {
-    "$oid": "62ade56087594d2297fb8fa3"
+    "$oid": "63761bb0bb2a7e3bb4bdbbc1"
+  },
+  "year": "2021",
+  "tab_id": 46,
+  "trad": "塘𧋦",
+  "simp": "塘𧋦",
+  "ipa_s": "taŋ21 mɛŋ53",
+  "ipa_t": "taŋ21 miɐŋ53",
+  "jyutping": "daang4 miang1",
+  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P658",
+  "expl": "蜻蜓",
+  "note": "原文有音無字"
+},{
+  "_id": {
+    "$oid": "63761bb0bb2a7e3bb4bdbbc2"
+  },
+  "year": "2021",
+  "tab_id": 47,
+  "trad": "脷前",
+  "simp": "脷前",
+  "ipa_s": "li22 tʃin21",
+  "ipa_t": "li22 tʃin21",
+  "jyutping": "li6 zin4",
+  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P658",
+  "expl": "舌頭",
+  "note": "原文有音無字"
+},{
+  "_id": {
+    "$oid": "63761bb0bb2a7e3bb4bdbbc3"
   },
   "year": "2021",
   "tab_id": 48,
@@ -698,7 +684,21 @@
   "note": "原文有音無字"
 },{
   "_id": {
-    "$oid": "62ade56087594d2297fb8fa5"
+    "$oid": "63761bb0bb2a7e3bb4bdbbc4"
+  },
+  "year": "2021",
+  "tab_id": 49,
+  "trad": "囗(bot6)囗(lot6)子(zi2)",
+  "simp": "囗(bot6)囗(lot6)子(zi2)",
+  "ipa_s": "pɔt2 lɔt2 tʃi33",
+  "ipa_t": "pot2 lot2 tʃi33",
+  "jyutping": "bot6 lot6 zi2",
+  "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P658",
+  "expl": "蝌蚪",
+  "note": "原文有音無字"
+},{
+  "_id": {
+    "$oid": "63761bb0bb2a7e3bb4bdbbc5"
   },
   "year": "2021",
   "tab_id": 50,
@@ -708,11 +708,11 @@
   "ipa_t": "ʃam53 nɐu33",
   "jyutping": "saam1 nau2",
   "sour": "1998年陳謨志總纂《南寧市誌·文化卷》P658",
-  "expl": "紐扣",
+  "expl": "鈕釦",
   "note": "原文未標音"
 },{
   "_id": {
-    "$oid": "62ade56087594d2297fb8fa6"
+    "$oid": "63761bb0bb2a7e3bb4bdbbc6"
   },
   "year": "2021",
   "tab_id": 51,

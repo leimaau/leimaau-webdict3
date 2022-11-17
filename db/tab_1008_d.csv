@@ -8388,10 +8388,10 @@ tab_id	word	niu	yunbu	she	hu	deng	tone	chong	fanqie	flag	expl	ipa	jp	bwipa	bwjp
 8387	揯	見	登	曾	開	一	平	O	古恆	2	急也淮南子云大弦揯則小弦絕也古恆切三	kɐŋ55	gang1	kɐŋ53	gang1
 8388	緪	見	登	曾	開	一	平	O	古恆	2	大索	kɐŋ55	gang1	kɐŋ53	gang1
 8389	絙	見	登	曾	開	一	平	O	古恆	2	上同（大索）	kɐŋ55	gang1	kɐŋ53	gang1
-8390	鼟	透	登	曾	開	一	平	O	他登	1	鼟鼟鼓聲他登切四		tang1		tang1
-8391	膯	透	登	曾	開	一	平	O	他登	1	飽也吳人云出方言		tang1		tang1
-8392	𤃶	透	登	曾	開	一	平	O	他登	2	小水相添益皃		tang1		tang1
-8393	𧰥	透	登	曾	開	一	平	O	他登	1	上同（小水相添益皃）		tang1		tang1
+8390	鼟	透	登	曾	開	一	平	O	他登	1	鼟鼟鼓聲他登切四	tʰɐŋ55	tang1	tʰɐŋ53	tang1
+8391	膯	透	登	曾	開	一	平	O	他登	1	飽也吳人云出方言	tʰɐŋ55	tang1	tʰɐŋ53	tang1
+8392	𤃶	透	登	曾	開	一	平	O	他登	2	小水相添益皃	tʰɐŋ55	tang1	tʰɐŋ53	tang1
+8393	𧰥	透	登	曾	開	一	平	O	他登	1	上同（小水相添益皃）	tʰɐŋ55	tang1	tʰɐŋ53	tang1
 8394	漰	滂	登	曾	開	一	平	O	普朋	1	漰渤水擊聲普朋切二	pʰɐŋ55	pang1	pʰɐŋ53	pang1
 8395	堋	滂	登	曾	開	一	平	O	普朋	3	堋振動皃	pʰɐŋ55	pang1	pʰɐŋ53	pang1
 8396	尤	云	尤	流	開	三	平	O	羽求	1	過也甚也怨也多也說文異也又姓出姓苑羽求切九	jɐu21	jau4	jɐu21	jau4
@@ -17817,7 +17817,7 @@ tab_id	word	niu	yunbu	she	hu	deng	tone	chong	fanqie	flag	expl	ipa	jp	bwipa	bwjp
 17816	袒	澄	山	山	開	二	去	O	丈莧	2	衣縫解又作䘺丈莧切三	tʃan22	zaan6	tʃan22	zaan6
 17817	綻	澄	山	山	開	二	去	O	丈莧	1	上同（衣縫解又作䘺丈莧切三）	tʃan22	zaan6	tʃan22	zaan6
 17818	䋎	澄	山	山	開	二	去	O	丈莧	1	補縫	tʃan22	zaan6	tʃan22	zaan6
-17819	扮	幫	山	山	開	二	去	O	晡幻	5	打扮晡幻切一	pan33	baan3		baan3
+17819	扮	幫	山	山	開	二	去	O	晡幻	5	打扮晡幻切一	pan33	baan3	pan55	baan3
 17820	鰥	見	山	山	合	二	去	O	古幻	2	鰥視古幻切一	kʷan33	gwaan3	kʷan55	gwaan3
 17821	霰	心	先	山	開	四	去	O	蘇佃	1	雨雪雜又作䨘𩆵釋名曰霰星也水雪相搏如星而散說文云霰稷雪也蘇佃切九	ɬin33	slin3	ɬin55	slin3
 17822	䨘	心	先	山	開	四	去	O	蘇佃	1	（雨雪雜又作䨘𩆵釋名曰霰星也水雪相搏如星而散說文云霰稷雪也蘇佃切九）	ɬin33	slin3	ɬin55	slin3
@@ -18319,8 +18319,8 @@ tab_id	word	niu	yunbu	she	hu	deng	tone	chong	fanqie	flag	expl	ipa	jp	bwipa	bwjp
 18318	少	書	宵	效	開	三	去	X	失照	2	幼少漢書曰少府秦官掌山海池澤之稅以給供養又漢複姓五氏說苑趙簡子御有少室周魯惠公子施叔之後有少施氏家語魯有少正卯孔子弟子有少叔乘何氏姓苑有少師氏失照切又失沼切二	ʃiu33	siu3	ʃiu55	siu3
 18319	燒	書	宵	效	開	三	去	X	失照	2	放火又失昭切	ʃiu33	siu3	ʃiu55	siu3
 18320	脁	徹	宵	效	開	三	去	X	丑召	1	祭也丑召切一	tʃʰiu33	ciu3	tʃʰiu55	ciu3
-18321	裱	幫	宵	效	開	三	去	B	方廟	1	領巾也方廟切二		biu3		biu3
-18322	俵	幫	宵	效	開	三	去	B	方廟	1	俵散		biu3		biu3
+18321	裱	幫	宵	效	開	三	去	B	方廟	1	領巾也方廟切二	piu33	biu3	piu55	biu3
+18322	俵	幫	宵	效	開	三	去	B	方廟	1	俵散	piu33	biu3	piu55	biu3
 18323	翹	群	宵	效	開	三	去	A	巨要	2	尾起也巨要切又巨堯切一	kiu22	giu6	kiu22	giu6
 18324	饒	日	宵	效	開	三	去	X	人要	2	益饒人要切又人招切二	jiu22	jiu6		njiu6
 18325	繞	日	宵	效	開	三	去	X	人要	2	卷取物皃	jiu22	jiu6		njiu6
@@ -18552,10 +18552,10 @@ tab_id	word	niu	yunbu	she	hu	deng	tone	chong	fanqie	flag	expl	ipa	jp	bwipa	bwjp
 18551	㝾	精	歌	果	開	一	去	O	則箇	2	行不正也	tʃɔ33	zo3	tʃo55	zo3
 18552	袏	精	歌	果	開	一	去	O	則箇	1	襌衣	tʃɔ33	zo3	tʃo55	zo3
 18553	作	精	歌	果	開	一	去	O	則箇	3	造也本臧洛切	tʃɔ33	zo3	tʃo55	zo3
-18554	跢	端	歌	果	開	一	去	O	丁佐	2	小兒行也丁佐切四	tɔ33	do3		do3
-18555	癉	端	歌	果	開	一	去	O	丁佐	4	勞也	tɔ33	do3		do3
-18556	痑	端	歌	果	開	一	去	O	丁佐	3	病也	tɔ33	do3		do3
-18557	哆	端	歌	果	開	一	去	O	丁佐	7	語助聲	tɔ33	do3		do3
+18554	跢	端	歌	果	開	一	去	O	丁佐	2	小兒行也丁佐切四	tɔ33	do3	to55	do3
+18555	癉	端	歌	果	開	一	去	O	丁佐	4	勞也	tɔ33	do3	to55	do3
+18556	痑	端	歌	果	開	一	去	O	丁佐	3	病也	tɔ33	do3	to55	do3
+18557	哆	端	歌	果	開	一	去	O	丁佐	7	語助聲	tɔ33	do3	to55	do3
 18558	邏	來	歌	果	開	一	去	O	郎佐	1	游兵也郎佐切三	lɔ22	lo6	lo22	lo6
 18559	𧟌	來	歌	果	開	一	去	O	郎佐	1	婦人衣	lɔ22	lo6	lo22	lo6
 18560	㿚	來	歌	果	開	一	去	O	郎佐	1	病也	lɔ22	lo6	lo22	lo6
@@ -19781,13 +19781,13 @@ tab_id	word	niu	yunbu	she	hu	deng	tone	chong	fanqie	flag	expl	ipa	jp	bwipa	bwjp
 19780	塹	清	鹽	咸	開	三	去	X	七豔	1	上同出說文（坑也遶城水也七豔切四）	tʃʰim33	cim3	tʃʰim55	cim3
 19781	槧	清	鹽	咸	開	三	去	X	七豔	4	插也論衡曰斷木爲槧釋名曰槧版長三尺者也槧漸也言漸漸然長也又七廉切又才敢切	tʃʰim33	cim3	tʃʰim55	cim3
 19782	嬱	清	鹽	咸	開	三	去	X	七豔	1	嬮嬱美女皃	tʃʰim33	cim3	tʃʰim55	cim3
-19783	殮	來	鹽	咸	開	三	去	X	力驗	1	殯殮力驗切七	lim22	lim6		lim6
-19784	斂	來	鹽	咸	開	三	去	X	力驗	2	聚也又力琰切	lim22	lim6		lim6
-19785	瀲	來	鹽	咸	開	三	去	X	力驗	2	泛瀲一曰水波也亦作澰	lim22	lim6		lim6
-19786	爁	來	鹽	咸	開	三	去	X	力驗	3	爁焱火延	lim22	lim6		lim6
-19787	𧸘	來	鹽	咸	開	三	去	X	力驗	1	市先入值也	lim22	lim6		lim6
-19788	𩅼	來	鹽	咸	開	三	去	X	力驗	3	小雨	lim22	lim6		lim6
-19789	獫	來	鹽	咸	開	三	去	X	力驗	4	長喙犬名	lim22	lim6		lim6
+19783	殮	來	鹽	咸	開	三	去	X	力驗	1	殯殮力驗切七	lim22	lim6	lim22	lim6
+19784	斂	來	鹽	咸	開	三	去	X	力驗	2	聚也又力琰切	lim22	lim6	lim22	lim6
+19785	瀲	來	鹽	咸	開	三	去	X	力驗	2	泛瀲一曰水波也亦作澰	lim22	lim6	lim22	lim6
+19786	爁	來	鹽	咸	開	三	去	X	力驗	3	爁焱火延	lim22	lim6	lim22	lim6
+19787	𧸘	來	鹽	咸	開	三	去	X	力驗	1	市先入值也	lim22	lim6	lim22	lim6
+19788	𩅼	來	鹽	咸	開	三	去	X	力驗	3	小雨	lim22	lim6	lim22	lim6
+19789	獫	來	鹽	咸	開	三	去	X	力驗	4	長喙犬名	lim22	lim6	lim22	lim6
 19790	覘	徹	鹽	咸	開	三	去	X	丑豔	2	候也說文云闚視也春秋傳曰公使覘之丑豔切二	tʃʰim33	cim3	tʃʰim55	cim3
 19791	䀡	徹	鹽	咸	開	三	去	X	丑豔	3	視也	tʃʰim33	cim3	tʃʰim55	cim3
 19792	䠨	昌	鹽	咸	開	三	去	X	昌豔	1	音譜云馬急行昌豔切八	tʃʰim33	cim3	tʃʰim55	cim3
@@ -19832,7 +19832,7 @@ tab_id	word	niu	yunbu	she	hu	deng	tone	chong	fanqie	flag	expl	ipa	jp	bwipa	bwjp
 19831	兼	見	添	咸	開	四	去	O	古念	2	古念切又古嫌切二	kim33	gim3	kim55	gim3
 19832	䱤	見	添	咸	開	四	去	O	古念	2	魚名	kim33	gim3	kim55	gim3
 19833	傔	溪	添	咸	開	四	去	O	苦念	1	傔從苦念切一	him33	him3	him55	him3
-19834	稴	來	添	咸	開	四	去	O	力店	4	稴䆎力店切一	lim22	lim6		lim6
+19834	稴	來	添	咸	開	四	去	O	力店	4	稴䆎力店切一	lim22	lim6	lim22	lim6
 19835	釅	疑	嚴	咸	開	三	去	O	魚欠	1	酒醋味厚魚欠切二	jim22	jim6	ȵim22	njim6
 19836	𪙊	疑	嚴	咸	開	三	去	O	魚欠	3	齒皃	jim22	jim6	ȵim22	njim6
 19837	脅	曉	嚴	咸	開	三	去	O	許欠	2	妨也許欠切二	him33	him3	him55	him3
@@ -25103,18 +25103,18 @@ tab_id	word	niu	yunbu	she	hu	deng	tone	chong	fanqie	flag	expl	ipa	jp	bwipa	bwjp
 25102	𪑧	來	怗	咸	開	四	入	O	盧協	2	竹裏黑也	lip2	lip6	lip24	lip5
 25103	𡂩	來	怗	咸	開	四	入	O	盧協	1	𡂩𠲷多言	lip2	lip6	lip24	lip5
 25104	𦖩	來	怗	咸	開	四	入	O	盧協	1	耳垂	lip2	lip6	lip24	lip5
-25105	聑	端	怗	咸	開	四	入	O	丁愜	1	耳垂皃丁愜切十二		dip3		dip2
-25106	𠲷	端	怗	咸	開	四	入	O	丁愜	1	多言		dip3		dip2
-25107	𢬴	端	怗	咸	開	四	入	O	丁愜	2	打也		dip3		dip2
-25108	笘	端	怗	咸	開	四	入	O	丁愜	1	折竹箠也		dip3		dip2
-25109	喋	端	怗	咸	開	四	入	O	丁愜	3	血流皃又田叶切		dip3		dip2
-25110	㝪	端	怗	咸	開	四	入	O	丁愜	2	下也		dip3		dip2
-25111	跕	端	怗	咸	開	四	入	O	丁愜	2	墮落		dip3		dip2
-25112	䩞	端	怗	咸	開	四	入	O	丁愜	2	䩞鞢鞍具		dip3		dip2
-25113	𧚊	端	怗	咸	開	四	入	O	丁愜	2	衣領		dip3		dip2
-25114	㑙	端	怗	咸	開	四	入	O	丁愜	1	低㑙也		dip3		dip2
-25115	𨓊	端	怗	咸	開	四	入	O	丁愜	1	𨓊䢡走也		dip3		dip2
-25116	涉	端	怗	咸	開	四	入	O	丁愜	2	血流皃又時懾切		dip3		dip2
+25105	聑	端	怗	咸	開	四	入	O	丁愜	1	耳垂皃丁愜切十二	tip3	dip3	tip3	dip2
+25106	𠲷	端	怗	咸	開	四	入	O	丁愜	1	多言	tip3	dip3	tip3	dip2
+25107	𢬴	端	怗	咸	開	四	入	O	丁愜	2	打也	tip3	dip3	tip3	dip2
+25108	笘	端	怗	咸	開	四	入	O	丁愜	1	折竹箠也	tip3	dip3	tip3	dip2
+25109	喋	端	怗	咸	開	四	入	O	丁愜	3	血流皃又田叶切	tip3	dip3	tip3	dip2
+25110	㝪	端	怗	咸	開	四	入	O	丁愜	2	下也	tip3	dip3	tip3	dip2
+25111	跕	端	怗	咸	開	四	入	O	丁愜	2	墮落	tip3	dip3	tip3	dip2
+25112	䩞	端	怗	咸	開	四	入	O	丁愜	2	䩞鞢鞍具	tip3	dip3	tip3	dip2
+25113	𧚊	端	怗	咸	開	四	入	O	丁愜	2	衣領	tip3	dip3	tip3	dip2
+25114	㑙	端	怗	咸	開	四	入	O	丁愜	1	低㑙也	tip3	dip3	tip3	dip2
+25115	𨓊	端	怗	咸	開	四	入	O	丁愜	1	𨓊䢡走也	tip3	dip3	tip3	dip2
+25116	涉	端	怗	咸	開	四	入	O	丁愜	2	血流皃又時懾切	tip3	dip3	tip3	dip2
 25117	䕹	從	怗	咸	開	四	入	O	在協	2	草簾在協切一		zip6		zip6
 25118	浹	精	怗	咸	開	四	入	O	子協	1	洽也通也徹也浹辰十二日也子協切三	tʃip3	zip3	tʃip3	zip2
 25119	𠗉	精	怗	咸	開	四	入	O	子協	3	𠗉𠗨又音狎	tʃip3	zip3	tʃip3	zip2
