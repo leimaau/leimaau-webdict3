@@ -73,7 +73,7 @@ select '2009'||'	'||tab_id||'	'||trad||'	'||simp||'	'||ipa_s||'	'||ipa_t||'	'||j
 union all
 select '200906'||'	'||tab_id||'	'||trad||'	'||simp||'	'||ipa_s||'	'||ipa_t||'	'||jyutping||'	'||replace(sour,'2009年張菁雅《桂南平話語音比較研究》','')||'	'||expl||'	'||note from v_nbdict_200906
 union all
-select '2018'||'	'||tab_id||'	'||trad||'	'||simp||'	'||ipa_s||'	'||ipa_t||'	'||jyutping||'	'||sour||'	'||expl||'	'||note from v_nb_zingjam_all
+select '2018'||'	'||tab_id||'	'||trad||'	'||simp||'	'||ipa_s||'	'||ipa_t||'	'||jyutping||'	'||sour||'	'||expl||'	'||note||decode(bookjp,'1','一','2','二','3','三','4','四','5','五','x','x')||'級字' from v_nb_zingjam_all
 union all
 select '201806'||'	'||tab_id||'	'||trad||'	'||simp||'	'||ipa_s||'	'||ipa_t||'	'||jyutping||'	'||sour||'	'||expl||'	'||note from tab_nbdict_201806
 union all
@@ -94,7 +94,7 @@ select '201705'||'	'||tab_id||'	'||trad||'	'||simp||'	'||ipa_s||'	'||ipa_t||'	'|
 union all
 select '2009'||'	'||tab_id||'	'||trad||'	'||simp||'	'||ipa_s||'	'||ipa_t||'	'||jyutping||'	'||replace(sour,'2009年陳海倫、林亦《粵語平話土話方音字彙》','')||'	'||expl||'	'||note from v_nbdict_2009_bw
 union all
-select '2018'||'	'||tab_id||'	'||trad||'	'||simp||'	'||ipa_s||'	'||ipa_t||'	'||jyutping||'	'||sour||'	'||expl||'	'||note from v_nb_zingjam_bw_all
+select '2018'||'	'||tab_id||'	'||trad||'	'||simp||'	'||ipa_s||'	'||ipa_t||'	'||jyutping||'	'||sour||'	'||expl||'	'||note||decode(bookjp,'1','一','2','二','3','三','4','四','5','五','x','x')||'級字' from v_nb_zingjam_bw_all
 union all
 select '2021'||'	'||tab_id||'	'||trad||'	'||simp||'	'||ipa_s||'	'||ipa_t||'	'||jyutping||'	'||sour||'	'||expl||'	'||note from tab_nbdict_2021_bw
 );

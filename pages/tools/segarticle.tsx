@@ -7,7 +7,7 @@ import { TabView, TabPanel } from 'primereact/tabview'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import Layout from '../../components/layout'
 
-export default function signarticle() {
+export default function segarticle() {
   const [value1, setValue1] = useState("我們來自泥潭\nWe come from the mire\n我們在地獄高歌\nWe're singing in hell\n我們渴望權力\nWe yearn for rights\n我們充滿野心\nWe are full of ambition\n我們強大冷靜\nWe are strong and calm\n我們優雅自持\nWe hold ourselves gracefull\n我們從不後悔\nWe never regret\n我們是永遠高貴純潔的\nWe are always noble and pure\n斯萊特林\nSlytherin ")
   const [value2, setValue2] = useState('')
   const [value3, setValue3] = useState('')

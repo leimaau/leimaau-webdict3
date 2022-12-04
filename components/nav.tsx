@@ -62,8 +62,13 @@ export default function Navbar() {
               },
               {
                   label: '讀音聯想',
-                  icon: 'pi pi-fw pi-question-circle',
+                  icon: 'pi pi-fw pi-question',
                   command:()=>{ router.push('/tools/soundLenovo') }
+              },
+              {
+                  label: '合音拆分',
+                  icon: 'pi pi-fw pi-hourglass',
+                  command:()=>{ router.push('/tools/soundSplit') }
               },
               {
                   separator: true

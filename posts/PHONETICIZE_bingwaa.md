@@ -54,7 +54,7 @@
   <tr>
 	<td><span style="font-size:2em;">aa</span> [aː] 沙</td>
 	<td><span style="font-size:2em;">a</span> [ɐ/ə] 新</td>
-	<td><span style="font-size:2em;">e</span> [ɛː/e/E] 些</td>
+	<td><span style="font-size:2em;">e</span> [ɛː/e] 些</td>
 	<td><span style="font-size:2em;">o</span> [o] 多光國</td>
   </tr>
   <tr>
@@ -116,7 +116,7 @@
   </tr>
   <tr>
 	<td></td>
-	<td><span style="font-size:2em;">ai</span><br/>[ɐi/əi/Ei]<br/>事</td>
+	<td><span style="font-size:2em;">ai</span><br/>[ɐi/əi]<br/>事</td>
 	<td><span style="font-size:2em;">au</span><br/>[ɐu/əu]<br/>手</td>
 	<td><span style="font-size:2em;">am</span><br/>[ɐm/əm]<br/>針</td>
 	<td><span style="font-size:2em;">an</span><br/>[ɐn/ən]<br/>分</td>
@@ -126,15 +126,15 @@
 	<td><span style="font-size:2em;">ak</span><br/>[ɐk̚/ək̚]<br/>得</td>
   </tr>
   <tr>
-	<td><span style="font-size:2em;">e</span><br/>[ɛː/e/E]<br/>車</td>
+	<td><span style="font-size:2em;">e</span><br/>[ɛː/e]<br/>車</td>
 	<td></td>
-	<td><span style="font-size:2em;">eu</span><br/>[ɛːu/eu/Eu]<br/>貓</td>
-	<td><span style="font-size:2em;">em</span><br/>[ɛːm/em/Em]<br/>鉗</td>
-	<td><span style="font-size:2em;">en</span><br/>[ɛːn/en/En]<br/>扁</td>
-	<td><span style="font-size:2em;">iang</span><br/>[iɐŋ/Eŋ/ɛːŋ]<br/>長*</td>
-	<td><span style="font-size:2em;">ep</span><br/>[ɛːp̚/ep̚/Ep̚]<br/>夾</td>
-	<td><span style="font-size:2em;">et</span><br/>[ɛːt̚/et̚/Et̚]<br/>挖</td>
-	<td><span style="font-size:2em;">iak</span><br/>[iɐk̚/Ek̚/ɛːk̚]<br/>白*</td>
+	<td><span style="font-size:2em;">eu</span><br/>[ɛːu/eu]<br/>貓</td>
+	<td><span style="font-size:2em;">em</span><br/>[ɛːm/em]<br/>鉗</td>
+	<td><span style="font-size:2em;">en</span><br/>[ɛːn/en]<br/>扁</td>
+	<td><span style="font-size:2em;">iang</span><br/>[iɐŋ/ɛːŋ]<br/>長*</td>
+	<td><span style="font-size:2em;">ep</span><br/>[ɛːp̚/ep̚]<br/>夾</td>
+	<td><span style="font-size:2em;">et</span><br/>[ɛːt̚/et̚]<br/>挖</td>
+	<td><span style="font-size:2em;">iak</span><br/>[iɐk̚/ɛːk̚]<br/>白*</td>
   </tr>
   <tr>
 	<td><span style="font-size:2em;">o</span><br/>[o/ɔː]<br/>多</td>
@@ -156,7 +156,7 @@
 	<td><span style="font-size:2em;">ing</span><br/>[eŋ]<br/>平</td>
 	<td><span style="font-size:2em;">ip</span><br/>[iːp̚]<br/>貼</td>
 	<td><span style="font-size:2em;">it</span><br/>[iːt̚]<br/>必</td>
-	<td><span style="font-size:2em;">ik</span><br/>[ek̚/ʅk̚]<br/>逼</td>
+	<td><span style="font-size:2em;">ik</span><br/>[ek̚]<br/>逼</td>
   </tr>
   <tr>
 	<td><span style="font-size:2em;">u</span><br/>[uː]<br/>步</td>
@@ -167,7 +167,7 @@
 	<td><span style="font-size:2em;">ung</span><br/>[oŋ/uŋ]<br/>王</td>
 	<td></td>
 	<td><span style="font-size:2em;">ut</span><br/>[uːt̚]<br/>闊</td>
-	<td><span style="font-size:2em;">uk</span><br/>[ok̚/ɷk̚/uk̚]<br/>國</td>
+	<td><span style="font-size:2em;">uk</span><br/>[ok̚/uk̚]<br/>國</td>
   </tr>
   <tr>
 	<td><span style="font-size:2em;">yu</span><br/>[yː]<br/>朱</td>

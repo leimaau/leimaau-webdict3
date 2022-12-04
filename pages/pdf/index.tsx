@@ -11,10 +11,10 @@ export default function PDFViewer() {
     const router = useRouter()
 
     let pdfname = ''
-    if (router.query.counter == '1')  pdfname = '/南寧白話單字音表(總表).pdf'
-    if (router.query.counter == '2')  pdfname = '/南寧白話同音字表(總表).pdf'
-    if (router.query.counter == '3')  pdfname = '/南寧亭子平話單字音表(總表).pdf'
-    if (router.query.counter == '4')  pdfname = '/南寧亭子平話同音字表(總表).pdf'
+    if (router.query.counter == '1')  pdfname = '/南寧白話單字音表.pdf'
+    if (router.query.counter == '2')  pdfname = '/南寧白話同音字表.pdf'
+    if (router.query.counter == '3')  pdfname = '/南寧亭子平話單字音表.pdf'
+    if (router.query.counter == '4')  pdfname = '/南寧亭子平話同音字表.pdf'
     if (router.query.counter == '5')  pdfname = '/南寧白話、南寧亭子平話與廣州話三語對照字表.pdf'
 
     return (
@@ -29,7 +29,7 @@ export default function PDFViewer() {
                     marginBottom: 'auto',
                 }}
             >
-                <Viewer fileUrl={pdfname || '/南寧白話單字音表(總表).pdf'} plugins={[defaultLayoutPluginInstance]} />
+                <Viewer fileUrl={pdfname || '/南寧白話單字音表.pdf'} plugins={[defaultLayoutPluginInstance]} />
             </div>
         </Worker>
     )

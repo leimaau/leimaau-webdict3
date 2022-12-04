@@ -6,7 +6,7 @@ import { Toast } from 'primereact/toast'
 import {CopyToClipboard} from 'react-copy-to-clipboard'
 import Layout from '../../components/layout'
 
-export default function transform() {
+export default function soundLenovo() {
   const [value1, setValue1] = useState('kwaat6')
   const [value2, setValue2] = useState('')
   const toast = useRef(null)
