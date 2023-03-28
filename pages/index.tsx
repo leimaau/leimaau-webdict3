@@ -43,7 +43,7 @@ export default function Home({ isConnected }) {
 
       <p className={styles.description}>
         狸貓的在線辭典{' '}
-        <code className={styles.code}> v3.0.8 </code>
+        <code className={styles.code}> v3.0.9 </code>
       </p>
 
       <QButton search="" isConnected={isConnected && loding} radioName="A" getContent={getTabContent} type="單字"/>

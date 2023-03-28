@@ -58,15 +58,15 @@
 	<td><span style="font-size:2em;">o</span> [ɔː] 疏康</td>
   </tr>
   <tr>
-	<td><span style="font-size:2em;">i</span> [iː/ɪ/e] 詩星識</td>
-	<td><span style="font-size:2em;">u</span> [uː/ʊ/o] 夫風福</td>
+	<td><span style="font-size:2em;">i</span> [iː/e/ɪ] 詩星識</td>
+	<td><span style="font-size:2em;">u</span> [uː/o/ʊ] 夫風福</td>
 	<td><span style="font-size:2em;">yu</span> [yː] 書</td>
 	<td><span style="font-size:2em;">oe</span> [œː] 靴</td>
   </tr>
 </table>
 
 - [œ]的實際音值舌位在[œ]和[ø]之間。
-- 特殊地，語氣詞可以單獨使用a[ɐ/ə]，例如「嘞」的語音弱化：嘞laa3[laː˧]->嘞la3[lɐ˧]->嘞la3[lə˧]->嘞a3[ə˧]->嘞a2[ə˧˥]。
+- 特殊地，語氣詞可以單獨使用a[ɐ/ə]，例如「喇」的語音弱化：喇laa3[laː˧]->嘞la3[lɐ˧/lə˧] 或 喇laa3[laː˧]->啊aa3[a˧]->啊a3[ɐ˧/ə˧]。
 
 ## 韻尾
 
@@ -164,10 +164,10 @@
 	<td></td>
 	<td></td>
 	<td><span style="font-size:2em;">un</span><br/>[uːn]<br/>歡</td>
-	<td><span style="font-size:2em;">ung</span><br/>[ʊŋ/oŋ]<br/>風</td>
+	<td><span style="font-size:2em;">ung</span><br/>[oŋ/ʊŋ]<br/>風</td>
 	<td></td>
 	<td><span style="font-size:2em;">ut</span><br/>[uːt̚]<br/>闊</td>
-	<td><span style="font-size:2em;">uk</span><br/>[ʊk̚/ok̚]<br/>福</td>
+	<td><span style="font-size:2em;">uk</span><br/>[ok̚/ʊk̚]<br/>福</td>
   </tr>
   <tr>
 	<td><span style="font-size:2em;">yu</span><br/>[yː]<br/>朱</td>

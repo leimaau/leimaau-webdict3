@@ -62,7 +62,7 @@ export default function FastLink({textChar, reqType}) {
 
                         <p>
                         東方語言學：<a className='hover:underline' href={"http://www.eastling.org/"} target="_blank">前往</a><br/>
-                        漢語方言學大詞典：<a className='hover:underline' href={"http://www.fangyanxue.com/pages/index/index.html"} target="_blank">前往</a><br/>
+                        漢語方言學大詞典：<a className='hover:underline' href={"http://www.fangyanxue.com:8090/pages/index/index.html"} target="_blank">前往</a><br/>
                         古音小鏡：<a className='hover:underline' href={"http://www.kaom.net/"} target="_blank">前往</a><br/>
                         小學堂：<a className='hover:underline' href={"http://xiaoxue.iis.sinica.edu.tw/"} target="_blank">前往</a><br/>
                         早期漢語方言文獻資料庫：<a className='hover:underline' href={"http://database.shss.ust.hk/5dialects/"} target="_blank">前往</a><br/>
