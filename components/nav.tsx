@@ -67,7 +67,7 @@ export default function Navbar() {
               },
               {
                   label: '合音拆分',
-                  icon: 'pi pi-fw pi-wrench',
+                  icon: 'pi pi-fw pi-box',
                   command:()=>{ router.push('/tools/soundSplit') }
               },
               {

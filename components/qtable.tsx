@@ -162,7 +162,7 @@ const pageBodyTemplate = (rowData) => {
 }
 
 const sourBodyTemplate = (rowData) => {
-    let linkaddr = 'https://fastly.jsdelivr.net/gh/leimaau/CDN@latest/data-store/' + rowData.year
+    let linkaddr = 'https://leimaau.github.io/CDN/index.html?value=' + rowData.year
 	if (rowData.year == '1994') linkaddr += 'zh/zh'
 	else if (rowData.year == '1997') linkaddr += 'yd/yd'
 	else if (rowData.year == '1998') linkaddr += 'dfz/dfz'

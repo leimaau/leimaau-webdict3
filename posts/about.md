@@ -74,8 +74,8 @@ github：[leimaau's github](https://github.com/leimaau)
 
 ### 支付寶
 
-![](https://fastly.jsdelivr.net/gh/leimaau/CDN@latest/data-store/jpg/zhifubao.jpg)
+![](https://leimaau.github.io/CDN/data-store/jpg/zhifubao.jpg)
 
 ### 微信
 
-![](https://fastly.jsdelivr.net/gh/leimaau/CDN@latest/data-store/jpg/weixin.jpg)
+![](https://leimaau.github.io/CDN/data-store/jpg/weixin.jpg)
