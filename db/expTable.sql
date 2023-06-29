@@ -65,6 +65,8 @@ select '1998'||'	'||tab_id||'	'||trad||'	'||simp||'	'||ipa_s||'	'||ipa_t||'	'||j
 union all
 select '2003'||'	'||tab_id||'	'||trad||'	'||simp||'	'||ipa_s||'	'||ipa_t||'	'||jyutping||'	'||replace(sour,'2003年侯精一《現代漢語方言音庫(字庫)》','')||'	'||expl||'	'||note from v_nbdict_2003
 union all
+select '200706'||'	'||tab_id||'	'||trad||'	'||simp||'	'||ipa_s||'	'||ipa_t||'	'||jyutping||'	'||replace(sour,'2007年李彬《左江土白話研究》','')||'	'||expl||'	'||note from v_nbdict_200706
+union all
 select '2007'||'	'||tab_id||'	'||trad||'	'||simp||'	'||ipa_s||'	'||ipa_t||'	'||jyutping||'	'||replace(sour,'2007年謝建猷《廣西漢語方言研究》','')||'	'||expl||'	'||note from v_nbdict_2007
 union all
 select '2008'||'	'||tab_id||'	'||trad||'	'||simp||'	'||ipa_s||'	'||ipa_t||'	'||jyutping||'	'||replace(sour,'2008年林亦、覃鳳餘《廣西南寧白話研究》','')||'	'||expl||'	'||note from v_nbdict_2008
@@ -86,7 +88,7 @@ union all
 select * from (
 select '1998'||'	'||tab_id||'	'||trad||'	'||simp||'	'||ipa_s||'	'||ipa_t||'	'||jyutping||'	'||replace(sour,'1998年楊煥典主編《廣西通誌·漢語方言誌》','')||'	'||expl||'	'||note from v_nbdict_1998_bw
 union all
-select '2000'||'	'||tab_id||'	'||trad||'	'||simp||'	'||ipa_s||'	'||ipa_t||'	'||jyutping||'	'||sour||'	'||expl||'	'||note from tab_nbdict_2000_bw
+select '2000'||'	'||tab_id||'	'||trad||'	'||simp||'	'||ipa_s||'	'||ipa_t||'	'||jyutping||'	'||replace(sour,'2000年李連進《平話音韻研究》','')||'	'||expl||'	'||note from tab_nbdict_2000_bw
 union all
 select '201703'||'	'||tab_id||'	'||trad||'	'||simp||'	'||ipa_s||'	'||ipa_t||'	'||jyutping||'	'||sour||'	'||expl||'	'||note from v_nbdict_201703_bw
 union all

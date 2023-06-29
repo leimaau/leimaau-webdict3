@@ -8,7 +8,7 @@ export function calcYear (data) {
 			dataValue += Math.log(9)
 		} else if (item == '1998' || item == '2008' || item == '2009') {
 			dataValue += Math.log(7)
-		} else if (item == '1997' || item == '2003' || /2021/.test(item)){
+		} else if (item == '1997' || item == '2003' || item == '200706' || /2021/.test(item)){
 			dataValue += Math.log(5)
 		} else if (item == '1994' || item == '2000' || item == '2007' || item == '201703' || item == '201705' || item == '200906'){
 			dataValue += Math.log(3)
@@ -141,6 +141,8 @@ const toObj = (result: any[], year: string) => {
       tabDoc.sour = '2000年李連進《平話音韻研究》'
     } else if (tabDoc.year == '2003') {
       tabDoc.sour = '2003年侯精一《現代漢語方言音庫(字庫)》' + tabDoc.sour
+    } else if (tabDoc.year == '200706') {
+      tabDoc.sour = '2007年李彬《左江土白話研究》'
     } else if (tabDoc.year == '2007') {
       tabDoc.sour = '2007年謝建猷《廣西漢語方言研究》'
     } else if (tabDoc.year == '2008') {

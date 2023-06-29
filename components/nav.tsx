@@ -67,7 +67,7 @@ export default function Navbar() {
               },
               {
                   label: '合音拆分',
-                  icon: 'pi pi-fw pi-hourglass',
+                  icon: 'pi pi-fw pi-wrench',
                   command:()=>{ router.push('/tools/soundSplit') }
               },
               {
@@ -157,11 +157,11 @@ export default function Navbar() {
                             icon:'pi pi-fw pi-file-pdf',
                             command:()=>{ window.open('/pdf/?counter=5') }
                         },
-                        {
+                        /*{
                             label:'南寧話單字音文獻資料彙編（整理中）',
                             icon:'pi pi-fw pi-file-pdf',
                             //command:()=>{ window.open('/pdf/?counter=5') }
-                        },
+                        },*/
                        ]
                     }
                  ]
