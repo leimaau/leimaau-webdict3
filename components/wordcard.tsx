@@ -6,9 +6,9 @@ import { pageSplit } from '../components/qtable'
 export default function WordCard ({tabDataListArr,dividerName}) {
     const sourStr = (year,sour) => {
         if (year == '1937jz') {
-            return <span>{'1937年邕寧縣修誌委員會《邕寧縣誌(第4冊)》'}{pageSplit(sour,'jpg','https://fastly.jsdelivr.net/gh/leimaau/CDN@latest/data-store/1937tj/jz_tj')}</span>
+            return <span>{'1937年邕寧縣修誌委員會《邕寧縣誌(第4冊)》'}{pageSplit(sour,'jpg','https://leimaau.github.io/CDN/index.html?value=1937tj/jz_tj')}</span>
         } else if (year == '1937kk') {
-            return <span>{'1937年廣西省政府總務處統計室《南寧社會概況》'}{pageSplit(sour,'jpg','https://fastly.jsdelivr.net/gh/leimaau/CDN@latest/data-store/1937tj/kk_tj')}</span>
+            return <span>{'1937年廣西省政府總務處統計室《南寧社會概況》'}{pageSplit(sour,'jpg','https://leimaau.github.io/CDN/index.html?value=1937tj/kk_tj')}</span>
         }
     }
 
