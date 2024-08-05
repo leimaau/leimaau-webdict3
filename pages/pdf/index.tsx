@@ -11,6 +11,7 @@ export default function PDFViewer() {
     const router = useRouter()
 
     let pdfname = ''
+    if (router.query.counter == '0')  pdfname = '/南寧白話入門.pdf'
     if (router.query.counter == '1')  pdfname = '/南寧白話單字音表.pdf'
     if (router.query.counter == '2')  pdfname = '/南寧白話同音字表.pdf'
     if (router.query.counter == '3')  pdfname = '/南寧亭子平話單字音表.pdf'

@@ -15,7 +15,7 @@ import { rowData_select, rowData_selecty } from '../lib/tabConfig'
 export default function BasicDialog({rowDataFlag, getContent, type, setLodFun}) {
     const rowDataSele = rowDataFlag=='1' ? rowData_select : rowData_selecty
     const customHeader = rowDataFlag=='1' ? "中古音查詢" : "早期粵音查詢"
-    const noteDiv = rowDataFlag=='1' ? <span>※ 除了反切和釋文其他項必填<br/>※ 重紐項只對《廣韻》查詢較精確</span> : <span>※ 除了反切和釋文其他項必填</span>
+    const noteDiv = rowDataFlag=='1' ? <span>※ 除了反切和釋文其他項必填<br/>※ 重紐項只對《廣韻》查詢較精確，《廣韻》《集韻》有所刪簡</span> : <span>※ 除了反切和釋文其他項必填</span>
 
     const [displayBasic, setDisplayBasic] = useState(false)
     const [position, setPosition] = useState('center')

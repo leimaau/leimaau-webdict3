@@ -35,7 +35,7 @@ export default function Navbar() {
                   command:()=>{ router.push('/posts/REFERENCES') }
               },
               {
-                  label: '本站所用參攷資料',
+                  label: '常見問題解答',
                   icon: 'pi pi-fw pi-tag',
                   command:()=>{ router.push('/posts/allbook') }
               }
@@ -130,6 +130,14 @@ export default function Navbar() {
                        icon:'pi pi-fw pi-download',
                        items:[
                         {
+                            label:'南寧白話入門',
+                            icon:'pi pi-fw pi-file-pdf',
+                            command:()=>{ window.open('/pdf/?counter=0') }
+                        },
+                        {
+                            separator: true
+                        },
+                        {
                             label:'南寧白話單字音表',
                             icon:'pi pi-fw pi-file-pdf',
                             command:()=>{ window.open('/pdf/?counter=1') }
@@ -148,9 +156,6 @@ export default function Navbar() {
                             label:'南寧平話同音字表',
                             icon:'pi pi-fw pi-file-pdf',
                             command:()=>{ window.open('/pdf/?counter=4') }
-                        },
-                        {
-                            separator: true
                         },
                         {
                             label:'南寧白話、南寧亭子平話與廣州話三語對照字表',

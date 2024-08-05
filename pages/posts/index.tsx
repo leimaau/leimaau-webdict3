@@ -45,6 +45,6 @@ const getArticleName = (id: string) => {
   if (id=='PHONETICIZE_bingwaa') return '南寧平話拼音方案'
   if (id=='REFERENCES') return '參攷資料'
   if (id=='section2.2') return '與廣州話的區別'
-  if (id=='allbook') return '本站所用參攷資料'
+  if (id=='allbook') return '常見問題解答'
   return id
 }

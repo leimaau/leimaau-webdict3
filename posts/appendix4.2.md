@@ -1,6 +1,6 @@
 # 南寧話輸入方案
 
-本文選自本站作者狸貓的[《南寧白話小冊子》](https://leimaau.github.io/myBook/#/appendix1/appendix4.2)，更多詳細內容可前往參閱。
+本文選自本站作者狸貓的[《南寧白話小冊子》](https://leimaau.github.io/book/appendix1/appendix4.2.html)，更多詳細內容可前往參閱。
 
 ## RIME輸入法引擎
 
@@ -10,7 +10,7 @@
 
 ![演示gif](https://s2.ax1x.com/2019/05/14/Eo2OyR.gif)
 
-南寧話輸入方案：[**下載地址**](https://github.com/leimaau/naamning_jyutping) | 安裝及使用方法：[**漢語方言拼音輸入**](https://www.hanhngiox.net/)
+南寧話輸入方案：[**下載地址**](https://github.com/leimaau/naamning_jyutping)
 
 **註：** 舊版爲「南寧白話輸入方案」，新的改版稱爲「南寧話輸入方案」，新的版本包括了南寧平話輸入方案，統一至一起稱「南寧話」。
 

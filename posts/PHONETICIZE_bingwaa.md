@@ -1,6 +1,6 @@
 # 南寧平話拼音方案〔亭子音〕
 
-本文選自本站作者狸貓的[《南寧白話小冊子》](https://leimaau.github.io/myBook/#/PHONETICIZE_bingwaa)，更多詳細內容可前往參閱。
+本文選自本站作者狸貓的[《南寧白話小冊子》](https://leimaau.github.io/book/PHONETICIZE_bingwaa.html)，更多詳細內容可前往參閱。
 
 桂南平話以南寧平話爲代表，南寧平話以亭子墟平話爲代表，下面列出亭子平話的聲韻調系統。
 

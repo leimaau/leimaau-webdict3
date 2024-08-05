@@ -151,7 +151,7 @@ export default function signarticle() {
               <Checkbox inputId="output_useWordSeg" checked={checked2} onChange={e => setChecked2(e.checked)} />
               <label htmlFor="output_useWordSeg">啓用分詞系統和審詞表</label>
               <Checkbox inputId="output_useFilter" checked={checked3} onChange={e => setChecked3(e.checked)} />
-              <label htmlFor="output_useFilter">過濾罕用音和口語音</label>
+              <label htmlFor="output_useFilter">過濾又音</label>
             </div>
           </div>
           <InputTextarea value={value1} onChange={(e) => setValue1(e.target.value)} rows={12} style={{width: '-webkit-fill-available'}} />
